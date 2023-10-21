@@ -57,7 +57,7 @@
       const cookieName = "token";
   
       // Periksa apakah cookie ada dengan menggunakan fungsi dari file cookieUtil.js
-      if (isCookieExist(cookieName)) {
+      if (getCookie(cookieName)) {
         // Jika cookie tidak ada, arahkan kembali ke halaman login
         window.location.href = "dashboard.html";
       }

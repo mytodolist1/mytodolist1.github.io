@@ -28,19 +28,31 @@
             </nav>
         </div>
 
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <span class="navbar-item">
+                    <a class="button is-primary is-outlined" href="#">
+                        <span class="icon">
+                            <i class="fa fa-logout"></i>
+                        </span>
+                        <span>Logout</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-6 is-offset-3">
                     <a href="#">
                         <button id="button" class="button is-large is-white is-responsive is-outlined">INI DASHBOARD</button>
-                        <button id="button" class="button is-small is-primary is-responsive is-outlined">LOGOUT</button>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <script async type="text/javascript" src="./js/dashboard.js"></script>
+    <script async type="module" src="./js/dashboard.js"></script>
     <script type="module">
         // Nama cookie yang akan diperiksa
         import { getCookie } from "https://jscroot.github.io/cookie/croot.js";

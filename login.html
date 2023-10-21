@@ -8,9 +8,9 @@
     <title>MYTODOLIST</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 
-    <script src="./js/cookie.js"></script>
+    <script src="js/cookie.js"></script>
 
   </head>
 
@@ -31,7 +31,8 @@
               </div>
             </div>
             <br />
-            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" onclick="PostSignUp()">
+            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" id="button"
+            onclick="PostSignUp()">
               Login
             </button>
           </form>
@@ -52,7 +53,7 @@
       </div>
     </section>
 
-    <script type="module" src="./js/post.js"></script>
+    <script type="module" src="js/post.js"></script>
     <script type="module">
       // Nama cookie yang akan diperiksa
       import { getCookie } from "https://jscroot.github.io/cookie/croot.js";

@@ -16,6 +16,7 @@ export default function PostSignUp() {
 // document.getElementById("loginButton").addEventListener("submit", PostSignUp);
 
 function responseData(result) {
+    console.log("Respons dari server:", result);
 
     setInner("pesan", result.message);
     setCookieWithExpireHour("token", result.token, 2);

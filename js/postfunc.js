@@ -2,19 +2,6 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 // import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
 
-function PostSignUp() {
-    let target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
-    let tokenkey = "token";
-    let tokenvalue = "ceafb0cce1b404d71d32ab0b20fea94031b471c87f02b5e0d99e1e911c600ff9";
-    let datainjson = {
-        "username": getValue("username"),
-        "password": getValue("password")
-    }
-    postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
-}
-
-document.getElementById("loginButton").addEventListener("click", PostSignUp);
-
 function responseData(result) {
 
     setInner("pesan", result.message);
@@ -49,6 +36,19 @@ function setSecureCookieWithExpireHour(cname, cvalue, exhour) {
 
 // Contoh penggunaan fungsi
 setSecureCookieWithExpireHour("id", "a3fWa", 1); // Cookie akan kedaluwarsa dalam 1 jam
+
+function PostSignUp() {
+    let target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
+    let tokenkey = "token";
+    let tokenvalue = "ceafb0cce1b404d71d32ab0b20fea94031b471c87f02b5e0d99e1e911c600ff9";
+    let datainjson = {
+        "username": getValue("username"),
+        "password": getValue("password")
+    }
+    postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
+}
+
+setInner("loginButton", PostSignUp);
 
 
 // function setCookieWithExpireHour(cname, cvalue, exhour) {

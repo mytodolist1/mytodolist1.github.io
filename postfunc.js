@@ -6,11 +6,11 @@ export default function PostSignUp() {
     let target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
     let tokenkey = "token";
     let tokenvalue = "72654165d09b9f0a8b4f0c5815775ed5fc933069ce2e006b4e62a65bea6f06e3";
-    let datainjson = {
+    let datajson = {
         "username": getValue("username"),
         "password": getValue("password")
     }
-    postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
+    postWithToken(target_url, tokenkey, tokenvalue, datajson, responseData);
 }
 
 // document.getElementById("loginButton").addEventListener("submit", PostSignUp);

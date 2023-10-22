@@ -8,8 +8,8 @@ export default function PostSignUp() {
     let tokenvalue = "915ae398cfbc8902f33077c449bdbd5c9f475667fe79c2356e9e800798bb9839";
     let datajson = {
         "username": getValue("username"),
-        "password": getValue("password")
-    }
+        "password": getValue("password"),
+    };
     postWithToken(target_url, tokenkey, tokenvalue, datajson, responseData);
 }
 

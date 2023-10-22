@@ -23,7 +23,7 @@ function responseData(result) {
     if (result.message == "Selamat Datang") {
         window.location.href = "dashboard.html";
         alert("Berhasil Masuk " + result.message);
-    } else if (result.message == "Username atau Password Salah") {
+    } else if (result.message == "Password Salah") {
         alert("Gagal Masuk " + result.message);
     } else {
         alert("Gagal Masuk " + "password atau username salah")

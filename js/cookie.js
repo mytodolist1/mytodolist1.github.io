@@ -17,4 +17,4 @@ function logout() {
     }
 }
 
-document.getElementById("logoutButton").addEventListener("click", logout);
+document.getElementById("button").addEventListener("click", logout);

@@ -2,4 +2,4 @@
 // import {setInner,getValue} from "https://jscroot.github.io/element/croot.js";
 import PostSignUp from "./postfunc.js";
 
-window.PostSignUp = PostSignUp;
+document.getElementById("button").addEventListener("submit", PostSignUp);

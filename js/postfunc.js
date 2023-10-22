@@ -48,7 +48,7 @@ function PostSignUp() {
     postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
 }
 
-document.getElementById("logoutButton").addEventListener("submit", logout);
+document.getElementById("loginButton").addEventListener("submit", PostSignUp);
 
 
 // function setCookieWithExpireHour(cname, cvalue, exhour) {

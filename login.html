@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/login.css">
-
+    <script src="./js/cookie.js"></script>
   </head>
 
   <body>
@@ -20,12 +20,12 @@
           <form>
             <div class="field">
               <div class="control">
-                <input class="input is-medium is-rounded" type="text" placeholder="budiman" autocomplete="username" value="budiman" required />
+                <input class="input is-medium is-rounded" type="text" placeholder="budiman" autocomplete="username" id="username" value="budiman" required />
               </div>
             </div>
             <div class="field">
               <div class="control">
-                <input class="input is-medium is-rounded" type="password" placeholder="********" autocomplete="current-password" value="secret" required />
+                <input class="input is-medium is-rounded" type="password" placeholder="********" autocomplete="current-password" id="password" value="secret" required />
               </div>
             </div>
             <br />

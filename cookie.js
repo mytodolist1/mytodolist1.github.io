@@ -1,5 +1,5 @@
 import { deleteCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { setInner } from "https://jscroot.github.io/element/croot.js";
+// import { setInner } from "https://jscroot.github.io/element/croot.js";
 
 function logout() {
     deleteCookie("token");

@@ -8,9 +8,15 @@
 <body>
     <script>
         function checkLoginStatus() {
-            const isLoggedIn = document.cookie.split(";").some((item) => item.trim() === "isLoggedIn=true");
-            return isLoggedIn;
+            const cookies = document.cookie.split("; ");
+            for (const cookie of cookies) {
+                if (cookie.startsWith("isLoggedIn=")) {
+                    return cookie.split("=")[1] === "true";
+                }
+            }
+            return false;
         }
+
 
         // Cek status login, jika belum login, arahkan ke halaman login.
         if (!checkLoginStatus()) {

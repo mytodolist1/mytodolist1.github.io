@@ -65,10 +65,11 @@
             return isLoggedIn;
         }
     
-        // Cek status login, jika belum login, arahkan kembali ke halaman login.
+        // Cek status login, jika belum login, arahkan ke halaman login.
         if (!checkLoginStatus()) {
             window.location.href = "login.html"; // Gantilah ini sesuai dengan halaman login Anda.
-        } else {
+        } else if (window.location.pathname.includes("login.html")) {
+            // Jika sudah login dan sedang berada di halaman login, arahkan ke halaman index.
             window.location.href = "index.html"; // Gantilah ini sesuai dengan halaman index Anda.
         }
     </script>

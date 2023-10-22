@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.9.x-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
+
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
     <script src="js/dashboard.js"></script>
@@ -26,6 +27,11 @@
                         <a class="navbar-item" href="#">
                             <img src="img/MYTODOLIST.png" alt="Logo">
                         </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
                     </div>
                 </div>
             </nav>
@@ -34,7 +40,7 @@
         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
                 <span class="navbar-item">
-                    <a class="button is-primary is-outlined" href="#">
+                    <a class="button is-primary is-outlined" id="logoutButton" onclick="logout()">
                         <span class="icon">
                             <i class="fa fa-logout"></i>
                         </span>
@@ -55,8 +61,7 @@
         </div>
     </section>
 
-
-    <script type="module">
+    <!-- <script type="module">
         // Nama cookie yang akan diperiksa
         import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
         const cookieName = "token";
@@ -66,7 +71,15 @@
           // Jika cookie tidak ada, arahkan kembali ke halaman login
           window.location.href = "login.html";
         }
-      </script>
+    </script>
+    <script>
+        function logout(){
+            let konfirmasi= confirm ('anda yakin akan logout?') 
+                if (konfirmasi) {
+                deleteCookie("token");
+            }
+        }
+    </script> -->
 
 </body>
 </html>

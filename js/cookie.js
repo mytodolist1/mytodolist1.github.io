@@ -1,16 +1,8 @@
-// cookieUtil.js
-// function isCookieExist(cookieName) {
-//     const cookies = document.cookie.split('; ');
-//     for (let i = 0; i < cookies.length; i++) {
-//         const cookie = cookies[i];
-//         const cookieParts = cookie.split('=');
-//         if (cookieParts[0] === cookieName) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
+import { deleteCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-function deleteCookie(name) {
-    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+function logout() {
+    deleteCookie("token");
+    window.location.href = "login.html";
 }
+
+document.getElementById("logoutButton").addEventListener("click", logout);

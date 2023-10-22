@@ -6,4 +6,4 @@ function logout() {
     window.location.href = "login.html";
 }
 
-setInner("logoutButton", logout);
+document.getElementById("logoutButton").addEventListener("click", logout);

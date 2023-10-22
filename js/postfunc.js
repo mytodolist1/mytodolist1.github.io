@@ -6,9 +6,9 @@ function responseData(result) {
 
     setInner("pesan", result.message);
     if (result.message == "Selamat Datang") {
-        setSecureCookieWithExpireHour("token", result.token, 2); // Menggunakan setSecureCookieWithExpireHour
+        setSecureCookieWithExpireHour("token", result.token, 2);
         alert("Berhasil Masuk " + result.message);
-        window.location.href = "dashboard.html";    
+        window.location.href = "dashboard.html";
     } else {
         alert("Gagal Masuk " + "password atau username salah")
         console.log(result.message);
@@ -48,7 +48,7 @@ function PostSignUp() {
     postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
 }
 
-setInner("loginButton", PostSignUp);
+document.getElementById("logoutButton").addEventListener("submit", logout);
 
 
 // function setCookieWithExpireHour(cname, cvalue, exhour) {

@@ -19,7 +19,7 @@ function responseData(result) {
     
     if (result.message === "Selamat Datang") {
         setCookieWithExpireHour("token", result.token, 2);
-        window.location.href = "dashboard.html"; 
+        window.location.href = "index.html"; 
     } else if (result.message === "Password Salah") {
         window.location.href = "login.html";
     } else {

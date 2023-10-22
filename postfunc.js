@@ -5,7 +5,7 @@ import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.
 export default function PostSignUp() {
     let target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
     let tokenkey = "token";
-    let tokenvalue = "72654165d09b9f0a8b4f0c5815775ed5fc933069ce2e006b4e62a65bea6f06e3";
+    let tokenvalue = "915ae398cfbc8902f33077c449bdbd5c9f475667fe79c2356e9e800798bb9839";
     let datajson = {
         "username": getValue("username"),
         "password": getValue("password")

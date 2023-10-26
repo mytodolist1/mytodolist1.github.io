@@ -1,7 +1,7 @@
 import { deleteCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 function logout() {
-    var result = confirm("Are you sure you want to logout?");
+    var result = confirm("yakin?");
     if (result) {
         deleteCookie("token");
         // Mengarahkan ke halaman login

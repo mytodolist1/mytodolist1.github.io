@@ -6,7 +6,7 @@ function checkSessionAndRedirect() {
 
   if (token) {
     // Token ditemukan, pengguna tetap di dashboard
-    window.location.href = "dashboard.html"; // Ganti "dashboard.html" dengan URL halaman dashboard yang sesuai
+    window.location.href = "index.html"; // Ganti "dashboard.html" dengan URL halaman dashboard yang sesuai
   } else {
     // Token tidak ditemukan, arahkan ke halaman login
     window.location.href = "login.html"; // Ganti "login.html" dengan URL halaman login yang sesuai

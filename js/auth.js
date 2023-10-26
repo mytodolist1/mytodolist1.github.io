@@ -8,9 +8,6 @@ function checkTokenAndRedirect() {
     if (!tokenValue) {
         console.log("Token not found, redirecting to login.");
         window.location.href = "login.html";
-    } else {
-        console.log("Token found, redirecting to dashboard.");
-        window.location.href = "index.html";
     }
 }
 

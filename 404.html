@@ -5,28 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
+    <title>Error 404 - Halaman Tidak Ditemukan</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="./css/404.css"> -->
 </head>
 
+<style>
+    body {
+    background-color: #000000;
+    margin: 0;
+    overflow: hidden;
+}
+
+p {
+    color: #ffffff;
+}
+
+#button {
+    border-radius: 20px;
+}
+
+#img {
+    margin-top: 10px;
+    width: 400px;
+    height: auto;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+
 <body>
-    <div class="is-flex is-justify-content-center is-align-items-center" style=" height: 100vh;">
+    <div class="content">
         <div class="columns">
-            <!-- <div class="is-half mr-5 mb-5">
-                  <img src="#" alt="#">
-                </div> -->
-            <div class="has-text-centered is-half ml-4 mt-5">
-                <h1 class="is-size-1 has-text-weight-bold has-text-primary">404</h1>
-                <p class="is-size-5 has-text-weight-medium"> <span class="has-text-danger">Opps!</span> Page not
-                    found.</p>
-                <p class="is-size-6 mb-2">
-                    The page you’re looking for doesn’t exist.
+            <div class="column has-text-centered ml-4">
+                <h1 class="is-size-1 has-text-weight-bold has-text-primary">Error 404</h1>
+                <p class="is-size-5 has-text-weight-medium"> 
+                    <span class="has-text-danger">Oops!</span> 
+                    Halaman Tidak Ditemukan.
                 </p>
-                <a href="https://mytodolist1.github.io" class="button is-primary is-small is-responsive" id="button">Go Home</a>
+                <p class="is-size-6 mb-2">
+                    Maaf, halaman yang Anda cari tidak dapat ditemukan.
+                </p>
+                <br>
+                <a href="https://mytodolist1.github.io" class="button is-danger is-small is-responsive" id="button">Go Home</a>
+            </div>
+            <div class="column" id="img">
+                <img src="https://github.com/mytodolist1/mytodolist1.github.io/assets/147221583/c1c3dfbe-3a19-44e9-8e88-4464384a3c7a" alt="hehe">
             </div>
         </div>
     </div>
-    <script>
-    </script>
 </body>
 </html>

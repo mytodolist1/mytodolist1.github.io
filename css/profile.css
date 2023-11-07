@@ -1,42 +1,63 @@
-.has-same-height .card {
-    height: 320px;
-    overflow: hidden;
+html,body {
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
   }
   
-  .card-content h3 {
-    text-align: center;
+  .hero.is-success {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url('https://unsplash.it/1200/900?random') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .hero .nav, .hero.is-success .nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .box {
+    margin-top: 5rem;
+  }
+
+  .form {
+    width: 80%;
+  }
+  .avatar {
+    margin-top: -70px;
+    padding-bottom: 20px;
+  }
+  .avatar img {
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+  }
+  input {
+    font-weight: 300;
+  }
+  p {
+    font-weight: 700;
+  }
+  p.subtitle {
+    padding-top: 1rem;
   }
   
-  .table-profile td,
-  th {
-    border: none !important;
+  .login-hr{
+    border-bottom: 1px solid black;
   }
   
-  .table-profile td:first-of-type {
-    font-weight: bold;
+  .has-text-black{
+    color: black;
   }
   
-  .skills-content .media {
-    margin: 0 !important;
-    padding: 4px !important;
-    border: 0 !important;
+  .field{
+    padding-bottom: 10px;
   }
   
-  .skills-content .progress {
-    height: 4px !important;
-  }
-  
-  .custom-tags {
-    text-align: center !important;
-    display: block;
-  }
-  
-  .portfolio-container .card {
-    margin-bottom: 2em;
-  }
-  
-  .section-heading {
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 6em;
+  .fa{
+    margin-left: 5px; 
   }

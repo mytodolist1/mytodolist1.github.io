@@ -1,4 +1,4 @@
-import { post } from "./postfunc.js";
+// import { post } from "./postfunc.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
 const PostSignUp = () => {

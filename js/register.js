@@ -14,7 +14,7 @@ function Register(){
 }
 
 function responseData(result) {
-    alert(result.messege);
+    alert(result.message);
     window.location.href = "login.html";
 }
 

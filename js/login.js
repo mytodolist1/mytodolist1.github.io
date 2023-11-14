@@ -28,3 +28,5 @@ function responseData(result) {
         return false;
     }
 }
+
+document.getElementById("button").addEventListener("click", Login);

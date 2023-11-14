@@ -15,11 +15,7 @@ function Register(){
 
 function responseData(result) {
     alert(result.messege);
-    if (result.status === true) {
-        window.location.href = "login.html";
-    } else {
-        return false;
-    }
+    window.location.href = "login.html";
 }
 
 document.getElementById("button1").addEventListener("click", Register);

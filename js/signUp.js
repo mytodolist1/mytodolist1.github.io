@@ -15,8 +15,10 @@ function Register(){
 
 function responseData(result) {
     alert(result.messege);
-    if (result.messege === "Register success") {
+    if (result.status === true) {
         window.location.href = "login.html";
+    } else {
+        return false;
     }
 }
 

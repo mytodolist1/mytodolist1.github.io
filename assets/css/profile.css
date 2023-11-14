@@ -30,6 +30,7 @@ html,body {
     padding-bottom: 20px;
   }
   .avatar img {
+    width: 20%;
     padding: 5px;
     background: #fff;
     border-radius: 50%;

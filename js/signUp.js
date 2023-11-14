@@ -14,8 +14,10 @@ function Register(){
 }
 
 function responseData(result) {
-    alert(result.message + "\nRegistrasi Berhasil")
-    window.location.href= "login.html"
+    alert(result.messege);
+    if (result.messege === "Register success") {
+        window.location.href = "login.html";
+    }
 }
 
 document.getElementById("button1").addEventListener("click", Register);

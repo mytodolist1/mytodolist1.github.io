@@ -19,11 +19,9 @@ export default function Login(){
 function responseData(result) {
     alert(result.message);
     
-    if (result.message === "Selamat Datang") {
+    if (result.message === "Login success") {
         setCookieWithExpireHour("token", result.token, 2);
         window.location.href = "index.html"; 
-    } else if (result.message === "Password Salah") {
-        window.location.href = "login.html";
     } else {
         return false;
     }

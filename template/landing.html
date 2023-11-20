@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/landing.css">
 
     <script async type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/dashboard.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/auth/redirect.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/auth/redirect.js"></script> -->
 </head>
 
 <body>
@@ -136,7 +136,7 @@
                                 </ul>
                             </nav> -->
                             <section class="hero is-info welcome is-small">
-                                <div class="hero-body">
+                                <div class="hero-body is-16">
                                     <div class="container">
                                         <h1 class="title">
                                             Hello User !
@@ -146,7 +146,17 @@
                                         </h2>
                                     </div>
                                 </div>
+                                <section class="hero is-info is-right">
+                                    <div class="hero-body">
+                                        <div class="container">
+                                            <div class="datepicker-container">
+                                                <input type="text" id="datepicker" placeholder="Select Date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </section>
+                            
                             <section class="info-tiles">
                                 <!-- <div class="tile is-ancestor has-text-centered">
                                     <div class="tile is-parent">
@@ -352,6 +362,7 @@
 
     </section>
     <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/auth/logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
 </body>
 
 </html>

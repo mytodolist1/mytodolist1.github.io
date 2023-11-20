@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/landing.css">
 
     <script async type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/dashboard.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/auth/redirect.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/auth/redirect.js"></script> -->
 </head>
 
 <body>
@@ -146,18 +146,22 @@
                                         </h2>
                                     </div>
                                 </div>
-                                <section class="hero is-info is-right">
-                                    <div class="card-table">
-                                        <div class="content">
-                                            <table class="table is-fullwidth is-striped">
-                                                <tr>
-                                                  <input type="text" id="datepicker" placeholder="Select Date">
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </section>
                             </section>
+                            <section class="container">
+                                <form class="row">
+                                  <label for="date" class="col-1 col-form-label">Date</label>
+                                  <div class="col-5">
+                                    <div class="input-group date" id="datepicker">
+                                      <input type="text" class="form-control" id="date"/>
+                                      <span class="input-group-append">
+                                        <span class="input-group-text bg-light d-block">
+                                          <i class="fa fa-calendar"></i>
+                                        </span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </form>
+                              </section>
                             
                             <section class="info-tiles">
                                 <!-- <div class="tile is-ancestor has-text-centered">

@@ -121,7 +121,10 @@ html,body {
     height: 100vh;
     margin: 0;
   } */
-  
+  .input-group-append {
+    cursor: pointer;
+  }
+
   .datepicker-container {
     position: relative;
   }

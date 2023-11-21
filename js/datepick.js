@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inisialisasi datepicker menggunakan Pikaday
     const picker = new Pikaday({
       field: datepickerInput,
-      format: 'YYYY-MM-DD', // Format tanggal (YYYY-MM-DD)
+      format: 'MMMM-DD-YY', // Format tanggal (YYYY-MM-DD)
       // Opsi lainnya dapat ditambahkan sesuai kebutuhan
     });
   });

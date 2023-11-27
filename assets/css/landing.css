@@ -113,14 +113,6 @@ html,body {
     overflow-y: scroll;
   }
 
-  /* body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  } */
   .input-group-append {
     cursor: pointer;
   }
@@ -134,3 +126,43 @@ html,body {
     font-size: 16px;
   }
   
+.datepicker {
+    position: relative;
+    display: inline-block;
+}
+
+.datepicker-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.datepicker-calendar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.datepicker-calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.datepicker-calendar th, .datepicker-calendar td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.datepicker-calendar td {
+    cursor: pointer;
+}
+
+.datepicker-calendar .selected {
+    background-color: #f0f0f0;
+}

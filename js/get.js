@@ -1,5 +1,5 @@
-import { addInner } from "https://bukulapak.github.io/element/process.js";
-import { formProfile } from "../temp/table";
+import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { formProfile } from "./table";
 import { get } from "./process.js";
 
 function showProfile(result) {

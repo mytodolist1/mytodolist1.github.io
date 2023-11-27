@@ -2,16 +2,77 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MYTODOLIST</title>
+    <link rel="shortcut icon" href="../assets/img/todolist.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/dashboard.css">
+
+    <script async type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.7/dashboard.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/auth/redirect.js"></script> -->
 </head>
 
 <body>
+    <section class="hero is-info is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="#">
+                            <img src="../assets/img/MYTODOLIST.png" alt="Logo" width="150" height="200">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu" style="color: white;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <span class="navbar-item">
+                                <a href="./template/login.html" class="button is-white is-outlined" type="button">
+                                    <span class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <span>Login</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a href="./template/register.html" class="button is-white is-outlined" type="button">
+                                    <span class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <span>Register</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
 
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-6 is-offset-3">
+                    <h1 class="title">
+                        MYTODOLIST
+                    </h1>
+                    <h2 class="subtitle">
+                        A simple todo list app for you to manage your tasks easily.
+                    </h2>
+                    <a href="./template/landing.html">
+                        <button class="button is-large is-white is-responsive is-outlined">Get Started</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.7/auth/logout.js"></script> -->
 </body>
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.6/auth/redirect.js"></script>
-
-<script>
-    window.location.href = "./template/index.html";
-</script>
-
 </html>

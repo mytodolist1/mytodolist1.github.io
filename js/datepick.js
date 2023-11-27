@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const datepickers = document.querySelectorAll('.datepicker');
+  const datepickers = document.querySelectorAll('datepicker');
 
   datepickers.forEach(function (datepicker) {
-      const input = datepicker.querySelector('.datepicker-input');
-      const calendar = datepicker.querySelector('.datepicker-calendar');
+      const input = datepicker.querySelector('datepicker-input');
+      const calendar = datepicker.querySelector('datepicker-calendar');
 
       input.addEventListener('focus', function () {
           calendar.style.display = 'block';

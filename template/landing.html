@@ -13,8 +13,15 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/landing.css">
 
+    <!-- Sertakan file Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+    <!-- Sertakan file Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.js"></script>
+
     <script async type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.7/dashboard.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.7/auth/redirect.js"></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.7/auth/redirect.js"></script> -->
 </head>
 
 <body>
@@ -32,48 +39,6 @@
                             <span></span>
                         </span>
                     </div>
-                    <!-- <div id="navbarMenu" class="navbar-menu">
-                        <div class="navbar-end">
-                            <span class="navbar-item">
-                                <a class="button is-link" href="index.html">
-                                    <span class="icon">
-                                        <i class="fa fa-home"></i>
-                                    </span>
-                                    <span>Home</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-primary" href="profile.html">
-                                    <span class="icon">
-                                        <i class="fa fa-user-circle"></i>
-                                    </span>
-                                    <span>Profile</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#" id="button">
-                                    <span class="icon">
-                                        <i class="fa fa-superpowers"></i>
-                                    </span>
-                                    <span>Logout</span>
-                                </a>
-                            </span> -->
-                            <!-- <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="#">
-                                    <span class="icon">
-                                        <i class="fa fa-book"></i>
-                                    </span>
-                                    <span>Documentation</span>
-                                </a>
-                            </span> -->
-                            <!-- <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html">
-                                    <span class="icon">
-                                        <i class="fa fa-github"></i>
-                                    </span>
-                                    <span>View Source</span>
-                                </a>
-                            </span> -->
                         </div>
                     </div>
                 </div>
@@ -85,56 +50,19 @@
                     <div class="columns">
                         <div class="column is-2 ">
                             <aside class="is-large menu ">
-                                <!-- <p class="menu-label">
-                                    General
-                                </p>
-                                <ul class="menu-list">
-                                    <li><a class="is-active">Dashboard</a></li>
-                                    <li><a>Customers</a></li>
-                                    <li><a>Other</a></li>
-                                </ul> -->
                                 <p class="menu-label">
                                     categories
                                   </p>
                                   <ul class="menu-list">
                                     <li class="is-right"><a href="../index.html" class="is-active"><i class="fa fa-home"></i> Home</a></li>
                                     <li><a href="profile.html" class="is-active"><i class="fa fa-user-circle"></i> Profile</a></li>
+                                    
                                     <li><a href="#" class="is-active" type="button" id="button"><i class="fa fa-superpowers"></i> Logout</a></li>
                                   </ul>
-                                    <!-- <li>
-                                        <a>Manage Your Team</a>
-                                        <ul>
-                                            <li><a>Members</a></li>
-                                            <li><a>Plugins</a></li>
-                                            <li><a>Add a member</a></li>
-                                            <li><a>Remove a member</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a>Invitations</a></li>
-                                    <li><a>Cloud Storage Environment Settings</a></li>
-                                    <li><a>Authentication</a></li>
-                                    <li><a>Payments</a></li>
-                                </ul>
-                                <p class="menu-label">
-                                    Transactions
-                                </p>
-                                <ul class="menu-list">
-                                    <li><a>Payments</a></li>
-                                    <li><a>Transfers</a></li>
-                                    <li><a>Balance</a></li>
-                                    <li><a>Reports</a></li> -->
                                 </ul>
                             </aside>
                         </div>
                         <div class="column is-16">
-                            <!-- <nav class="breadcrumb" aria-label="breadcrumbs">
-                                <ul>
-                                    <li><a href="../">Bulma</a></li>
-                                    <li><a href="../">Templates</a></li>
-                                    <li><a href="../">Examples</a></li>
-                                    <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
-                                </ul>
-                            </nav> -->
                             <section class="hero is-info welcome is-small">
                                 <div class="hero-body is-16">
                                     <div class="container">
@@ -147,183 +75,6 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="container">
-                                <form class="row">
-                                  <label for="date" class="col-1 col-form-label">Date</label>
-                                  <div class="col-5">
-                                    <div class="input-group date" id="datepicker">
-                                      <input type="text" class="form-control" id="date"/>
-                                      <span class="input-group-append">
-                                        <span class="input-group-text bg-light d-block">
-                                          <i class="fa fa-calendar"></i>
-                                        </span>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </form>
-                              </section>
-                            
-                            <section class="info-tiles">
-                                <!-- <div class="tile is-ancestor has-text-centered">
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="title">439k</p>
-                                            <p class="subtitle">Users</p>
-                                        </article>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="title">59k</p>
-                                            <p class="subtitle">Products</p>
-                                        </article>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="title">3.4k</p>
-                                            <p class="subtitle">Open Orders</p>
-                                        </article>
-                                    </div>
-                                    <div class="tile is-parent">
-                                        <article class="tile is-child box">
-                                            <p class="title">19</p>
-                                            <p class="subtitle">Exceptions</p>
-                                        </article>
-                                    </div>
-                                </div> -->
-                            </section>
-                            <div class="columns">
-                                <div class="column is-6">
-                                    <div class="card events-card">
-                                        <header class="card-header">
-                                            <p class="card-header-title">
-                                                Your Shcedule
-                                            </p>
-                                            <a href="#" class="card-header-icon" aria-label="more options">
-                              <span class="icon">
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                              </span>
-                            </a>
-                                        </header>
-                                        <div class="card-table">
-                                            <div class="content">
-                                                <table class="table is-fullwidth is-striped">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                                            <td>Lorum ipsum dolem aire</td>
-                                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <!-- <footer class="card-footer">
-                                            <a href="#" class="card-footer-item">View All</a>
-                                        </footer> -->
-                                    </div>
-                                </div>
-
-
-                                <!-- <div class="column is-6">
-                                    <div class="card">
-                                        <header class="card-header">
-                                            <p class="card-header-title">
-                                                Inpur Your List
-                                            </p>
-                                            <a href="#" class="card-header-icon" aria-label="more options">
-                              <span class="icon">
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                              </span>
-                            </a>
-                                        </header>
-                                        <div class="card-content">
-                                            <div class="content">
-                                                <div class="control has-icons-left has-icons-right">
-                                                    <input class="input is-large" type="text" placeholder="">
-                                                    <span class="icon is-medium is-left">
-                                  <i class="fa fa-search"></i>
-                                </span>
-                                                    <span class="icon is-medium is-right">
-                                  <i class="fa fa-check"></i>
-                                </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="card">
-                                        <header class="card-header">
-                                            <p class="card-header-title">
-                                                User Search
-                                            </p>
-                                            <a href="#" class="card-header-icon" aria-label="more options">
-                              <span class="icon">
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                              </span>
-                            </a>
-                                        </header>
-                                        <div class="card-content">
-                                            <div class="content">
-                                                <div class="control has-icons-left has-icons-right">
-                                                    <input class="input is-large" type="text" placeholder="">
-                                                    <span class="icon is-medium is-left">
-                                  <i class="fa fa-search"></i>
-                                </span>
-                                                    <span class="icon is-medium is-right">
-                                  <i class="fa fa-check"></i>
-                                </span>
-                                                </div> -->
-                                            <!-- </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-                <!-- <div class="container has-text-centered"> -->
                     <br>
                     <div class="columns">
                         <div class="column is-16">
@@ -334,16 +85,13 @@
                                 <input class="input" type="text" placeholder="Text input">
                               </div>
                             </div>
-                
-                            <!-- <div class="field">
-                              <label class="label">Email</label>
-                              <div class="control has-icons-left">
-                                <input class="input" type="email" placeholder="Email input" value="">
-                                <span class="icon is-small is-left">
-                                  <i class="fas fa-envelope"></i>
-                                </span>
+
+                            <div class="mb-3 row">
+                              <label for="tanggal" class="col-sm-3 col-form-label">Date</label>
+                              <div class="col-sm-9">
+                                <input type="date" class="form-control" id="tanggal" placeholder="tanggal">
                               </div>
-                            </div> -->
+                            </div>
                 
                             <div class="field">
                               <label class="label">To Do List</label>
@@ -355,21 +103,16 @@
                             <div class="field is-grouped has-text-centered">
                               <div class="control">
                                 <button class="button is-success is-large">
-                                  <!-- <span class="icon">
-                                    <i class="fa fa-marker"></i>
-                                  </span> -->
                                   <span>Submit</span></button>
                               </div>
                             </div>
                           </div>
                         </div>
-                <!-- </div> -->
-            </div>
-
+                      </div>
     </section>
     <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.7/auth/logout.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script> -->
-    <script src="js/datepick.js"></script>
+    <script src="../js/datepick.js"></script>
 </body>
 
 </html>

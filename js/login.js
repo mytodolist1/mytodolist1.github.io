@@ -22,7 +22,7 @@ function responseData(result) {
     
     if (result.status === true) {
         setCookieWithExpireHour("token", result.token, 2);
-        window.location.href = "index.html"; 
+        window.location.href = "landing.html"; 
     } else {
         return false;
     }

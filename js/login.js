@@ -11,6 +11,7 @@ export default function Login(){
     let data = {
         "username": getValue("username"),
         "password": getValue("password"),
+        "role": getValue("role"),
     };
 
     postWithToken(target_url, 'Authorization', 'Bearer ' + token, data, responseData);

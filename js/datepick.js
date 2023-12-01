@@ -1,61 +1,35 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const datepickers = document.querySelectorAll('datepicker');
+// Assuming you have HTML elements with the IDs "eventDate" and "eventTime"
+const eventDateInput = document.getElementById("eventDate");
+const eventTimeInput = document.getElementById("eventTime");
 
-  datepickers.forEach(function (datepicker) {
-      const input = datepicker.querySelector('datepicker-input');
-      const calendar = datepicker.querySelector('datepicker-calendar');
+// Function to handle the input and return a formatted date and time string
+function getFormattedDateTime() {
+    const dateValue = eventDateInput.value;
+    const timeValue = eventTimeInput.value;
 
-      input.addEventListener('focus', function () {
-          calendar.style.display = 'block';
-      });
+    // Combine date and time strings into a single string
+    const dateTimeString = `${dateValue} ${timeValue}`;
 
-      input.addEventListener('blur', function () {
-          setTimeout(function () {
-              calendar.style.display = 'none';
-          }, 200);
-      });
+    // Create a JavaScript Date object from the combined string
+    const dateTime = new Date(dateTimeString);
 
-      const today = new Date();
-      const currentMonth = today.getMonth();
-      const currentYear = today.getFullYear();
+    // Check if the date is valid
+    if (isNaN(dateTime.getTime())) {
+        alert("Invalid date and time");
+        return null; // or handle it according to your requirements
+    } else {
+        // Return the formatted date and time string or the DateTime object as needed
+        return dateTime.toISOString(); // or customize based on your needs
+    }
+}
 
-      const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+// Example: Add an event listener to a button with ID "submitEventButton"
+document.getElementById("submitEventButton").addEventListener("click", function () {
+    const formattedDateTime = getFormattedDateTime();
 
-      let date = 1;
-
-      const table = document.createElement('table');
-
-      for (let i = 0; i < 6; i++) {
-          const row = document.createElement('tr');
-
-          for (let j = 0; j < 7; j++) {
-              if (i === 0 && j < today.getDay()) {
-                  const cell = document.createElement('td');
-                  row.appendChild(cell);
-              } else if (date > daysInMonth) {
-                  break;
-              } else {
-                  const cell = document.createElement('td');
-                  cell.textContent = date;
-
-                  if (date === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
-                      cell.classList.add('selected');
-                  }
-
-                  cell.addEventListener('click', function () {
-                      input.value = cell.textContent;
-                      calendar.style.display = 'none';
-                  });
-
-                  row.appendChild(cell);
-                  date++;
-              }
-          }
-
-          table.appendChild(row);
-      }
-
-      calendar.appendChild(table);
-  });
+    // Check if the date and time are valid before proceeding
+    if (formattedDateTime !== null) {
+        // Use the formattedDateTime variable as needed (e.g., send it in your API request)
+        console.log("Scheduled date and time:", formattedDateTime);
+    }
 });
-  

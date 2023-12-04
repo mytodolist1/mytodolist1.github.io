@@ -20,3 +20,15 @@ export const formTodolist = `
 </div>
 </td>
 `;
+
+export const formProfile = `
+<label class="label">Username</label>
+<div class="control is-clearfix">
+  <input type="text" value="#USERNAME#" class="input is-static">
+</div>
+<hr>
+<label class="label">E-mail</label>
+<div class="control is-clearfix">
+  <input type="text" value="#EMAIL#" class="input is-static">
+</div>
+`;

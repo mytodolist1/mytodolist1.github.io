@@ -24,6 +24,7 @@ const dataUser  = (value) => {
     const data = formProfile
     .replace("#USERNAME#", value.username)
     .replace("#EMAIL#", value.email)
+    .replace("#IDEDIT#", value._id);
 
     addInner("profileUser", data);
 }

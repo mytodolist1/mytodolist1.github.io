@@ -1,4 +1,4 @@
-import { isiData } from "./editTodo.js";
+import { isiData } from "./editUser.js";
 // import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const urlParams = new URLSearchParams(window.location.search);

@@ -26,13 +26,13 @@ export const formProfile = `
   <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
 </a>
 <br>
-
+<label class="label">Username</label>
 <div class="control is-clearfix">
   <input type="text" value="#USERNAME#" class="input is-static">
 </div>
 <br>
 <br>
-
+<label class="label">E-mail</label>
 <div class="control is-clearfix">
   <input type="text" value="#EMAIL#" class="input is-static">
 </div>

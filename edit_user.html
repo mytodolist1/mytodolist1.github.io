@@ -21,7 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
   <script src="./assets/js/loading.js"></script>
-  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script> -->
+  <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script>
 
   <script type="module" src="./assets/js/getUser.js"></script>
 
@@ -213,31 +213,27 @@
                   <br>
                   <label class="label">Username</label>
                   <div class="control is-clearfix">
-                    <input type="text" class="input" id="username">
+                    <input type="text" class="input" value="${'username'}" id="username">
                   </div>
                   <br>
                   <br>
                   <label class="label">E-mail</label>
                   <div class="control is-clearfix">
-                    <input type="text" class="input" id="email">
+                    <input type="text" class="input" value="${'email'}" id="email">
                   </div>
                 </div>
-                <div class="field-body">
-                    <div class="field">
-                      <div class="field is-grouped">
-                        <div class="control">
-                          <button type="button" class="button is-dark" id="btnUpdate">
-                            <span>Update</span>
-                          </button>
-                        </div>
-                        <div class="control">
-                          <a href="profile.html" type="button" class="button is-dark is-outlined">
-                            <span>Kembali</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                <div class="field is-grouped">
+                  <div class="control">
+                    <button type="button" class="button is-dark" id="btnUpdate">
+                      <span>Update</span>
+                    </button>
                   </div>
+                  <div class="control">
+                    <a href="profile.html" type="button" class="button is-dark is-outlined">
+                      <span>Kembali</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

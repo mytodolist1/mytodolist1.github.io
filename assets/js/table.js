@@ -36,4 +36,11 @@ export const formProfile = `
 <div class="control is-clearfix">
   <input type="text" value="#EMAIL#" class="input is-static">
 </div>
+<br>
+<br>
+<div class="button-icon">
+  <a href="#" type="button" class="button is-black is-outlined">
+    <span>Change Password</span>
+  </a>
+</div>
 `;

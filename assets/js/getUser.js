@@ -1,6 +1,6 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { formTodolist } from "./table.js";
+import { formProfile } from "./table.js";
 
 function getWithToken(target_url, responseFunction) {
     const myHeaders = new Headers();
@@ -21,11 +21,11 @@ function getWithToken(target_url, responseFunction) {
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getUserByToken";
 
 const dataUser  = (value) => {
-    const data = formTodolist
+    const data = formProfile
     .replace("#USERNAME#", value.username)
     .replace("#EMAIL#", value.email)
 
-    addInner("tableProfile", data);
+    addInner("profileUser", data);
 }
 
 const responseData = (result) => {

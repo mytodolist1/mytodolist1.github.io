@@ -19,7 +19,7 @@ const putData = (target_url, data, responseFunction) => {
 }
 
 const responseData = (result) => {
-    console.log("Server Response:", result, result.status);
+    // console.log("Server Response:", result, result.status);
     if (result.status === true) {
         Swal.fire({
             icon: "success",
@@ -41,7 +41,7 @@ const updateUser = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const _id = urlParams.get("_id");
 
-    console.log("todoID:", _id);
+    // console.log("todoID:", _id);
 
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateUser?_id=" + _id;
 
@@ -52,7 +52,7 @@ const updateUser = () => {
     
     putData(target_url, data, responseData);
 
-    console.log("Data:", data);
+    // console.log("Data:", data);
 };
 
 // window.updateUser = updateUser;

@@ -4,8 +4,8 @@ const deleteTodo = async (IDHAPUS) => {
   const _id = IDHAPUS;
   const token = getCookie("Authorization");
 
-  console.log("todoID:", _id);
-  console.log("_id:", IDHAPUS);
+  // console.log("todoID:", _id);
+  // console.log("_id:", IDHAPUS);
 
 
   const isConfirmed = await Swal.fire({
@@ -19,7 +19,7 @@ const deleteTodo = async (IDHAPUS) => {
   });
 
   if (isConfirmed.isConfirmed) {
-    console.log("Confirmed:", isConfirmed.isConfirmed);
+    // console.log("Confirmed:", isConfirmed.isConfirmed);
     const myHeaders = new Headers();
     myHeaders.append("Authorization", token);
 
@@ -34,7 +34,7 @@ const deleteTodo = async (IDHAPUS) => {
       });
 
       if (response.ok) {
-        console.log("Response:", response);
+        // console.log("Response:", response);
         await Swal.fire({
           icon: "success",
           title: "Data berhasil dihapus",

@@ -11,6 +11,7 @@ html,body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    transition: background-image 0.2s ease-in-out;
   }
 
   .hero .nav, .hero.is-success .nav {

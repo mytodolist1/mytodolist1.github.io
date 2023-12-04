@@ -22,7 +22,7 @@ export const formTodolist = `
 `;
 
 export const formProfile = `
-<a href="edit_user.html?_id=#IDEDIT#" class="control-icon" id="pencilIcon">
+<a href="edit_user.html?_id=#IDEDIT#" class="control-icon">
   <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
 </a>
 <br>

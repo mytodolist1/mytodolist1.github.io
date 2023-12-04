@@ -10,6 +10,7 @@
   <!-- Bulma is included -->
   <link rel="stylesheet" href="./assets/css/comp/main.min.css">
   <link rel="stylesheet" href="./assets/css/comp/dashboard.css">
+  <link rel="stylesheet" href="./assets/css/loading.css">
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -18,6 +19,7 @@
   <!-- js -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
+  <script src="./assets/js/loading.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/getTodo.js"></script>
 
@@ -26,6 +28,12 @@
 </head>
 
 <body>
+  
+<div id="loader-wrapper">
+	<div id="loader"></div>
+	<div id="loading-text"></div>
+</div>
+
 <div id="app">
   <nav id="navbar-main" class="navbar is-fixed-top">
     <div class="navbar-brand">

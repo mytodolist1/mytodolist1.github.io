@@ -28,12 +28,12 @@ export const formProfile = `
 <br>
 <label class="label">Username</label>
 <div class="control is-clearfix">
-  <input type="text" value="#USERNAME#" class="input">
+  <input type="text" value="#USERNAME#" class="input" id="username">
 </div>
 <br>
 <br>
 <label class="label">E-mail</label>
 <div class="control is-clearfix">
-  <input type="text" value="#EMAIL#" class="input">
+  <input type="text" value="#EMAIL#" class="input" id="email">
 </div>
 `;

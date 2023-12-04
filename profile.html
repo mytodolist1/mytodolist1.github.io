@@ -18,8 +18,7 @@
   <!-- js -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
-  <script type="module" src="./assets/js/auth.js"></script>
-  <script type="module" src="./assets/js/getUser.js"></script>
+  <script type="module" src="./assets/js/redirect.js"></script>
 
 </head>
 <body>
@@ -134,7 +133,7 @@
       <ul class="menu-list">
         <li>
           <a href="list_kegiatan.html" class="has-icon">
-            <span class="icon has-update-mark"><i class="mdi mdi-table"></i></span>
+            <span class="icon"><i class="mdi mdi-table"></i></span>
             <span class="menu-item-label">Todo List</span>
           </a>
         </li>
@@ -158,6 +157,16 @@
           <a href="#" class="has-icon" id="btnLogout" type="button">
             <span class="icon"><i class="mdi mdi-logout"></i></span>
             <span class="menu-item-label">Logout</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="menu-label">Contact</p>
+      <ul class="menu-list">
+        <li>
+          <a href="https://wa.me/6282317150681?text=HAI KAK" class="has-icon">
+            <span class="icon"><i class="mdi mdi-whatsapp"></i></span>
+            <span class="menu-item-label">WhatsApp</span>
           </a>
         </li>
       </ul>
@@ -185,7 +194,7 @@
                 <hr>
 
                 <div id="profileUser" class="field">
-                  <!-- <label class="label">Name</label>
+                  <label class="label">Name</label>
                   <div class="control is-clearfix">
                     <input type="text" readonly value="John Doe" class="input is-static">
                   </div>
@@ -193,7 +202,7 @@
                   <label class="label">E-mail</label>
                   <div class="control is-clearfix">
                     <input type="text" readonly value="user@example.com" class="input is-static">
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>

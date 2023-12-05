@@ -58,6 +58,7 @@ const responseData = (result) => {
         setCookieWithExpireHour("Authorization", result.token, 2);
 
         if (result.role === "admin") {
+            console.log(result.role, result.message);
             Swal.fire({
                 icon: "success",
                 title: "Login Successful",

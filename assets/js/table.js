@@ -39,10 +39,13 @@ export const formProfile = `
 `;
 
 export const navbarUser = `
+<a class="navbar-link is-arrowless">
 <div class="is-user-avatar">
   <img src="./assets/img/todolist.png">
 </div>
 <div class="is-user-name">
-  <span>#USERNAME#</span>
+  <span id="username">#USERNAME#</span>
 </div>
+<span class="icon"><i class="mdi mdi-chevron-down"></i></span>
+</a>
 `;

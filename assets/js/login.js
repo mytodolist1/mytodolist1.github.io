@@ -57,7 +57,7 @@ const responseData = (result) => {
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);
 
-        if (result.role === "admin") {
+        if (role === "admin") {
             Swal.fire({
                 icon: "success",
                 title: "Login Successful",
@@ -66,7 +66,7 @@ const responseData = (result) => {
                 window.location.href = "admin.html";
             });
 
-        } else if (result.role === "user") {
+        } else if (role === "user") {
             Swal.fire({
                 icon: "success",
                 title: "Login Successful",
@@ -74,7 +74,7 @@ const responseData = (result) => {
             }).then(() => {
                 window.location.href = "list_kegiatan.html";
             });
-            
+
         } else {
             Swal.fire({
                 icon: "error",

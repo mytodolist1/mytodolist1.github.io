@@ -11,10 +11,10 @@ export const formTodolist = `
 <td data-label="Date">#DEADLINE#</td>
 <td class="is-actions-cell">
 <div class="buttons is-right">
-  <a href="edit.html?_id=#IDEDIT#" class="button is-primary jb-modal" data-todo-id="#IDHAPUS#" data-target="edit-modal" type="button">
+  <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
     <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
   </a>
-  <button class="button is-danger" type="button" onclick="deleteTodo('#DELETE#')">
+  <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')">
     <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
   </button>
 </div>
@@ -22,7 +22,7 @@ export const formTodolist = `
 `;
 
 export const formProfile = `
-<a href="edit_user.html?_id=#IDEDIT#" class="control-icon">
+<a href="edit_user.html?_id=#IDEDIT#" class="control-icon" type="button">
   <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
 </a>
 <br>

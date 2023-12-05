@@ -32,70 +32,26 @@ const Login = () => {
 
 }
 
-// const responseData = (result) => {
-//     if (result.status === true) {
-//         setCookieWithExpireHour("Authorization", result.token, 2);
-
-//         Swal.fire({
-//           icon: "success",
-//           title: "Login Successful",
-//           text: result.message,
-//         }).then(() => {
-//             window.location.href = "list_kegiatan.html";
-//         });
-
-//     } else {
-//         Swal.fire({
-//           icon: "error",
-//           title: "Login Failed",
-//           text: result.message,
-//         });
-//     }
-// };
-
-const admin = getValue("role");
-const user = getValue("role");
-
 const responseData = (result) => {
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);
 
-        if (admin === "admin") {
-            console.log(result.role, result.message);
-            Swal.fire({
-                icon: "success",
-                title: "Login Successful",
-                text: result.message,
-            }).then(() => {
-                window.location.href = "admin.html";
-            });
+        Swal.fire({
+          icon: "success",
+          title: "Login Successful",
+          text: result.message,
+        }).then(() => {
+            window.location.href = "list_kegiatan.html";
+        });
 
-        } else if (user === "user") {
-            Swal.fire({
-                icon: "success",
-                title: "Login Successful",
-                text: result.message,
-            }).then(() => {
-                window.location.href = "list_kegiatan.html";
-            });
-
-        } else {
-            console.log(result.role, result.message);
-
-            Swal.fire({
-                icon: "error",
-                title: "Login Failed",
-                text: result.message,
-            });
-        }
     } else {
         Swal.fire({
-            icon: "error",
-            title: "Login Failed",
-            text: result.message,
+          icon: "error",
+          title: "Login Failed",
+          text: result.message,
         });
     }
-}
+};
 
 const btnLogin = document.getElementById("btnLogin");
 

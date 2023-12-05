@@ -32,26 +32,58 @@ const Login = () => {
 
 }
 
+// const responseData = (result) => {
+//     if (result.status === true) {
+//         setCookieWithExpireHour("Authorization", result.token, 2);
+
+//         Swal.fire({
+//           icon: "success",
+//           title: "Login Successful",
+//           text: result.message,
+//         }).then(() => {
+//             window.location.href = "list_kegiatan.html";
+//         });
+
+//     } else {
+//         Swal.fire({
+//           icon: "error",
+//           title: "Login Failed",
+//           text: result.message,
+//         });
+//     }
+// };
+
 const responseData = (result) => {
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);
 
-        Swal.fire({
-          icon: "success",
-          title: "Login Successful",
-          text: result.message,
-        }).then(() => {
-            window.location.href = "list_kegiatan.html";
-        });
+        if (result.role === "admin") {
+            Swal.fire({
+                icon: "success",
+                title: "Login Successful",
+                text: result.message,
+            }).then(() => {
+                window.location.href = "admin.html";
+            });
 
-    } else {
-        Swal.fire({
-          icon: "error",
-          title: "Login Failed",
-          text: result.message,
-        });
+        } else if (result.role === "user") {
+            Swal.fire({
+                icon: "success",
+                title: "Login Successful",
+                text: result.message,
+            }).then(() => {
+                window.location.href = "list_kegiatan.html";
+            });
+            
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Login Failed",
+                text: result.message,
+            });
+        }
     }
-};
+}
 
 const btnLogin = document.getElementById("btnLogin");
 

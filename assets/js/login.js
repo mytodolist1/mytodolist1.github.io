@@ -77,12 +77,20 @@ const responseData = (result) => {
             });
 
         } else {
+            console.log(result.role, result.message);
+
             Swal.fire({
                 icon: "error",
                 title: "Login Failed",
                 text: result.message,
             });
         }
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Login Failed",
+            text: result.message,
+        });
     }
 }
 

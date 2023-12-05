@@ -37,3 +37,12 @@ export const formProfile = `
   <input type="text" value="#EMAIL#" class="input" id="email">
 </div>
 `;
+
+export const navbarUser = `
+<div class="is-user-avatar">
+  <img src="./assets/img/todolist.png">
+</div>
+<div class="is-user-name">
+  <span>#USERNAME#</span>
+</div>
+`;

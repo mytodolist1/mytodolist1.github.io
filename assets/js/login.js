@@ -53,11 +53,14 @@ const Login = () => {
 //     }
 // };
 
+const admin = getValue("role");
+const user = getValue("role");
+
 const responseData = (result) => {
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);
 
-        if (result.role === "admin") {
+        if (admin === "admin") {
             console.log(result.role, result.message);
             Swal.fire({
                 icon: "success",
@@ -67,7 +70,7 @@ const responseData = (result) => {
                 window.location.href = "admin.html";
             });
 
-        } else if (result.role === "user") {
+        } else if (user === "user") {
             Swal.fire({
                 icon: "success",
                 title: "Login Successful",

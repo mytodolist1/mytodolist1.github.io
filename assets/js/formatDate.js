@@ -1,13 +1,17 @@
-export const formatDate = (inputValue) => {
-    let date;
+// formatDate.js
 
-    if (inputValue) {
-        date = new Date(inputValue);
+// Module untuk memformat tanggal
+export const formatDate = (dateString) => {
+    let deadlineDate;
+
+    // Cek apakah input tanggal tidak kosong
+    if (dateString) {
+        deadlineDate = new Date(dateString);
     } else {
-        date = new Date();
+        // Jika kosong, gunakan tanggal saat ini
+        deadlineDate = new Date();
     }
 
-    return `${date.getDate().toString().padStart(2, '0')}/
-    ${(date.getMonth() + 1).toString().padStart(2, '0')}/
-    ${date.getFullYear()}`;
+    // Gunakan modul formatDate untuk memformat tanggal
+    return `${deadlineDate.getFullYear()}-${(deadlineDate.getMonth() + 1).toString().padStart(2, '0')}-${deadlineDate.getDate().toString().padStart(2, '0')}`;
 };

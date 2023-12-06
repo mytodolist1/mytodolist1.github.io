@@ -8,10 +8,14 @@ const insertTodo = () => {
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
+    const deadlineInput = document.getElementById('deadline');
+
+    const formattedDeadline = formatDate(deadlineInput.value);
+
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),
-        "deadline": formatDate,
+        "deadline": formattedDeadline,
     };
 
     postWithToken(target_url, tokenkey, tokenvalue, data, responseData);

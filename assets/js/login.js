@@ -45,11 +45,11 @@ const responseData = (result) => {
           text: result.message,
         }).then(() => {
             if (role === "admin") {
-                window.location.href = "admin.html";
+                window.location.href = "pages_admin/admin.html";
             } else if (role === "user admin") {
-                window.location.href = "admin_user.html";
+                window.location.href = "pages_user_admin/admin_user.html";
             } else if (role === "user") {
-                window.location.href = "list_kegiatan.html";
+                window.location.href = "pages_user/list_kegiatan.html";
             } else {
                 console.error("Unknown user role:", role);
             }

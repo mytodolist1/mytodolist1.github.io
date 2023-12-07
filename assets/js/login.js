@@ -33,6 +33,7 @@ const Login = () => {
 }
 
 const responseData = (result) => {
+    console.log(result);
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);
 

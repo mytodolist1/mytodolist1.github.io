@@ -9,7 +9,7 @@ export const formTodolist = `
 <td data-label="Title">#TITLE#</td>
 <td data-label="Description">#DESCRIPTION#</td>
 <td data-label="Date">#DEADLINE#</td>
-<td data-label="Date">#TIME#</td>
+<td data-label="Time">#TIME#</td>
 <td class="is-actions-cell">
 <div class="buttons is-right">
   <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">

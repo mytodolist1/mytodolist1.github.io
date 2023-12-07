@@ -42,11 +42,11 @@ const responseData = (result) => {
           title: "Login Successful",
           text: result.message,
         }).then(() => {
-            if (result.role === "admin") {
+            if (result.data.role === "admin") {
                 window.location.href = "admin.html";
-            } else if (result.role === "user admin") {
+            } else if (result.data.role === "user admin") {
                 window.location.href = "admin_user.html";
-            } else if (result.role === "user") {
+            } else if (result.data.role === "user") {
                 window.location.href = "list_kegiatan.html";
             } else {
                 console.error("Unknown user role:", result);

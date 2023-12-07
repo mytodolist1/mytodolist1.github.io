@@ -31,7 +31,7 @@ const responseData = (result) => {
     if (result.status === true) {
         result.data.forEach(dataUser);
 
-        console.log(result);
+        // console.log(result);
     }
 }
 

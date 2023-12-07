@@ -41,7 +41,15 @@ const responseData = (result) => {
           title: "Login Successful",
           text: result.message,
         }).then(() => {
-            window.location.href = "list_kegiatan.html";
+            if (result.role === "admin") {
+                window.location.href = "admin.html";
+            } else if (result.role === "user admin") {
+                window.location.href = "admin_user.html";
+            } else if (result.role === "user") {
+                window.location.href = "list_kegiatan.html";
+            } else {
+                console.log("Role not found", result.role);
+            }
         });
 
     } else {

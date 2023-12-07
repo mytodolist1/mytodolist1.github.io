@@ -41,7 +41,7 @@ export const formProfile = `
 export const navbarUser = `
 <a class="navbar-link is-arrowless">
 <div class="is-user-avatar">
-  <img src="./assets/img/todolist.png">
+  <img src="../assets/img/todolist.png">
 </div>
 <div class="is-user-name">
   <span id="username">#USERNAME#</span>

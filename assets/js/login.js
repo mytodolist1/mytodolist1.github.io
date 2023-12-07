@@ -25,7 +25,7 @@ const Login = () => {
     const data = {
         "username": getValue("username"),
         "password": getValue("password"),
-        "role": getValue("role"),
+        // "role": getValue("role"),
     };
 
     postWithToken(target_url, data, responseData);
@@ -48,7 +48,7 @@ const responseData = (result) => {
             } else if (result.role === "user") {
                 window.location.href = "list_kegiatan.html";
             } else {
-                console.log("Role not found", result.role);
+                console.error("Unknown user role:", result.role);
             }
         });
 

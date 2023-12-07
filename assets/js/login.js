@@ -25,7 +25,7 @@ const Login = () => {
     const data = {
         "username": getValue("username"),
         "password": getValue("password"),
-        // "role": getValue("role"),
+        "role": getValue("role"),
     };
 
     postWithToken(target_url, data, responseData);

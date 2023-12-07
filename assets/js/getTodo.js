@@ -25,6 +25,7 @@ const dataTodo  = (value) => {
     .replace("#TITLE#", value.title)
     .replace("#DESCRIPTION#", value.description)
     .replace("#DEADLINE#", value.deadline)
+    .replace("#TIME#", value.time)
     .replace("#IDEDIT#", value._id)
     .replace("#DELETE#", value._id)
     .replace("#IDHAPUS#", value._id);

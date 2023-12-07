@@ -7,7 +7,7 @@ const checkTokenAndRedirect = () => {
 
     if (!tokenValue) {
         // console.log("Token not found, redirecting to login.");
-        window.location.href = "login.html";
+        window.location.href = "./login.html";
     }
 }
 

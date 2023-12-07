@@ -49,7 +49,7 @@ const responseData = (result) => {
             } else if (result.role === "user") {
                 window.location.href = "list_kegiatan.html";
             } else {
-                console.error("Unknown user role:", result.role);
+                console.error("Unknown user role:", result);
             }
         });
 

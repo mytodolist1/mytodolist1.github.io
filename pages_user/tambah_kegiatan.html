@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../assets/img/todolist.ico" type="image/x-icon">
 
   <!-- Bulma is included -->
-  <link rel="stylesheet" href="../assets/css/comp/main.min.css">
+  <link rel="stylesheet" href="../assets/css/comp/main.css">
   <link rel="stylesheet" href="../assets/css/comp/dashboard.css">
   <link rel="stylesheet" href="../assets/css/loading.css">
 
@@ -20,20 +20,13 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
   <script src="../assets/js/loading.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script> -->
   
-  <!-- <script type="module" src="./assets/js/redirect.js"></script> -->
-
+  <script type="module" src="../assets/js/redirect.js"></script>
   <script type="module" src="../assets/js/UsernameNav.js"></script>
 
 </head>
 <body>
-
-<div id="loader-wrapper">
-	<div id="loader"></div>
-	<div id="loading-text"></div>
-</div>
-
 <div id="app">
   <nav id="navbar-main" class="navbar is-fixed-top">
     <div class="navbar-brand">
@@ -51,36 +44,6 @@
     </div>
     <div class="navbar-menu fadeIn animated faster" id="navbar-menu">
       <div class="navbar-end">
-        <!-- <div class="navbar-item has-dropdown has-dropdown-with-icons has-divider is-hoverable">
-          <a class="navbar-link is-arrowless">
-            <span class="icon">
-              <i class="mdi mdi-menu"></i>
-            </span>
-            <span>Sample Menu</span>
-            <span class="icon">
-              <i class="mdi mdi-chevron-down"></i>
-            </span>
-          </a>
-          <div class="navbar-dropdown">
-            <a href="profile.html" class="navbar-item">
-              <span class="icon"><i class="mdi mdi-account"></i></span>
-              <span>My Profile</span>
-            </a>
-            <a class="navbar-item">
-              <span class="icon"><i class="mdi mdi-settings"></i></span>
-              <span>Settings</span>
-            </a>
-            <a class="navbar-item">
-              <span class="icon"><i class="mdi mdi-email"></i></span>
-              <span>Messages</span>
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              <span class="icon"><i class="mdi mdi-logout"></i></span>
-              <span>Log Out</span>
-            </a>
-          </div>
-        </div> -->
         <div class="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable" id="usernameNav">
           <!-- <a class="navbar-link is-arrowless">
             <div class="is-user-avatar">
@@ -293,14 +256,14 @@
 </div>
 
 <!-- Scripts below are for demo only -->
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/comp/main.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/comp/main.js"></script>
 <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/postTodo.js"></script> -->
 <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/logout.js"></script> -->
 
 
 <!-- <script type="text/javascript" src="./assets/js/comp/main.min.js"></script> -->
 <script type="module" src="../assets/js/postTodo.js"></script>
-<script type="module" src="./assets/js/logout.js"></script>
+<script type="module" src="../assets/js/logout.js"></script>
 
 <!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">

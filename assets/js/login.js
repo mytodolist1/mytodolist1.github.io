@@ -33,6 +33,8 @@ const Login = () => {
 }
 
 const responseData = (result) => {
+    const role = result.data[0].role;
+
     console.log(result);
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);
@@ -42,14 +44,14 @@ const responseData = (result) => {
           title: "Login Successful",
           text: result.message,
         }).then(() => {
-            if (result.data.role === "admin") {
+            if (role === "admin") {
                 window.location.href = "admin.html";
-            } else if (result.data.role === "user admin") {
+            } else if (role === "user admin") {
                 window.location.href = "admin_user.html";
-            } else if (result.data.role === "user") {
+            } else if (role === "user") {
                 window.location.href = "list_kegiatan.html";
             } else {
-                console.error("Unknown user role:", result);
+                console.error("Unknown user role:", role);
             }
         });
 

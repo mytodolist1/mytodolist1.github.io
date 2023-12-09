@@ -21,6 +21,8 @@ function getWithToken(target_url, responseFunction) {
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodo";
 
+const dataArray = [];
+
 const dataTodo  = (value) => {
     const data = formTodolist
     .replace("#TITLE#", value.title)
@@ -32,6 +34,8 @@ const dataTodo  = (value) => {
     .replace("#IDHAPUS#", value._id);
 
     addInner("tableTodolist", data);
+
+    dataArray.unshift(data);
 
     setReminder(value.deadline, value.time);
 }

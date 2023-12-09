@@ -1,6 +1,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodolist } from "./table.js";
+import { setReminder } from "./reminder.js";
 
 function getWithToken(target_url, responseFunction) {
     const myHeaders = new Headers();
@@ -32,14 +33,12 @@ const dataTodo  = (value) => {
 
     addInner("tableTodolist", data);
 
-    console.log(value);
+    setReminder(value.deadline, value.time);
 }
 
 const responseData = (result) => {
     if (result.status === true) {
         result.data.forEach(dataTodo);
-
-        console.log(result);
     }
 }
 

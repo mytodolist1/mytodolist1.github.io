@@ -9,38 +9,19 @@ export function setReminder(date, time) {
 
     setTimeout(function() {
         Swal.fire({
-            title: "5 menit lagi tugasnya masuk deadline nih, mau perpanjang atau selesaikan aja?",
+            title: "5 menit lagi tugasnya masuk deadline nih, jangan lupa selesaikan ya!",
             icon: "warning",
-            // showCancelButton: true,
             confirmButtonColor: "#3085d6",
-            denyButtonColor: "#d33",
-            confirmButtonText: "Selesaikan",
-            denyButtonText: "Perpanjang",
-            customClass: {
-              confirmButton: "button is-success",
-              denyButton: "button is-warning",
-            },
+            confirmButtonText: "Baiklah",
           }).then((result) => {
             if (result.isConfirmed) {
               Swal.fire({
-                title: "Tugas berhasil diselesaikan",
+                title: "Silahkan selesaikan tugasnya ya!",
                 icon: "success",
                 showConfirmButton: false,
               });
-
-            } else if (result.isDenied) {
-              Swal.fire({
-                title: "Silahkan perpanjang tugasnya",
-                icon: "warning",
-                showConfirmButton: false,
-              }).then(() => {
-                window.location.href = "edit.html";
-              });
-
-            } else {
-                Error("Error: " + result);
             }
-          });
+        });
     }, alertDifference);
 
     console.log("Selisih waktu total: " + timeDifference);

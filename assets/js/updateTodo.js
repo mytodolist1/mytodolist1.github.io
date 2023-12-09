@@ -45,10 +45,15 @@ const updateTodo = () => {
 
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateTodo?_id=" + _id;
 
+    const deadlineInput = document.getElementById('deadline');
+    const deadlineDate = new Date(deadlineInput.value);
+    const formattedDeadline = deadlineDate.toLocaleDateString('id-ID');
+
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),
-        "deadline": getValue("deadline"),
+        "deadline": formattedDeadline,
+        "time" : getValue("time"),
     };
     
     putData(target_url, data, responseData);

@@ -2,21 +2,21 @@ export function setReminder(date, time) {
     const currentDate = new Date().getTime();
     const deadline = new Date(date + " " + time).getTime();
 
-    const alertReminder = deadline - (5 * 60 * 1000)
+    const alertReminder = deadline - (10 * 60 * 1000)
     const alertDifference = alertReminder - currentDate;
 
-    const timeDifference = deadline - currentDate;
+    const alertDifferences = deadline - currentDate;
 
     setTimeout(function() {
         Swal.fire({
-            title: "5 menit lagi tugasnya masuk deadline nih, jangan lupa selesaikan ya!",
+            title: "10 menit lagi tugasnya masuk deadline nih, jangan lupa selesaikan atau update ya!",
             icon: "warning",
             confirmButtonColor: "#3085d6",
             confirmButtonText: "Baiklah",
           }).then((result) => {
             if (result.isConfirmed) {
               Swal.fire({
-                title: "Silahkan selesaikan tugasnya ya!",
+                title: "Silahkan selesaikan atau update tugasnya ya!",
                 icon: "success",
                 showConfirmButton: false,
               });
@@ -24,5 +24,17 @@ export function setReminder(date, time) {
         });
     }, alertDifference);
 
-    console.log("Selisih waktu total: " + timeDifference);
+    setTimeout(function() {
+        Swal.fire({
+            icon: "warning",
+            title: "Sepertinya tugasnya sudah melewati deadline nih, jangan lupa selesaikan atau update ya!",
+            showConfirmButton: false,
+        });
+    }, alertDifferences);
+
+    console.log("Current Date:", currentDate);
+    console.log("Deadline:", deadline);
+    console.log("Alert Reminder:", alertReminder);
+    console.log("Alert Difference:", alertDifference);
+    console.log("Alert Differences:", alertDifferences);
 }

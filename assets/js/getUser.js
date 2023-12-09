@@ -20,6 +20,8 @@ function getWithToken(target_url, responseFunction) {
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getUserByToken";
 
+const userDataArray = [];
+
 const dataUser  = (value) => {
     const data = formProfile
     .replace("#USERNAME#", value.username)
@@ -27,6 +29,8 @@ const dataUser  = (value) => {
     .replace("#IDEDIT#", value._id);
 
     addInner("profileUser", data);
+
+    userDataArray.unshift(data);
 }
 
 const responseData = (result) => {

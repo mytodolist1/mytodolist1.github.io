@@ -3,6 +3,7 @@ export const isiData = (results) => {
     {id: "title", path: "data.0.title"},
     {id: "description", path: "data.0.description"},
     {id: "deadline", path: "data.0.deadline"},
+    {id: "time", path: "data.0.time"},
   ];
 
 

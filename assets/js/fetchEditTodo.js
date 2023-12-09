@@ -2,10 +2,7 @@ import { isiData } from "./editTodo.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const urlParams = new URLSearchParams(window.location.search);
-// console.log("urlParams:", urlParams);
 const _id = urlParams.get("_id");
-
-// console.log("todoID:", _id);
 
 const urlFetch = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodoByID?_id=" + _id;
 

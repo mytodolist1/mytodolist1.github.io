@@ -1,48 +1,4 @@
-/* #profileUser {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .control-icon {
-    align-self: flex-start;
-    display: inline-block;
-    background-color: #3498db; 
-    border-radius: 50%;
-    padding: 3px;
-    margin-right: 10px;
-  }
-
-  .control-icon .icon {
-    color: #ffffff; 
-  }
-
-  .button-icon {
-    align-self: flex-end;
-  }
-  
-  .label {
-    margin-left: 25px; 
-  }
-  
-  .control {
-    margin-left: 25px; 
-  }
-
-  .input {
-    max-width: 400px; 
-  }
-
-  .label, .control {
-    margin-top: 10px; 
-  }
-  
-  label {
-    margin-bottom: 5px;
-  }
-   */
-
-
-   #profileUser {
+  #profileUser {
     display: flex;
     flex-direction: column;
   }

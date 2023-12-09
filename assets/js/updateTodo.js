@@ -56,13 +56,11 @@ const updateTodo = () => {
     console.log("Data:", data);
 };
 
-// window.updateTodo = updateTodo;
-
 const btnUpdates = document.getElementById("btnUpdate");
 
 // btnUpdates.addEventListener("click", updateTodo);
 
 btnUpdates.addEventListener("click", () => {
     console.log("button aktif");
-    updateTodo(); // Call pushData function when the button is clicked
+    updateTodo();
   });

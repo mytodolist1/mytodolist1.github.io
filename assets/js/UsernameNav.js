@@ -30,8 +30,6 @@ const dataUser  = (value) => {
 const responseData = (result) => {
     if (result.status === true) {
         result.data.forEach(dataUser);
-
-        // console.log(result);
     }
 }
 

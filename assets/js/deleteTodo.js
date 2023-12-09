@@ -4,10 +4,6 @@ const deleteTodo = async (IDHAPUS) => {
   const _id = IDHAPUS;
   const token = getCookie("Authorization");
 
-  // console.log("todoID:", _id);
-  // console.log("_id:", IDHAPUS);
-
-
   const isConfirmed = await Swal.fire({
     title: "Benarkah anda ingin menghapus data ini?",
     icon: "warning",
@@ -34,7 +30,6 @@ const deleteTodo = async (IDHAPUS) => {
       });
 
       if (response.ok) {
-        // console.log("Response:", response);
         await Swal.fire({
           icon: "success",
           title: "Data berhasil dihapus",

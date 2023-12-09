@@ -17,7 +17,7 @@ export function setReminder(date, time) {
             if (result.isConfirmed) {
               Swal.fire({
                 title: "Silahkan selesaikan atau update tugasnya ya!",
-                icon: "success",
+                icon: "warning",
                 showConfirmButton: false,
               });
             }
@@ -27,7 +27,7 @@ export function setReminder(date, time) {
     setTimeout(function() {
         Swal.fire({
             icon: "warning",
-            title: "Sepertinya tugasnya sudah melewati deadline nih, jangan lupa selesaikan atau update ya!",
+            title: "Sepertinya tugas kamu sudah melewati deadline nih, jangan lupa selesaikan ya!",
             showConfirmButton: false,
         });
     }, alertDifferences);

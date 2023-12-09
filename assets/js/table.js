@@ -1,7 +1,7 @@
 export const formTodolist = `
 <td class="is-checkbox-cell">
   <label id="checkbox" class="b-checkbox checkbox">
-    <input type="checkbox" value="false" class="checkbox">
+    <input type="checkbox" class="checkbox">
     <span class="check"></span>
   </label>
 </td>

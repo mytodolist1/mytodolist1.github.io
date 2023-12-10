@@ -54,6 +54,7 @@ export const navbarUser = `
 
 //admin
 export const formTodolistAdmin = `
+  <td></td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
@@ -67,6 +68,7 @@ export const formTodolistAdmin = `
 `;
 
 export const formUserAll = `
+  <td></td>
   <td data-label="UID">#UID#</td>
   <td data-label="Email">#EMAIL#</td>
   <td data-label="Username">#USERNAME#</td>

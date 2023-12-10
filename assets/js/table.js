@@ -1,3 +1,4 @@
+//user
 export const formTodolist = `
 <td class="is-checkbox-cell">
   <label id="checkbox" class="b-checkbox checkbox">
@@ -8,8 +9,7 @@ export const formTodolist = `
 <td></td>
 <td data-label="Title">#TITLE#</td>
 <td data-label="Description">#DESCRIPTION#</td>
-<td data-label="Date">#DEADLINE#</td>
-<td data-label="Time">#TIME#</td>
+<td data-label="Deadline">#DEADLINE# #TIME#</td>
 <td class="is-actions-cell">
 <div class="buttons is-right">
   <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
@@ -49,4 +49,41 @@ export const navbarUser = `
 </div>
 <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
 </a>
+`;
+
+
+//admin
+export const formTodolistAdmin = `
+<td class="is-checkbox-cell">
+  <label id="checkbox" class="b-checkbox checkbox">
+    <input type="checkbox" class="checkbox">
+    <span class="check"></span>
+  </label>
+</td>
+<td></td>
+<td data-label="ID">#ID#</td>
+<td data-label="Title">#TITLE#</td>
+<td data-label="Description">#DESCRIPTION#</td>
+<td data-label="Deadline">#DEADLINE# #TIME#</td>
+<td data-label="Time Stamp" colspan="2">
+  <div class="w-auto p-2">
+    <p class="mb-1">Create At: #CREATEAT#</p>
+    <p class="mb-1">Update At: #UPDATEAT#</p>
+  </div>
+</td>
+<td data-label="UID">#UID#</td>
+`;
+
+export const formUserAll = `
+<td class="is-checkbox-cell">
+  <label id="checkbox" class="b-checkbox checkbox">
+    <input type="checkbox" class="checkbox">
+    <span class="check"></span>
+  </label>
+</td>
+<td></td>
+<td data-label="UID">#UID#</td>
+<td data-label="Email">#EMAIL#</td>
+<td data-label="Username">#USERNAME#</td>
+<td data-label="Role">#ROLE#</td>
 `;

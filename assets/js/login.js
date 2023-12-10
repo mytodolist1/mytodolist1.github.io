@@ -45,7 +45,7 @@ const responseData = (result) => {
           text: result.message,
         }).then(() => {
             if (role === "admin") {
-                window.location.href = "pages_admin/admin.html";
+                window.location.href = "pages_admin/todolist_user.html";
             } else if (role === "user admin") {
                 window.location.href = "pages_user_admin/admin_user.html";
             } else if (role === "user") {

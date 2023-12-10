@@ -54,17 +54,15 @@ export const navbarUser = `
 
 //admin
 export const formTodolistAdmin = `
-  <td data-label="ID">#ID#</td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
-  <td data-label="TimeStamp" colspan="2">
+  <td data-label="TimeStamp">
     <div class="w-auto p-2">
-      <p class="mb-1">Created At: #CREATEDAT#</p>
-      <p class="mb-1">Updated At: #UPDATEDAT#</p>
+      <p class="mb-1"><b>Created At:</b> #CREATEDAT#</p>
+      <p class="mb-1"><b>Updated At:</b> #UPDATEDAT#</p>
     </div>
   </td>
-  <td></td>
   <td data-label="UID">#UID#</td>
 `;
 

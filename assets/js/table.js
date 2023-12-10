@@ -54,13 +54,6 @@ export const navbarUser = `
 
 //admin
 export const formTodolistAdmin = `
-  <td class="is-checkbox-cell">
-    <label id="checkbox" class="b-checkbox checkbox">
-      <input type="checkbox" class="checkbox">
-      <span class="check"></span>
-    </label>
-  </td>
-  <td></td>
   <td data-label="ID">#ID#</td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
@@ -75,13 +68,6 @@ export const formTodolistAdmin = `
 `;
 
 export const formUserAll = `
-  <td class="is-checkbox-cell">
-    <label id="checkbox" class="b-checkbox checkbox">
-      <input type="checkbox" class="checkbox">
-      <span class="check"></span>
-    </label>
-  </td>
-  <td></td>
   <td data-label="UID">#UID#</td>
   <td data-label="Email">#EMAIL#</td>
   <td data-label="Username">#USERNAME#</td>

@@ -58,12 +58,13 @@ export const formTodolistAdmin = `
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
-  <td data-label="Time Stamp" colspan="2">
+  <td data-label="TimeStamp" colspan="2">
     <div class="w-auto p-2">
-      <p class="mb-1">Create At: #CREATEAT#</p>
-      <p class="mb-1">Update At: #UPDATEAT#</p>
+      <p class="mb-1">Created At: #CREATEDAT#</p>
+      <p class="mb-1">Updated At: #UPDATEDAT#</p>
     </div>
   </td>
+  <td></td>
   <td data-label="UID">#UID#</td>
 `;
 

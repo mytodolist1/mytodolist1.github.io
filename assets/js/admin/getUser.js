@@ -18,7 +18,7 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 
 const dataUsers  = (value) => {
     const data = formUserAll
-    .replace("#UID#", value.UID)
+    .replace("#UID#", value.uid)
     .replace("#EMAIL#", value.email)
     .replace("#USERNAME#", value.username)
     .replace("#ROLE#", value.role)

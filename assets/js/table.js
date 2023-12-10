@@ -20,7 +20,7 @@ export const formTodolist = `
     </button>
   </div>
   </td>
-  <hr>
+  <br>
 `;
 
 export const formProfile = `
@@ -66,7 +66,7 @@ export const formTodolistAdmin = `
     </div>
   </td>
   <td data-label="UID">#UID#</td>
-  <hr>
+  <br>
 `;
 
 export const formUserAll = `
@@ -75,5 +75,5 @@ export const formUserAll = `
   <td data-label="Email">#EMAIL#</td>
   <td data-label="Username">#USERNAME#</td>
   <td data-label="Role">#ROLE#</td>
-  <hr>
+  <br>
 `;

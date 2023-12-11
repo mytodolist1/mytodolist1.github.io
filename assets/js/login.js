@@ -44,14 +44,18 @@ const responseData = (result) => {
           title: "Login Successful",
           text: result.message,
         }).then(() => {
-            if (role === "admin") {
-                window.location.href = "pages_admin/todolist_user.html";
-            } else if (role === "user admin") {
-                window.location.href = "pages_user_admin/admin_user.html";
-            } else if (role === "user") {
-                window.location.href = "pages_user/list_kegiatan.html";
-            } else {
-                console.error("Unknown user role:", role);
+            switch (role) {
+                case "admin":
+                    window.location.href = "pages_admin/todolist_user.html";
+                    break;
+                case "user admin":
+                    window.location.href = "pages_user_admin/admin_user.html";
+                    break;
+                case "user":
+                    window.location.href = "pages_user/list_kegiatan.html";
+                    break;
+                default:
+                    console.error("Peran pengguna tidak dikenali:", role);
             }
         });
 

@@ -33,7 +33,6 @@ const Login = () => {
 }
 
 const responseData = (result) => {
-    const role = result.data(1).role;
 
     console.log(result);
     if (result.status === true) {
@@ -44,6 +43,9 @@ const responseData = (result) => {
           title: "Login Successful",
           text: result.message,
         }).then(() => {
+
+            console.log(result.data);
+            const role = result.data[0].role;
             switch (role) {
                 case "admin":
                     window.location.href = "pages_admin/todolist_user.html";

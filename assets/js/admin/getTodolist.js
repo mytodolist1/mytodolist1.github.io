@@ -18,14 +18,13 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 
 const dataTodolist  = (value) => {
     const data = formTodolistAdmin
-    .replace("#ID#", value._id)
     .replace("#TITLE#", value.title)
     .replace("#DESCRIPTION#", value.description)
     .replace("#DEADLINE#", value.deadline)
     .replace("#TIME#", value.time)
     .replace("#CREATEDAT#", value.timestamp.createdat)
     .replace("#UPDATEDAT#", value.timestamp.updatedat)
-    .replace("#UID#", value.user.uid)
+    .replace("#UID#", value.user.username)
 
     addInner("tableTodolistAdmin", data);
 }

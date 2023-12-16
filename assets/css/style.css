@@ -1,0 +1,23 @@
+.btn {
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    padding: 3px; 
+    margin-right: 10px;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center; /* Pusatkan elemen secara vertikal */
+  }
+  
+  .is-user-avatar {
+    padding-left: 10px;
+    margin-right: 10px;
+    flex-shrink: 0; /* Biarkan gambar mempertahankan ukuran aslinya */
+  }
+  
+  .is-user-info {
+    color: white;
+    padding-left: 10px;
+  }

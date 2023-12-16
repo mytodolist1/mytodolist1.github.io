@@ -1,7 +1,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { formTodolist } from "./table.js";
-import { setReminder } from "./reminder.js";
+import { formTodolist } from "../temp/table.js";
+import { setReminder } from "../complement/reminder.js";
 
 function getWithToken(target_url, responseFunction) {
     const myHeaders = new Headers();

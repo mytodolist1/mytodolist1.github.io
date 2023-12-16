@@ -24,11 +24,11 @@ export const format12Hours = (time) => {
     return formattedTime;
 }
 
-export const formatDate = (date) => {
-    const date = new Date(dateString);
+export const formatDate = (datestring) => {
+    const date = new Date(datestring);
     const month = ('0' + (date.getMonth() + 1)).slice(-2);
     const day = ('0' + date.getDate()).slice(-2);
     const year = date.getFullYear();
-    
+
     return month + '/' + day + '/' + year;
 }

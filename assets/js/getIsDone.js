@@ -21,15 +21,15 @@ function getWithToken(target_url, responseFunction) {
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getIsDone";
 
 const dataTodoDone  = (value) => {
-    console.log(value);
+    // console.log(value);
 
     const data = formTodolistDone
     .replace("#STATUS#", value.isdone)
     .replace("#CLEAR#", value.timeclear)
-    .replace("#TITLE#", value.title)
-    .replace("#DESCRIPTION#", value.description)
-    .replace("#DEADLINE#", value.deadline)
-    .replace("#TIME#", value.time)
+    .replace("#TITLE#", value.todo.title)
+    .replace("#DESCRIPTION#", value.todo.description)
+    .replace("#DEADLINE#", value.todo.deadline)
+    .replace("#TIME#", value.todo.time)
 
     addInner("tableTodolist", data);
 }

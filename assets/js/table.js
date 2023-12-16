@@ -1,11 +1,11 @@
 //user
 export const formTodolist = `
-  <td class="is-checkbox-cell">
-    <button class="button is-link" type="button" onclick="doneTodo('#IDDONE#')">
+  <td></td>
+  <td class="buttons is-left">
+    <button class="button is-link is-outlined" type="button" onclick="doneTodo('#DONE#')">
       <span class="icon"><i class="mdi mdi-clock-check"></i></span>
     </button>
   </td>
-  <td></td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
@@ -19,17 +19,15 @@ export const formTodolist = `
     </button>
   </div>
   </td>
-  <br>
 `;
 
 export const formTodolistDone = `
   <td></td>
-  <td data-label="Done">#DONE#</td>
+  <td data-label="Status">#STATUS#</td>
   <td data-label="Clear">#CLEAR#</td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
-  <br>
 `;
 
 export const formProfile = `
@@ -75,7 +73,6 @@ export const formTodolistAdmin = `
     </div>
   </td>
   <td data-label="UID">#UID#</td>
-  <br>
 `;
 
 export const formUserAll = `
@@ -84,5 +81,4 @@ export const formUserAll = `
   <td data-label="Email">#EMAIL#</td>
   <td data-label="Username">#USERNAME#</td>
   <td data-label="Role">#ROLE#</td>
-  <br>
 `;

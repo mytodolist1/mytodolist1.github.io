@@ -1,6 +1,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodolistDone } from "../temp/table.js";
+import { convertToLocal } from "../complement/timestamp.js";
 
 function getWithToken(target_url, responseFunction) {
     const myHeaders = new Headers();
@@ -21,11 +22,12 @@ function getWithToken(target_url, responseFunction) {
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getIsDone";
 
 const dataTodoDone  = (value) => {
-    // console.log(value);
+    const timestamp = value.timeclear;
+    const timeclear = convertToLocal(timestamp);
 
     const data = formTodolistDone
     .replace("#STATUS#", value.isdone ? "Done" : "clear")
-    .replace("#CLEAR#", value.timeclear)
+    .replace("#CLEAR#", timeclear)
     .replace("#TITLE#", value.todo.title)
     .replace("#DESCRIPTION#", value.todo.description)
     .replace("#DEADLINE#", value.todo.deadline)

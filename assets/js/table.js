@@ -1,10 +1,9 @@
 //user
 export const formTodolist = `
   <td class="is-checkbox-cell">
-    <label id="checkbox" class="b-checkbox checkbox">
-      <input type="checkbox" class="checkbox">
-      <span class="check"></span>
-    </label>
+    <button class="button is-primary" type="button" onclick="doneTodo('#IDDONE#')">
+      <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
+    </button>
   </td>
   <td></td>
   <td data-label="Title">#TITLE#</td>
@@ -20,6 +19,16 @@ export const formTodolist = `
     </button>
   </div>
   </td>
+  <br>
+`;
+
+export const formTodolistDone = `
+  <td></td>
+  <td data-label="Done">#DONE#</td>
+  <td data-label="Clear">#CLEAR#</td>
+  <td data-label="Title">#TITLE#</td>
+  <td data-label="Description">#DESCRIPTION#</td>
+  <td data-label="Deadline">#DEADLINE# + #TIME#</td>
   <br>
 `;
 

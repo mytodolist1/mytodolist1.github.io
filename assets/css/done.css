@@ -1,0 +1,13 @@
+.is-link {
+    background-color: #3273dc; /* Ganti dengan warna yang diinginkan */
+    color: #ffffff; /* Ganti dengan warna teks yang kontras */
+    padding: 10px; /* Sesuaikan dengan padding yang diinginkan */
+    border-radius: 5px; /* Sesuaikan dengan radius sudut yang diinginkan */
+    font-weight: bold; /* Sesuaikan dengan gaya teks yang diinginkan */
+    text-align: center; /* Atur posisi teks ke tengah jika perlu */
+  }
+  
+  /* Optional: Hover effect */
+  .is-link:hover {
+    background-color: #276cda; /* Ganti dengan warna hover yang diinginkan */
+  }

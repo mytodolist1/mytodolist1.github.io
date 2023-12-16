@@ -8,7 +8,7 @@ export const formTodolist = `
   </td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
-  <td data-label="Deadline">#DEADLINE# + #TIME#</td>
+  <td data-label="Deadline">#DEADLINE# #TIME#</td>
   <td data-label="Action" class="buttons is-left">
       <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
         <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
@@ -25,7 +25,7 @@ export const formTodolistDone = `
   <td data-label="Time Clear">#CLEAR#</td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
-  <td data-label="Deadline">#DEADLINE# + #TIME#</td>
+  <td data-label="Deadline">#DEADLINE# #TIME#</td>
 `;
 
 export const formProfile = `

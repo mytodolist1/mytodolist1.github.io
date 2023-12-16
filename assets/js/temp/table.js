@@ -9,15 +9,13 @@ export const formTodolist = `
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
-  <td class="is-actions-cell">
-    <div class="buttons is-left">
+  <td class="buttons is-left">
       <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
         <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
       </a>
       <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')">
         <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
       </button>
-    </div>
   </td>
 `;
 

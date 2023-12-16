@@ -12368,17 +12368,16 @@ aside.aside {
   box-shadow: none;
   background: #2e323a;
 }
-aside.aside .aside-tools {
+/* aside.aside .aside-tools {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #17191e;
   color: hsl(0deg, 0%, 100%);
   line-height: 3.25rem;
   height: 3.25rem;
   padding-left: 0.75rem;
   flex: 1;
-}
+} */
 aside.aside .aside-tools .icon {
   margin-right: 0.75rem;
 }

@@ -1,6 +1,6 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { navbarUser } from "./table.js";
+import { navbarUser } from "../temp/table.js";
 
 function getWithToken(target_url, responseFunction) {
     const myHeaders = new Headers();

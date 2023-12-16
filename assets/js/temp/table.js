@@ -2,7 +2,8 @@
 export const formTodolist = `
   <td></td>
   <td data-label="Status" class="buttons is-left">
-    <button class="btn is-link is-outlined" type="button" onclick="doneTodo('#DONE#')">
+    <button class="button is-link is-outlined" type="button" onclick="doneTodo('#DONE#')"
+    style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
       <span class="icon"><i class="mdi mdi-check-bold"></i></span>
     </button>
   </td>
@@ -10,10 +11,12 @@ export const formTodolist = `
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# #TIME#</td>
   <td data-label="Action" class="buttons is-left">
-      <a href="edit.html?_id=#IDEDIT#" class="btn is-dark" data-todo-id="#IDHAPUS#" type="button">
+      <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button"
+      style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
         <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
       </a>
-      <button class="btn is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')">
+      <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')"
+      style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
         <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
       </button>
   </td>
@@ -46,18 +49,18 @@ export const formProfile = `
 `;
 
 export const navbarUser = `
-    <div class="menu-item">
-      <div class="menu-content">
-        <div class="is-user-avatar">
-          <img src="../assets/img/todolist.ico" alt="#USERNAME#">
-        </div>
-        <div class="is-user-info">
-          <div class="is-user-name">
-            <span class="menu-item-label">#USERNAME#</span>
-          </div>
+  <div class="menu-item">
+    <div class="menu-content">
+      <div class="is-user-avatar">
+        <img src="../assets/img/todolist.ico">
+      </div>
+      <div class="is-user-info">
+        <div class="is-user-name">
+          <span class="menu-item-label" id="username">#USERNAME#</span>
         </div>
       </div>
     </div>
+  </div>
 `;
 
 

@@ -1,8 +1,8 @@
 //user
 export const formTodolist = `
   <td class="is-checkbox-cell">
-    <button class="button is-primary" type="button" onclick="doneTodo('#IDDONE#')">
-      <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
+    <button class="button is-link" type="button" onclick="doneTodo('#IDDONE#')">
+      <span class="icon"><i class="mdi mdi-clock-check"></i></span>
     </button>
   </td>
   <td></td>

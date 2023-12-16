@@ -21,8 +21,8 @@ export const formTodolist = `
 
 export const formTodolistDone = `
   <td></td>
-  <td class="is-link" data-label="Status">#STATUS#</td>
-  <td data-label="Clear">#CLEAR#</td>
+  <td data-label="Status" style="color: blue; font-weight: bold;>#STATUS#</td>
+  <td data-label="Time Clear">#CLEAR#</td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>

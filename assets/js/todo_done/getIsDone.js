@@ -24,7 +24,7 @@ const dataTodoDone  = (value) => {
     // console.log(value);
 
     const data = formTodolistDone
-    .replace("#STATUS#", value.isdone)
+    .replace("#STATUS#", value.isdone ? "Done" : "clear")
     .replace("#CLEAR#", value.timeclear)
     .replace("#TITLE#", value.todo.title)
     .replace("#DESCRIPTION#", value.todo.description)

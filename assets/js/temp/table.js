@@ -13,11 +13,11 @@ export const formTodolist = `
   <td data-label="Action" class="buttons is-left">
       <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button"
       style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
-        <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
+        <span class="icon"><i class="mdi mdi-eye"></i></span>
       </a>
       <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')"
       style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
-        <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
+        <span class="icon"><i class="mdi mdi-delete"></i></span>
       </button>
   </td>
 `;

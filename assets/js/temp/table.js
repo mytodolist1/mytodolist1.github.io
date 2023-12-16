@@ -1,7 +1,7 @@
 //user
 export const formTodolist = `
   <td></td>
-  <td class="buttons is-left">
+  <td class="button">
     <button class="button is-link is-outlined" type="button" onclick="doneTodo('#DONE#')">
       <span class="icon"><i class="mdi mdi-clock-check"></i></span>
     </button>
@@ -10,14 +10,14 @@ export const formTodolist = `
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
   <td class="is-actions-cell">
-  <div class="buttons is-right">
-    <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
-      <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
-    </a>
-    <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')">
-      <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
-    </button>
-  </div>
+    <div class="button">
+      <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
+        <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
+      </a>
+      <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')">
+        <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
+      </button>
+    </div>
   </td>
 `;
 

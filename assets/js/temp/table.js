@@ -3,7 +3,7 @@ export const formTodolist = `
   <td></td>
   <td data-label="Status" class="buttons is-left">
     <button class="button is-link is-outlined" type="button" onclick="doneTodo('#DONE#')">
-      <span class="icon"><i class="mdi mdi-clock-check"></i></span>
+      <span class="icon"><i class="mdi mdi-check-bold"></i></span>
     </button>
   </td>
   <td data-label="Title">#TITLE#</td>

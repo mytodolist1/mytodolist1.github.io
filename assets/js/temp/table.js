@@ -46,8 +46,6 @@ export const formProfile = `
 `;
 
 export const navbarUser = `
-  <p class="menu-label"></p>
-  <div class="menu-list">
     <div class="menu-item">
       <div class="menu-content">
         <div class="is-user-avatar">
@@ -60,7 +58,6 @@ export const navbarUser = `
         </div>
       </div>
     </div>
-  </div>
 `;
 
 

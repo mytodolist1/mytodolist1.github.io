@@ -1,7 +1,7 @@
 //user
 export const formTodolist = `
   <td></td>
-  <td class="button">
+  <td data-label="Status" class="buttons is-left">
     <button class="button is-link is-outlined" type="button" onclick="doneTodo('#DONE#')">
       <span class="icon"><i class="mdi mdi-clock-check"></i></span>
     </button>
@@ -9,7 +9,7 @@ export const formTodolist = `
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
-  <td class="buttons is-left">
+  <td data-label="Action" class="buttons is-left">
       <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
         <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
       </a>

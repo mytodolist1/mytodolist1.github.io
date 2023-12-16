@@ -13,7 +13,7 @@ export const formTodolist = `
       <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button">
         <span class="icon"><i class="mdi mdi-eye-circle"></i></span>
       </a>
-      <button class="button" type="button is-dark is-outlined" onclick="deleteTodo('#DELETE#')">
+      <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')">
         <span class="icon"><i class="mdi mdi-delete-circle"></i></span>
       </button>
   </td>

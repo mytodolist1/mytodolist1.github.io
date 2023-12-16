@@ -31,7 +31,7 @@ const dataTodoDone  = (value) => {
     .replace("#DEADLINE#", value.todo.deadline)
     .replace("#TIME#", value.todo.time)
 
-    addInner("tableTodolist", data);
+    addInner("tableTodolistDone", data);
 }
 
 const responseData = (result) => {

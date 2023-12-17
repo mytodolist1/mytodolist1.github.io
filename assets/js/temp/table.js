@@ -10,6 +10,7 @@ export const formTodolist = `
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# #TIME#</td>
+  <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
   <td data-label="Action" class="buttons is-left">
       <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button"
       style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
@@ -20,6 +21,31 @@ export const formTodolist = `
         <span class="icon"><i class="mdi mdi-delete"></i></span>
       </button>
   </td>
+`;
+
+export const formTodoCategory = `
+  <td></td>
+  <td data-label="Title">#TITLE#</td>
+  <td data-label="Description">#DESCRIPTION#</td>
+  <td data-label="Deadline">#DEADLINE# #TIME#</td>
+`;
+
+export const titleCategory = `
+  <p data-label="Category">
+    <span class="icon"><i class="mdi mdi-pound"></i></span>
+    #CATEGORY#
+  </p>
+`;
+
+export const sidebarCategory = `
+  <li>
+    <a href="category.html?_id=#CATEGORY#">
+      <p>
+        <span class="icon"><i class="mdi mdi-minus"></i></span>
+        #CATEGORY#
+      </p>
+    </a>
+  </li>
 `;
 
 export const formTodolistDone = `

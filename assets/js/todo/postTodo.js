@@ -1,28 +1,20 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-// import { format12Hours, formatDate } from "../temp/timestamp.js";
+import { format12Hours, formatDate } from "../temp/timestamp.js";
 
 const insertTodo = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-insertTodo";
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
-    // const data = {
-    //     "title": getValue("title"),
-    //     "description": getValue("description"),
-    //     "deadline": formatDate(getValue("deadline")),
-    //     "time": format12Hours(getValue("time")),
-    //     "category": getValue("category"),
-    // };
-
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),
-        "deadline": getValue("deadline"),
-        "time": getValue("time"),
+        "deadline": formatDate(getValue("deadline")),
+        "time": format12Hours(getValue("time")),
         "category": getValue("category"),
-    }
+    };
 
     console.log("Data:", data);
 
@@ -30,6 +22,7 @@ const insertTodo = () => {
 };
 
 const responseData = (result) => {
+    console.log("Server Response:", result, result.data);
     if (result.status === true) {
         Swal.fire({
             icon: "success",

@@ -4,7 +4,6 @@ const hiddenMode = () => {
 
     const editIcon = document.getElementById('editIcon');
 
-    // Dapatkan elemen input berdasarkan ID
     const usernameInput = document.getElementById('username');
     const emailInput = document.getElementById('email');
 
@@ -15,4 +14,4 @@ const hiddenMode = () => {
     }
 };
 
-window.onload = handleEditMode;
+window.onload = hiddenMode;

@@ -33,6 +33,7 @@ const dataCategory  = (value) => {
 
 const responseData = (result) => {
     if (result.status === true) {
+        console.log(result.data);
         result.data.forEach(dataCategory);
     }
 }

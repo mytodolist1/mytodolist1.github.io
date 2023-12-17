@@ -27,6 +27,7 @@ const dataCategory  = (value) => {
     console.log(value.category);
     const data = sidebarCategory
     .replace("#CATEGORY#", value.category)
+    .replace("#IDCATEGORY#", value.category);
 
     addInner("categoryBar", data);
 

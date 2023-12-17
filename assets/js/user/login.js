@@ -1,25 +1,8 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
-
-function postWithToken(target_url, data, responseFunction) {
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    const requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: JSON.stringify(data),
-        redirect: 'follow'
-    };
-
-    fetch(target_url, requestOptions)
-        .then(response => response.text())
-        .then(result => responseFunction(JSON.parse(result)))
-        .catch(error => console.log('error', error));
-}
+import { postWithToken } from "../temp/component.js";
 
 const Login = () => {
-
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-login";
     
     const data = {
@@ -29,11 +12,9 @@ const Login = () => {
     };
 
     postWithToken(target_url, data, responseData);
-
 }
 
 const responseData = (result) => {
-
     console.log(result);
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);

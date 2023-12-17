@@ -1,18 +1,5 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-
-function postRegister(target_url, data, responseFunction) {
-
-    const requestOptions = {
-        method: 'POST',
-        body: JSON.stringify(data),
-        redirect: 'follow'
-    };
-
-    fetch(target_url, requestOptions)
-        .then(response => response.text())
-        .then(result => responseFunction(JSON.parse(result)))
-        .catch(error => console.log('error', error));
-}
+import { postRegister } from "../temp/component.js";
 
 const Register = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-register";

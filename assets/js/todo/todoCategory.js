@@ -25,7 +25,8 @@ const responseData = (result) => {
 
 getWithToken(target_url, responseData);
 
-const titleCategory = (value) => {
+const Category = (value) => {
+    console.log(value);
     const data = titleCategory
     .replace("#CATEGORY#", value.category)
 
@@ -34,7 +35,7 @@ const titleCategory = (value) => {
 
 const responsedData = (result) => {
     if (result.status === true) {
-        result.data.forEach(titleCategory);
+        result.data.forEach(Category);
     }
 }
 

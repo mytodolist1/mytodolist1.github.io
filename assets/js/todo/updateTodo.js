@@ -19,6 +19,7 @@ const updateTodo = () => {
         // "deadline": formattedDeadline,
         "deadline": getValue("deadline"),
         "time" : getValue("time"),
+        "category": getValue("category"),
     };
     
     putData(target_url, data, responseData);

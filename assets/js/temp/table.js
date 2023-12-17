@@ -39,7 +39,7 @@ export const titleCategory = `
 
 export const sidebarCategory = `
   <li data-label="Category">
-    <a href="category.html?category=#IDCATEGORY#" class="is-active has-icon">
+    <a href="category.html?category=#IDCATEGORY#" class="has-icon">
       <p>
         <span class="icon"><i class="mdi mdi-minus"></i></span>
         #CATEGORY#

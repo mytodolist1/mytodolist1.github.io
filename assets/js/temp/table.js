@@ -39,7 +39,6 @@ export const titleCategory = `
 
 export const sidebarCategory = `
   <li>
-    <a href="category.html?category=#CATEGORY#" type="button">
       <p>
         <span class="icon"><i class="mdi mdi-minus"></i></span>
         #CATEGORY#

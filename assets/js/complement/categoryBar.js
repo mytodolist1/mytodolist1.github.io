@@ -21,7 +21,7 @@ function getWithToken(target_url, responseFunction) {
 // const urlParams = new URLSearchParams(window.location.search);
 // const category = urlParams.get("category");
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodoByCategory";
+const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodo";
 
 const dataCategory  = (value) => {
     console.log(value.category);

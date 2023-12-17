@@ -79,18 +79,20 @@ export const formProfile = `
 `;
 
 export const navbarUser = `
+<a href="profile.html" class="has-icon">
   <div class="menu-item">
     <div class="menu-content">
-      <div class="is-user-avatar">
-        <img src="../assets/img/todolist.ico">
-      </div>
-      <div class="is-user-info">
-        <div class="is-user-name">
-          <span class="menu-item-label" id="username">#USERNAME#</span>
+        <div class="is-user-avatar">
+          <img src="../assets/img/todolist.ico">
         </div>
-      </div>
+        <div class="is-user-info">
+          <div class="is-user-name">
+            <span class="menu-item-label" id="username">#USERNAME#</span>
+          </div>
+        </div>
     </div>
   </div>
+</a>
 `;
 
 

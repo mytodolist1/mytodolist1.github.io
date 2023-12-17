@@ -1,15 +1,23 @@
 .menu-content {
     display: flex;
-    align-items: center; /* Pusatkan elemen secara vertikal */
+    align-items: center;
   }
   
   .is-user-avatar {
     padding-left: 10px;
     margin-right: 10px;
-    flex-shrink: 0; /* Biarkan gambar mempertahankan ukuran aslinya */
+    flex-shrink: 0;
   }
   
   .is-user-info {
     color: white;
     padding-left: 10px;
+  }
+
+  .custom-hr {
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    background-color: #000000;
+    border: none;
+    box-shadow: 0 0 10px 1px #000000;
   }

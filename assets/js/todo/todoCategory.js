@@ -28,6 +28,8 @@ const responseData = (result) => {
 
 getWithToken(target_url, responseData);
 
+const target_url1 = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getCategory";
+
 const Category = (value) => {
     console.log(value);
     const data = titleCategory
@@ -44,4 +46,4 @@ const responsedData = (result) => {
     }
 }
 
-getWithToken(target_url, responsedData);
+getWithToken(target_url1, responsedData);

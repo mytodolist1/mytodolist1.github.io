@@ -4,7 +4,7 @@ export const isiData = (results) => {
     {id: "description", path: "data.0.description"},
     {id: "deadline", path: "data.0.deadline"},
     {id: "time", path: "data.0.time"},
-    {id: "category", path: "data.0.category"},
+    {id: "category", path: "data.0.tags.category"},
   ];
 
 

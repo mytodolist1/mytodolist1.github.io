@@ -1,7 +1,7 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { format12Hours, formatDate } from "../complement/timestamp.js";
+import { format12Hours, formatDate } from "../temp/timestamp.js";
 
 const insertTodo = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-insertTodo";

@@ -47,7 +47,7 @@ export function postRegister(target_url, data, responseFunction) {
         .catch(error => console.log('error', error));
 }
 
-export function putData (target_url, data, responseFunction) {
+export function putData(target_url, data, responseFunction) {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
 

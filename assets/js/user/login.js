@@ -38,7 +38,7 @@ const responseData = (result) => {
                     window.location.href = "pages_user/list_kegiatan.html";
                     break;
                 default:
-                    console.error("Peran pengguna tidak dikenali:", role);
+                    console.error("Role pengguna tidak dikenali:", role);
             }
         });
 

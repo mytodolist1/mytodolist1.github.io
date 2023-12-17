@@ -5,12 +5,13 @@ import { getWithToken } from "../temp/component.js";
 // const urlParams = new URLSearchParams(window.location.search);
 // const category = urlParams.get("category");
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodo";
+const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getCategory";
 
 const dataCategory  = (value) => {
     console.log(value);
     const data = sidebarCategory
     .replace("#CATEGORY#", value.category)
+    .replace("#IDCATEGORY#", value.category);
 
     addInner("categoryBar", data);
 }

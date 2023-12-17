@@ -1,5 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { formTodoCategory } from "../temp/table.js";
+import { formTodoCategory, titleCategory } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -24,3 +24,18 @@ const responseData = (result) => {
 }
 
 getWithToken(target_url, responseData);
+
+const titleCategory = (value) => {
+    const data = titleCategory
+    .replace("#CATEGORY#", value.category)
+
+    addInner("category", data);
+}
+
+const responsedData = (result) => {
+    if (result.status === true) {
+        result.data.forEach(titleCategory);
+    }
+}
+
+getWithToken(target_url, responsedData);

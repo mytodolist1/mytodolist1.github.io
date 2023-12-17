@@ -24,6 +24,7 @@
   <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script> -->
   
   <!-- <script type="module" src="../assets/js/auth/redirect.js"></script> -->
+  <script type="module" src="../assets/js/complement/categoryBar.js"></script>
   <script type="module" src="../assets/js/user/UsernameNav.js"></script>
   <script type="module" src="../assets/js/complement/timeNow.js"></script>
 
@@ -65,6 +66,25 @@
             <span class="icon"><i class="mdi mdi-table"></i></span>
             <span class="menu-item-label">Todo List</span>
           </a>
+        </li>
+        <li>
+          <a class="has-icon has-dropdown-icon">
+            <span class="icon"><i class="mdi mdi-view-list"></i></span>
+            <span class="menu-item-label">Category</span>
+            <div class="dropdown-icon">
+              <span class="icon"><i class="mdi mdi-plus"></i></span>
+            </div>
+          </a>
+          <ul id="categoryBar">
+            <!-- <li>
+              <a href="#void">
+                <p>
+                  <span class="icon"><i class="mdi mdi-minus"></i></span>
+                  Priority
+                </p>
+              </a>
+            </li> -->
+          </ul>
         </li>
         <li>
           <a href="done.html" class="has-icon">
@@ -175,7 +195,7 @@
                   <label class="label">Category</label>
                 </div>
                 <div class="field-body">
-                  <p class="control">
+                  <p class="control is-expanded">
                     <input id="category" type="text" class="input" placeholder="Masukkan kategori kegiatan">
                   </p>
                 </div>

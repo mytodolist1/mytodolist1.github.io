@@ -1,4 +1,4 @@
-const hiddenMode = () => {
+document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const _id = urlParams.get("_id");
 
@@ -12,6 +12,4 @@ const hiddenMode = () => {
         usernameInput.readOnly = false;
         emailInput.readOnly = false;
     }
-};
-
-window.onload = hiddenMode;
+});

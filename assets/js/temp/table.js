@@ -55,6 +55,7 @@ export const formTodolistDone = `
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# #TIME#</td>
+  <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
 `;
 
 export const formProfile = `

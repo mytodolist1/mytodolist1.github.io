@@ -7,9 +7,8 @@ const category = urlParams.get("category");
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodoByCategory?category=" + category;
 
-const addedCategories = new Set();
-
 const dataTodo = (value) => {
+    console.log(value);
     const data = formTodoCategory
     .replace("#TITLE#", value.title)
     .replace("#DESCRIPTION#", value.description)
@@ -20,6 +19,8 @@ const dataTodo = (value) => {
 }
 
 const responseData = (result) => {
+    console.log(result);
+    console.log(result.data);
     if (result.status === true) {
         result.data.forEach(dataTodo);
     }
@@ -33,11 +34,11 @@ const Category = (value) => {
     .replace("#CATEGORY#", value.category)
 
     addInner("category", data);
-
-    addedCategories.add(value.category);
 }
 
 const responsedData = (result) => {
+    console.log(result);
+    console.log(result.data);
     if (result.status === true) {
         result.data.forEach(Category);
     }

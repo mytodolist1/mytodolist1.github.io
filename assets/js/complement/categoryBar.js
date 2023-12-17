@@ -4,8 +4,6 @@ import { getWithToken } from "../temp/component.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getCategory";
 
-const addedCategories = new Set();
-
 const dataCategory  = (value) => {
     console.log(value);
     const data = sidebarCategory
@@ -13,8 +11,6 @@ const dataCategory  = (value) => {
     .replace("#IDCATEGORY#", value.category);
 
     addInner("categoryBar", data);
-
-    addedCategories.add(value.category);
 }
 
 const responseData = (result) => {

@@ -31,7 +31,7 @@ export const formTodoCategory = `
 `;
 
 export const titleCategory = `
-  <p data-label="Category">
+  <p data-label="Category" style="color: red; font-weight: bold;">
     <span class="icon"><i class="mdi mdi-pound"></i></span>
     #CATEGORY#
   </p>

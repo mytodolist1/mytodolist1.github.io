@@ -39,6 +39,7 @@ export const titleCategory = `
 
 export const sidebarCategory = `
   <li>
+    <a href="category.html?category=#CATEGORY#">
       <p>
         <span class="icon"><i class="mdi mdi-minus"></i></span>
         #CATEGORY#
@@ -50,7 +51,7 @@ export const sidebarCategory = `
 export const formTodolistDone = `
   <td></td>
   <td data-label="Status" style="color: blue; font-weight: bold;">
-    <span class="icon"><i class="mdi mdi-check"></i></span>
+    <span class="icon"><i class="mdi mdi-check-bold"></i></span>
     #STATUS#
   </td>
   <td data-label="Time Clear">#CLEAR#</td>

@@ -13,6 +13,7 @@ const insertTodo = () => {
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
+        "category": getValue("category"),
     };
 
     postWithToken(target_url, tokenkey, tokenvalue, data, responseData);

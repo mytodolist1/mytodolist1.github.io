@@ -93,6 +93,7 @@ export const navbarUser = `
     </div>
   </div>
 </a>
+<hr class="custom-hr">
 `;
 
 

@@ -21,7 +21,7 @@ const dataTodo = (value) => {
 const Category = (value) => {
     console.log(value);
     const data = titleCategory
-        .replace("#CATEGORY#", value.category);
+        .replace("#CATEGORY#", value.tags.category);
 
     addInner("category", data);
 }

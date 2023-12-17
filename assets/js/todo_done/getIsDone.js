@@ -16,7 +16,7 @@ const dataTodoDone  = (value) => {
     .replace("#DESCRIPTION#", value.todo.description)
     .replace("#DEADLINE#", value.todo.deadline)
     .replace("#TIME#", value.todo.time)
-    .replace("#CATEGORY#", value.todo.category);
+    .replace("#CATEGORY#", value.todo.tags.category);
 
     addInner("tableTodolistDone", data);
 }

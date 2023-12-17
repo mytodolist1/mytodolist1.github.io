@@ -5,7 +5,6 @@ import { getWithToken } from "../temp/component.js";
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getCategory";
 
 const dataCategory  = (value) => {
-    console.log(value);
     const data = sidebarCategory
     .replace("#CATEGORY#", value.category)
     .replace("#IDCATEGORY#", value.category);
@@ -15,8 +14,7 @@ const dataCategory  = (value) => {
 
 const responseData = (result) => {
     if (result.status === true) {
-        console.log(result.category);
-        result.category.forEach(dataCategory);
+        result.datatags.forEach(dataCategory);
     }
 }
 

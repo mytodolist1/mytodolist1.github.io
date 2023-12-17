@@ -21,14 +21,15 @@ const insertTodo = () => {
         "description": getValue("description"),
         "deadline": getValue("deadline"),
         "time": getValue("time"),
-        "tags.category": getValue("category"),
+        "category": getValue("category"),
     }
+
+    console.log("Data:", data);
 
     postWithToken(target_url, tokenkey, tokenvalue, data, responseData);
 };
 
 const responseData = (result) => {
-    console.log("Server Response:", result, result.status);
     if (result.status === true) {
         Swal.fire({
             icon: "success",

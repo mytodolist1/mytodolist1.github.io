@@ -62,19 +62,19 @@ export const formTodolistDone = `
 `;
 
 export const formProfile = `
-  <a href="edit_user.html?_id=#IDEDIT#" class="control-icon" type="button">
+  <a href="edit_user.html?_id=#IDEDIT#" class="control-icon" type="button" id="editIcon">
     <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
   </a>
   <br>
   <label class="label">Username</label>
   <div class="control is-clearfix">
-    <input type="text" value="#USERNAME#" class="input" id="username">
+    <input type="text" value="#USERNAME#" class="input" id="username" readonly>
   </div>
   <br>
   <br>
   <label class="label">E-mail</label>
   <div class="control is-clearfix">
-    <input type="text" value="#EMAIL#" class="input" id="email">
+    <input type="text" value="#EMAIL#" class="input" id="email" readonly>
   </div>
 `;
 

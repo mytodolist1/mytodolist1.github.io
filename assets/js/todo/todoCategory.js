@@ -7,6 +7,8 @@ const category = urlParams.get("category");
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodoByCategory?category=" + category;
 
+const addedCategories = new Set();
+
 const dataTodo = (value) => {
     const data = formTodoCategory
     .replace("#TITLE#", value.title)
@@ -31,6 +33,8 @@ const Category = (value) => {
     .replace("#CATEGORY#", value.category)
 
     addInner("category", data);
+
+    addedCategories.add(value.category);
 }
 
 const responsedData = (result) => {

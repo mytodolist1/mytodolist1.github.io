@@ -10,40 +10,34 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 const dataTodo = (value) => {
     console.log(value);
     const data = formTodoCategory
-    .replace("#TITLE#", value.title)
-    .replace("#DESCRIPTION#", value.description)
-    .replace("#DEADLINE#", value.deadline)
-    .replace("#TIME#", value.time)
+        .replace("#TITLE#", value.title)
+        .replace("#DESCRIPTION#", value.description)
+        .replace("#DEADLINE#", value.deadline)
+        .replace("#TIME#", value.time);
 
     addInner("tableTodoCategory", data);
+}
+
+const Category = (value) => {
+    console.log(value);
+    const data = titleCategory
+        .replace("#CATEGORY#", value.category);
+
+    addInner("category", data);
 }
 
 const responseData = (result) => {
     console.log(result);
     console.log(result.data);
     if (result.status === true) {
-        result.data.forEach(dataTodo);
+        result.data.forEach((value, index) => {
+            if (index === 0) {
+                // Hanya panggil Category untuk data pertama
+                Category(value);
+            }
+            dataTodo(value);
+        });
     }
 }
 
 getWithToken(target_url, responseData);
-
-const target_url1 = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getCategory";
-
-const Category = (value) => {
-    console.log(value);
-    const data = titleCategory
-    .replace("#CATEGORY#", value.category)
-
-    addInner("category", data);
-}
-
-const responsedData = (result) => {
-    console.log(result);
-    console.log(result.data);
-    if (result.status === true) {
-        result.data.forEach(Category);
-    }
-}
-
-getWithToken(target_url1, responsedData);

@@ -7,7 +7,7 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 const dataCategory  = (value) => {
     const data = sidebarCategory
     .replace("#CATEGORY#", value.category)
-    .replace("#IDCATEGORY#", value.category);
+    .replace("#ID#", value.category);
 
     addInner("categoryBar", data);
 }

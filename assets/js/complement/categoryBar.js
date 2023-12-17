@@ -24,6 +24,7 @@ const category = urlParams.get("category");
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodoByCategory?category=" + category;
 
 const dataCategory  = (value) => {
+    console.log(value.category);
     const data = sidebarCategory
     .replace("#CATEGORY#", value.category)
 

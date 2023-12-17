@@ -32,9 +32,9 @@ export function setReminder(date, time) {
         });
     }, alertDifferences);
 
-    console.log("Current Date:", currentDate);
-    console.log("Deadline:", deadline);
-    console.log("Alert Reminder:", alertReminder);
-    console.log("Alert Difference:", alertDifference);
-    console.log("Alert Differences:", alertDifferences);
+    // console.log("Current Date:", currentDate);
+    // console.log("Deadline:", deadline);
+    // console.log("Alert Reminder:", alertReminder);
+    // console.log("Alert Difference:", alertDifference);
+    // console.log("Alert Differences:", alertDifferences);
 }

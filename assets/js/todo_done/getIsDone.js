@@ -10,7 +10,7 @@ const dataTodoDone  = (value) => {
     const timeclear = convertToLocal(timestamp);
 
     const data = formTodolistDone
-    .replace("#STATUS#", value.isdone ? "Done" : "clear")
+    .replace("#STATUS#", value.isdone ? "Done" : "Done")
     .replace("#CLEAR#", timeclear)
     .replace("#TITLE#", value.todo.title)
     .replace("#DESCRIPTION#", value.todo.description)

@@ -9,7 +9,8 @@ const insertTodo = () => {
     const tokenvalue = getCookie("Authorization");
 
     const storedCategory = sessionStorage.getItem("selectedCategory");
-    const category = getValue("category") || storedCategory;
+    const category = document.querySelector('input[id="category"]:checked');
+    category.value = storedCategory;
 
     console.log("category:", storedCategory);
 
@@ -18,7 +19,7 @@ const insertTodo = () => {
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        "category": category,
+        "category": category.value,
     };
 
     console.log("category3", category);
@@ -30,10 +31,6 @@ const insertTodo = () => {
 
 const responseData = (result) => {
     console.log("Server Response:", result, result.data);
-
-    // if (result.status === true) {
-    //     sessionStorage.removeItem("selectedCategory");
-    // }
 
     if (result.status === true) {
         sessionStorage.removeItem("selectedCategory");

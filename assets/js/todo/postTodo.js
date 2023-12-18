@@ -11,12 +11,12 @@ const insertTodo = () => {
     const storedCategory = sessionStorage.getItem("selectedCategory");
     const category = getValue("category");
 
-    if (category === null) {
+    if (storedCategory !== null) {
         category = storedCategory;
-        console.log("category:", category);
+        console.log("category1:", category);
     } else {
-        category = getValue("category");
-        console.log("category:", category);
+        category = "";
+        console.log("category2:", category);
     }
 
     console.log("category:", storedCategory);
@@ -28,6 +28,8 @@ const insertTodo = () => {
         "time": format12Hours(getValue("time")),
         "category": category,
     };
+
+    console.log("category3", category);
 
     console.log("Data:", data);
 

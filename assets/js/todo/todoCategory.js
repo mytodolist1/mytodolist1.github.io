@@ -1,6 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodoCategory, titleCategory } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
+import { setReminder } from "../temp/reminder.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
@@ -16,6 +17,8 @@ const dataTodo = (value) => {
         .replace("#TIME#", value.time);
 
     addInner("tableTodoCategory", data);
+
+    setReminder(value.deadline, value.time);
 }
 
 const Category = (value) => {

@@ -79,11 +79,9 @@ export const formProfile = `
 `;
 
 export const navbarUser = `
-<div class="is-user-info">
   <div class="is-user-name">
     <span class="menu-item-label" id="username">#USERNAME#</span>
   </div>
-</div>
 `;
 
 

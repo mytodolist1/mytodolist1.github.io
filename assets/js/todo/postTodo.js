@@ -9,7 +9,7 @@ const insertTodo = () => {
     const tokenvalue = getCookie("Authorization");
 
     const storedCategory = sessionStorage.getItem("selectedCategory");
-    const category = getValue("category") ? setValue("category", storedCategory) : "";
+    const category = setValue("category", storedCategory) ? getValue("category") : "";
 
     console.log("category:", storedCategory);
 

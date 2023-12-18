@@ -1,5 +1,5 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
-import { getValue } from "https://jscroot.github.io/element/croot.js";
+import { getValue, setValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { format12Hours, formatDate } from "../temp/timestamp.js";
 
@@ -9,8 +9,7 @@ const insertTodo = () => {
     const tokenvalue = getCookie("Authorization");
 
     const storedCategory = sessionStorage.getItem("selectedCategory");
-    const category = document.querySelector('input[id="category"]:checked');
-    category.value = storedCategory;
+    const category = setValue("category", storedCategory) ? getValue("category") : "";
 
     console.log("category:", storedCategory);
 
@@ -19,7 +18,7 @@ const insertTodo = () => {
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        "category": category.value,
+        "category": category,   
     };
 
     console.log("category3", category);

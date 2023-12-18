@@ -1,7 +1,7 @@
 export function convertToLocal(timestamp) {
-    var date = new Date(timestamp);
-    var localDate = date.toLocaleDateString();
-    var localTime = date.toLocaleTimeString();
+    const date = new Date(timestamp);
+    const localDate = date.toLocaleDateString();
+    const localTime = date.toLocaleTimeString();
     return localDate + ' ' + localTime;
 }
 

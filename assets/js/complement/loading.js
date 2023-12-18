@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var loaderWrapper = document.getElementById("loader-wrapper");
-  var contentWrapper = document.getElementById("app");
+  const loaderWrapper = document.getElementById("loader-wrapper");
+  const contentWrapper = document.getElementById("app");
 
   contentWrapper.style.display = 'none';
 

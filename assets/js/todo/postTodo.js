@@ -8,16 +8,15 @@ const insertTodo = () => {
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get("category");
-    const inputCategory = getValue("category");
+    const storedCategory = sessionStorage.getItem("selectedCategory");
+    const category = (storedCategory === null) ? getValue("category") : storedCategory;
 
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        "category": (inputCategory === "") ? category : inputCategory,
+        "category": category,
     };
 
     console.log("Data:", data);
@@ -27,6 +26,11 @@ const insertTodo = () => {
 
 const responseData = (result) => {
     console.log("Server Response:", result, result.data);
+
+    if (result.status === true) {
+        sessionStorage.removeItem("selectedCategory");
+    }
+
     if (result.status === true) {
         Swal.fire({
             icon: "success",

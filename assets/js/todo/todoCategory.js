@@ -14,7 +14,11 @@ const dataTodo = (value) => {
         .replace("#TITLE#", value.title)
         .replace("#DESCRIPTION#", value.description)
         .replace("#DEADLINE#", value.deadline)
-        .replace("#TIME#", value.time);
+        .replace("#TIME#", value.time)
+        .replace("#DONE#", value._id)
+        .replace("#IDEDIT#", value._id)
+        .replace("#DELETE#", value._id)
+        .replace("#IDHAPUS#", value._id);
 
     addInner("tableTodoCategory", data);
 

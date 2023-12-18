@@ -8,12 +8,16 @@ const insertTodo = () => {
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category");
+    const inputCategory = getValue("category");
+
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        "category": getValue("category"),
+        "category": (inputCategory === "") ? category : inputCategory,
     };
 
     console.log("Data:", data);

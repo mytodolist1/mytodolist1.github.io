@@ -15,10 +15,6 @@ const updateTodo = () => {
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        // "deadline": convertFormatDateToSlash(getValue("deadline")),
-        // "time": convertToFormat12Hours(getValue("time")),
-        // "deadline": getValue("deadline"),
-        // "time" : getValue("time"),
         "category": getValue("category"),
     };
     

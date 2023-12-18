@@ -28,11 +28,6 @@ export function convertFormatDateToStrip(inputDate) {
     return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
 }
 
-export function convertFormatDateToSlash(inputDate) {
-    const [year, month, day] = inputDate.split('-');
-    return `${month}/${day}/${year}`;
-}
-
 export function convertToFormat24Hours(time12Hour) {
     const [time, period] = time12Hour.split(' ');
     const [hour, minute] = time.split(':');
@@ -43,12 +38,4 @@ export function convertToFormat24Hours(time12Hour) {
       const hour24 = (hour === '12') ? '00' : String(Number(hour) + 12).padStart(2, '0');
       return `${hour24}:${minute}`;
     }
-}
-  
-export function convertToFormat12Hours(time24Hour) {
-    const [hour, minute] = time24Hour.split(':');
-    const hour12 = (Number(hour) % 12) || 12;
-    const period = (Number(hour) < 12) ? 'AM' : 'PM';
-  
-    return `${hour12}:${minute} ${period}`;
 }

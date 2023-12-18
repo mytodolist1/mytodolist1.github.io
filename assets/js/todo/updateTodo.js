@@ -1,5 +1,6 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { putData } from "../temp/component.js";
+import { convertFormatDateToSlash, convertToFormat12Hours } from "../temp/timestamp.js";
 
 const updateTodo = () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -12,8 +13,10 @@ const updateTodo = () => {
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),
-        "deadline": getValue("deadline"),
-        "time" : getValue("time"),
+        "deadline": convertFormatDateToSlash(getValue("deadline")),
+        "time": convertToFormat12Hours(getValue("time")),
+        // "deadline": getValue("deadline"),
+        // "time" : getValue("time"),
         "category": getValue("category"),
     };
     

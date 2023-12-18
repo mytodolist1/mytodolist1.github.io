@@ -1,3 +1,5 @@
+import { convertFormatDateToStrip, convertToFormat24Hours } from '../temp/timestamp.js';
+
 export const isiData = (results) => {
   const dataTodo = [
     {id: "title", path: "data.0.title"},
@@ -20,6 +22,13 @@ const getNestedValue = (obj, path, index, property) => {
     .split(".")
     .reduce((value, key) => (value && value[key] !== undefined ? value[key] : ""), obj);
 
+  if (property === "deadline") {
+    return convertFormatDateToStrip(value);
+  }
+
+  if (property === "time") {
+    return convertToFormat24Hours(value);
+  }
 
   if (
     Array.isArray(value) &&

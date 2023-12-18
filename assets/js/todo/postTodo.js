@@ -11,6 +11,9 @@ const insertTodo = () => {
     const storedCategory = sessionStorage.getItem("selectedCategory");
     const category = getValue("category") ? storedCategory : "";
 
+    console.log ("storedCategory:", storedCategory);
+    console.log("todoID:", category);
+
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),
@@ -27,11 +30,13 @@ const insertTodo = () => {
 const responseData = (result) => {
     console.log("Server Response:", result, result.data);
 
-    if (result.status === true) {
-        sessionStorage.removeItem("selectedCategory");
-    }
+    // if (result.status === true) {
+    //     sessionStorage.removeItem("selectedCategory");
+    // }
 
     if (result.status === true) {
+        sessionStorage.removeItem("selectedCategory");
+
         Swal.fire({
             icon: "success",
             title: "Insert Successful",

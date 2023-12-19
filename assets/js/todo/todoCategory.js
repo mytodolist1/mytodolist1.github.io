@@ -51,7 +51,10 @@ const responseData = (result) => {
 
 getWithToken(target_url, responseData);
 
-window.addEventListener('beforeunload', function() {
-    // Lakukan sesuatu sebelum halaman keluar (misalnya, hapus data dari sessionStorage)
-    sessionStorage.removeItem("selectedCategory");
+window.addEventListener('beforeunload', function(event) {
+    const targetPage = event.currentTarget.location.pathname;
+    
+    if (targetPage !== '/tambah_kegiatan.html') {
+        sessionStorage.removeItem("selectedCategory");
+    }
 });

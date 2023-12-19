@@ -13,7 +13,7 @@ const insertTodo = () => {
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        "category": getValue("category"), 
+        "tags.category": getValue("category"), 
     };
 
     console.log("category3", category);

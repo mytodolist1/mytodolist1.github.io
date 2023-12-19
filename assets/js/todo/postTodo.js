@@ -13,7 +13,7 @@ const insertTodo = () => {
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        "tags.category": getValue("category"), 
+        "category": getValue("category"), 
     };
 
     console.log("category3", category);
@@ -27,7 +27,7 @@ const responseData = (result) => {
     console.log("Server Response:", result, result.data);
 
     if (result.status === true) {
-        sessionStorage.removeItem("selectedCategory");
+        // sessionStorage.removeItem("selectedCategory");
 
         Swal.fire({
             icon: "success",

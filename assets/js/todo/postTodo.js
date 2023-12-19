@@ -9,7 +9,10 @@ const insertTodo = () => {
     const tokenvalue = getCookie("Authorization");
 
     const storedCategory = sessionStorage.getItem("selectedCategory");
-    const category = setValue("category", storedCategory) ? getValue("category") : "";
+    const categoryInput = document.getElementById("category");
+    if (storedCategory) {
+        setValue(categoryInput, storedCategory);
+    }
 
     console.log("category:", storedCategory);
 
@@ -18,7 +21,7 @@ const insertTodo = () => {
         "description": getValue("description"),
         "deadline": formatDate(getValue("deadline")),
         "time": format12Hours(getValue("time")),
-        "category": category,   
+        "category": getValue("category"), 
     };
 
     console.log("category3", category);

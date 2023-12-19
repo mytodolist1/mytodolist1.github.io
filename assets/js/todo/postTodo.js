@@ -8,14 +8,6 @@ const insertTodo = () => {
     const tokenkey = "Authorization";
     const tokenvalue = getCookie("Authorization");
 
-    const storedCategory = sessionStorage.getItem("selectedCategory");
-    const categoryInput = document.getElementById("category");
-    if (storedCategory) {
-        setValue(categoryInput, storedCategory);
-    }
-
-    console.log("category1", categoryInput);
-
     const data = {
         "title": getValue("title"),
         "description": getValue("description"),

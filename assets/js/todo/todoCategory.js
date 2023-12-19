@@ -51,8 +51,19 @@ const responseData = (result) => {
 
 getWithToken(target_url, responseData);
 
-const addIcon = document.querySelector('#btnAddTodo');
-addIcon.addEventListener('click', function() {
-    // Jangan hapus session storage jika klik ikon
-    sessionStorage.setItem("selectedCategory", category);
+window.addEventListener('beforeunload', function(event) {
+    const targetPage = window.location.pathname;
+
+    // Jika pengguna menekan ikon dengan ID 'btnAddTodo', simpan session storage
+    const addIcon = document.querySelector('#btnAddTodo');
+    if (addIcon && event.target === addIcon) {
+        sessionStorage.setItem("selectedCategory", category);
+    } else if (targetPage.includes('tambah_kegiatan.html')) {
+        // Jika pengguna sedang di halaman 'tambah_kegiatan.html', session storage tetap ada
+        sessionStorage.setItem("selectedCategory", category);
+    } else {
+        // Jika pengguna menekan elemen lain atau berpindah ke halaman lain, hapus session storage
+        sessionStorage.removeItem("selectedCategory");
+    }
 });
+

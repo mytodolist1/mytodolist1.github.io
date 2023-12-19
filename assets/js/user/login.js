@@ -6,8 +6,8 @@ const Login = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-login";
     
     const data = {
-        "username": getValue("username"),
-        "password": getValue("password"),
+        username : getValue("username"),
+        password : getValue("password"),
         // "role": getValue("role"),
     };
 

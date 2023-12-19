@@ -11,11 +11,13 @@ const updateTodo = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateTodo?_id=" + _id;
 
     const data = {
-        "title": getValue("title"),
-        "description": getValue("description"),
-        "deadline": formatDate(getValue("deadline")),
-        "time": format12Hours(getValue("time")),
-        "category": getValue("category"),
+        title : getValue("title"),
+        description : getValue("description"),
+        deadline : formatDate(getValue("deadline")),
+        time : format12Hours(getValue("time")),
+        tags : {
+            category : getValue("category"),
+        }
     };
     
     putData(target_url, data, responseData);

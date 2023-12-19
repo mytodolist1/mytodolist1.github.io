@@ -1,5 +1,5 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
-import { getValue, setValue } from "https://jscroot.github.io/element/croot.js";
+import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { format12Hours, formatDate } from "../temp/timestamp.js";
 
@@ -9,14 +9,14 @@ const insertTodo = () => {
     const tokenvalue = getCookie("Authorization");
 
     const data = {
-        "title": getValue("title"),
-        "description": getValue("description"),
-        "deadline": formatDate(getValue("deadline")),
-        "time": format12Hours(getValue("time")),
-        "category": getValue("tags.category"), 
+        title : getValue("title"),
+        description : getValue("description"),
+        deadline : formatDate(getValue("deadline")),
+        time : format12Hours(getValue("time")),
+        tags : {
+            category : getValue("category"),
+        } 
     };
-
-    console.log("category3", category);
 
     console.log("Data:", data);
 
@@ -27,7 +27,7 @@ const responseData = (result) => {
     console.log("Server Response:", result, result.data);
 
     if (result.status === true) {
-        // sessionStorage.removeItem("selectedCategory");
+        sessionStorage.removeItem("selectedCategory");
 
         Swal.fire({
             icon: "success",

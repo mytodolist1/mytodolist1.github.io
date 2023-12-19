@@ -8,8 +8,8 @@ const updateUser = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateUser?_id=" + _id;
 
     const data = {
-        "username": getValue("username"),
-        "email": getValue("email"),
+        username : getValue("username"),
+        password : getValue("password"),
     };
     
     putData(target_url, data, responseData);

@@ -6,20 +6,7 @@ import { setReminder } from "../temp/reminder.js";
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
-const storedCategory = sessionStorage.getItem("selectedCategory");
-
-// Cek apakah pengguna sedang berpindah ke halaman tambah_kegiatan.html
-const targetPage = window.location.pathname;
-
-// Jika pengguna tidak berpindah ke halaman tambah_kegiatan.html dan session storage tidak kosong, hapus session storage
-if (targetPage !== '/tambah_kegiatan.html' && storedCategory) {
-    sessionStorage.removeItem("selectedCategory");
-}
-
-// Jika session storage kosong, tetapkan nilainya
-if (!storedCategory && targetPage !== '/tambah_kegiatan.html') {
-    sessionStorage.setItem("selectedCategory", category);
-}
+sessionStorage.getItem("selectedCategory");
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodoByCategory?category=" + category;
 

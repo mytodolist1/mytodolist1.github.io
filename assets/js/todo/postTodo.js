@@ -14,7 +14,7 @@ const insertTodo = () => {
         setValue(categoryInput, storedCategory);
     }
 
-    console.log("category:", storedCategory);
+    console.log("category1", categoryInput);
 
     const data = {
         "title": getValue("title"),

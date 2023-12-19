@@ -51,7 +51,7 @@ const responseData = (result) => {
 
 getWithToken(target_url, responseData);
 
-window.addEventListener('unload', function() {
+window.addEventListener('beforeunload', function() {
     // Lakukan sesuatu sebelum halaman keluar (misalnya, hapus data dari sessionStorage)
     sessionStorage.removeItem("selectedCategory");
 });

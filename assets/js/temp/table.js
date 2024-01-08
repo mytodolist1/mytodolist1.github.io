@@ -128,7 +128,6 @@ export const formTodolistAdmin = `
 
 export const formUserAll = `
   <td></td>
-  <td data-label="UID">#UID#</td>
   <td data-label="Email">#EMAIL#</td>
   <td data-label="Username">#USERNAME#</td>
   <td data-label="Role">#ROLE#</td>

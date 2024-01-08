@@ -114,7 +114,7 @@ export const formTodolistAdmin = `
   <td></td>
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
-  <td data-label="Deadline">#DEADLINE# + #TIME#</td>
+  <td data-label="Deadline">#DEADLINE# #TIME#</td>
   <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
   <td data-label="TimeStamp">
     <div class="w-auto p-2">
@@ -123,6 +123,7 @@ export const formTodolistAdmin = `
     </div>
   </td>
   <td data-label="UID">#UID#</td>
+  <td data-label="Username">#USERNAME#</td>
 `;
 
 export const formUserAll = `

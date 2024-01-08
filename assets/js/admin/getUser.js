@@ -1,5 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { formUserAll } from "../table.js";
+import { formUserAll } from "../temp/table.js";
 
 function get(target_url, responseFunction) {
 

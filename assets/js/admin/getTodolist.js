@@ -24,7 +24,7 @@ const dataTodolist  = (value) => {
     .replace("#TIME#", value.time)
     .replace("#CREATEDAT#", value.timestamp.createdat)
     .replace("#UPDATEDAT#", value.timestamp.updatedat)
-    .replace("#UID#", value.user.username)
+    .replace("#UID#", value.user.uid)
 
     addInner("tableTodolistAdmin", data);
 }

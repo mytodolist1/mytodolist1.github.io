@@ -7,8 +7,8 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 const dataTodoNew  = (value) => {
     console.log("value: ", value);
 
-    latest = value.change[value.change.length - 1];
-    datanew = latest.datanew;
+    const latest = value.change[value.change.length - 1];
+    const datanew = latest.datanew;
 
     const data = formTodolist1
     .replace("#TITLE#", datanew.title)

@@ -7,7 +7,7 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 const dataTodoOld  = (value) => {
     console.log("value: ", value);
 
-    dataold = value.change[0].dataold;
+    const dataold = value.change[0].dataold;
 
     console.log("dataold: ", dataold);
 

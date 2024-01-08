@@ -1,5 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { formTodolist } from "../temp/table.js";
+import { formTodolist1 } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-logTodo";
@@ -11,7 +11,7 @@ const dataTodoOld  = (value) => {
 
     console.log("dataold: ", dataold);
 
-    const data = formTodolist
+    const data = formTodolist1
     .replace("#TITLE#", dataold.title)
     .replace("#DESCRIPTION#", dataold.description)
     .replace("#DEADLINE#", dataold.deadline)
@@ -36,7 +36,7 @@ const dataTodoNew  = (value) => {
     const latest = value.change[value.change.length - 1];
     const datanew = latest.datanew;
 
-    const data = formTodolist
+    const data = formTodolist1
     .replace("#TITLE#", datanew.title)
     .replace("#DESCRIPTION#", datanew.description)
     .replace("#DEADLINE#", datanew.deadline)

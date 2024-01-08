@@ -51,8 +51,3 @@ const responseData = (result) => {
 
 getWithToken(target_url, responseData);
 
-window.addEventListener('beforeunload', function() {
-
-    sessionStorage.removeItem("selectedCategory");
-});
-

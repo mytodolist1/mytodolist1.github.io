@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="has-aside-left has-aside-mobile-transition has-aside-expanded">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile - MYTODOLIST</title>
+    <link rel="shortcut icon" href="../assets/img/todolist.ico" type="image/x-icon">
+
+  <!-- Bulma is included -->
+  <link rel="stylesheet" href="../assets/css/comp/main.css">
+  <link rel="stylesheet" href="../assets/css/comp/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/loading.css">
+  <link rel="stylesheet" href="../assets/css/profile.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+  <script src="../assets/js/complement/loading.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script> -->
+
+  <!-- <script type="module" src="../assets/js/auth/redirect.js"></script> -->
+  <script type="module" src="../assets/js/user/getUser.js"></script>
+  <script type="module" src="../assets/js/complement/UsernameNav.js"></script>
+
+</head>
+<body>
+
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div id="loader"></div>
+    <div id="loader"></div>
+    <div id="loader"></div>
+    <div id="loader"></div>
+  </div>
+
+<div id="app">
+  <aside class="aside is-placed-left is-expanded">
+    <div class="menu is-menu-main">
+      <p class="menu-label"></p>
+      <div class="menu-list">
+        <a href="profile.html" class="has-icon">
+          <div class="menu-item">
+            <div class="menu-content">
+              <div class="is-user-avatar">
+                <img src="../assets/img/todolist.ico">
+              </div>
+              <div class="is-user-info" id="usernameNav">
+                <!-- <div class="is-user-name">
+                  <span class="menu-item-label" id="username">#USERNAME#</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </a>
+        <hr class="custom-hr">
+      </div>
+      
+      <div class="menu is-menu-main">
+        <p class="menu-label">General</p>
+        <ul class="menu-list">
+          <li>
+            <a href="todolist_user.html" class="has-icon">
+              <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+              <span class="menu-item-label">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+  
+        <p class="menu-label">Todolist</p>
+        <ul class="menu-list">
+          <!-- <li>
+            <a href="#" class="has-icon">
+              <span class="icon"><i class="mdi mdi-table"></i></span>
+              <span class="menu-item-label">Todo List User</span>
+            </a>
+          </li> -->
+          <li>
+            <a href="users.html" class="has-icon">
+              <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
+              <span class="menu-item-label">Users</span>
+            </a>
+          </li>
+        </ul>
+  
+        <p class="menu-label">Personal</p>
+        <ul class="menu-list">
+          <li>
+            <a href="profile.html" class="has-icon is-active">
+              <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+              <span class="menu-item-label">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="has-icon" id="btnLogout" type="button">
+              <span class="icon"><i class="mdi mdi-logout"></i></span>
+              <span class="menu-item-label">Logout</span>
+            </a>
+          </li>
+        </ul>
+  
+        <p class="menu-label">Contact</p>
+        <ul class="menu-list">
+          <li>
+            <a href="https://wa.me/6282317150681?text=HAI KAK" class="has-icon">
+              <span class="icon"><i class="mdi mdi-whatsapp"></i></span>
+              <span class="menu-item-label">WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </aside>
+
+  <section class="hero is-info is-fullheight">
+    <div class="hero-head">
+      <div class="container">
+        <a class="is-hidden-desktop jb-aside-mobile-toggle">
+          <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+        </a>
+        <br>
+        <br>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="card tile is-child">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="icon"><i class="mdi mdi-account default"></i></span>
+                  Profile User
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="is-user-avatar image has-max-width is-aligned-center">
+                  <img src="../assets/img/todolist.png" alt="hehe">
+                </div>
+                <hr>
+
+                <div id="profileUser" class="field">
+                  <!-- <a href="#" class="control-icon">
+                    <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
+                  </a>
+                  <br>
+                  <label class="label">Username</label>
+                  <div class="control is-clearfix">
+                    <input type="text" readonly value="hehe" class="input">
+                  </div>
+                  <br>
+                  <br>
+                  <label class="label">E-mail</label>
+                  <div class="control is-clearfix">
+                    <input type="text" readonly value="hehe@gmail.com" class="input">
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="sample-modal" class="modal">
+    <div class="modal-background jb-modal-close"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Confirm action</p>
+        <button class="delete jb-modal-close" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>This will permanently delete <b>Some Object</b></p>
+        <p>This is sample modal</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button jb-modal-close">Cancel</button>
+        <button class="button is-danger jb-modal-close">Delete</button>
+      </footer>
+    </div>
+    <button class="modal-close is-large jb-modal-close" aria-label="close"></button>
+  </div>
+</div>
+
+<!-- Scripts below are for demo only -->
+<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/comp/main.js"></script>
+<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/logout.js"></script> -->
+
+<script type="module" src="../assets/js/complement/hidden.js"></script>
+<script type="module" src="../assets/js/auth/logout.js"></script>
+
+<!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+</body>
+</html>

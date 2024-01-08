@@ -1,18 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formUserAll } from "../temp/table.js";
-
-function get(target_url, responseFunction) {
-
-    const requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-    };
-
-    fetch(target_url, requestOptions)
-        .then(response => response.text())
-        .then(result => responseFunction(JSON.parse(result)))
-        .catch(error => console.log('error', error));
-}
+import { getWithToken } from "../temp/component.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
 
@@ -32,4 +20,4 @@ const responseData = (result) => {
     }
 }
 
-get(target_url, responseData);
+getWithToken(target_url, responseData);

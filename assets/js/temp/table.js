@@ -115,6 +115,7 @@ export const formTodolistAdmin = `
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# + #TIME#</td>
+  <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
   <td data-label="TimeStamp">
     <div class="w-auto p-2">
       <p class="mb-1"><b>Created At:</b> #CREATEDAT#</p>

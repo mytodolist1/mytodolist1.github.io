@@ -5,11 +5,14 @@ import { getWithToken } from "../temp/component.js";
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodolist";
 
 const dataTodolist  = (value) => {
+    console.log("value: ", value);
+    console.log("value.user.uid: ", value.user.username, value.user.uid);
     const data = formTodolistAdmin
     .replace("#TITLE#", value.title)
     .replace("#DESCRIPTION#", value.description)
     .replace("#DEADLINE#", value.deadline)
     .replace("#TIME#", value.time)
+    .replace("#CATEGORY#", value.tags.category)
     .replace("#CREATEDAT#", value.timestamps.createdat)
     .replace("#UPDATEDAT#", value.timestamps.updatedat)
     .replace("#UID#", value.user.uid)

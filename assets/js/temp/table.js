@@ -123,7 +123,6 @@ export const formTodolistAdmin = `
     </div>
   </td>
   <td data-label="UID">#UID#</td>
-  <td data-label="Username">#USERNAME#</td>
 `;
 
 export const formUserAll = `

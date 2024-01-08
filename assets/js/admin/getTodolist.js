@@ -6,10 +6,11 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 
 const getAllUsers = async () => {
     const response = await fetch("https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist");
-    const users = await response.json();
+    const responseData = await response.json();
+    const users = responseData.data; // Asumsikan data berada di properti "data"
+    console.log("All Users:", users);
     return users;
 };
-
 const findUserByUid = (users, uid) => {
     return users.find(user => user.uid === uid);
 };

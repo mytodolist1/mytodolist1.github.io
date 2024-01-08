@@ -1,5 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
-import { formTodolistAdmin } from "../table.js";
+import { formTodolistAdmin } from "../temp/table.js";
 
 function get(target_url, responseFunction) {
 

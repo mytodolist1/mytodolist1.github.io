@@ -8,8 +8,11 @@ const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net
 const dataTodolist  = (value) => {
     console.log("value: ", value);
 
-    const ts = value.timestamps;
-    const timestamp = convertToLocal(ts);
+    const timestamp1 = value.timestamps.createdat;
+    const createdAt = convertToLocal(timestamp1);
+
+    const timestamp2 = value.timestamps.updatedat;
+    const updatedAt = convertToLocal(timestamp2);
 
     const data = formTodolistAdmin
     .replace("#TITLE#", value.title)
@@ -17,8 +20,8 @@ const dataTodolist  = (value) => {
     .replace("#DEADLINE#", value.deadline)
     .replace("#TIME#", value.time)
     .replace("#CATEGORY#", value.tags.category)
-    .replace("#CREATEDAT#", timestamp.createdat)
-    .replace("#UPDATEDAT#", timestamp.updatedat)
+    .replace("#CREATEDAT#", createdAt)
+    .replace("#UPDATEDAT#", updatedAt)
     .replace("#UID#", value.user.uid)
 
     addInner("tableTodolistAdmin", data);

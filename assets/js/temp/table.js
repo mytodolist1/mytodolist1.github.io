@@ -23,6 +23,14 @@ export const formTodolist = `
   </td>
 `;
 
+export const formTodolist1 = `
+  <td></td>
+  <td data-label="Title">#TITLE#</td>
+  <td data-label="Description">#DESCRIPTION#</td>
+  <td data-label="Deadline">#DEADLINE# #TIME#</td>
+  <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
+`;
+
 export const formTodoCategory = `
   <td></td>
   <td data-label="Status" class="buttons is-left">

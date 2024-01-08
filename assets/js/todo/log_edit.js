@@ -8,7 +8,7 @@ const dataTodoOld  = (value) => {
     console.log("value: ", value);
 
     dataold = value.change[0].dataold;
-    const data = formTodolist
+    const data = formTodolist1
     .replace("#TITLE#", dataold.title)
     .replace("#DESCRIPTION#", dataold.description)
     .replace("#DEADLINE#", dataold.deadline)
@@ -33,7 +33,7 @@ const dataTodoNew  = (value) => {
     latest = value.change[value.change.length - 1];
     datanew = latest.datanew;
 
-    const data = formTodolist
+    const data = formTodolist1
     .replace("#TITLE#", datanew.title)
     .replace("#DESCRIPTION#", datanew.description)
     .replace("#DEADLINE#", datanew.deadline)

@@ -1,11 +1,15 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodolistAdmin } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
+import { convertToLocal } from "../temp/timestamp.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodolist";
 
 const dataTodolist  = (value) => {
     console.log("value: ", value);
+
+    const ts = value.timestamps;
+    const timestamp = convertToLocal(ts);
 
     const data = formTodolistAdmin
     .replace("#TITLE#", value.title)
@@ -13,8 +17,8 @@ const dataTodolist  = (value) => {
     .replace("#DEADLINE#", value.deadline)
     .replace("#TIME#", value.time)
     .replace("#CATEGORY#", value.tags.category)
-    .replace("#CREATEDAT#", value.timestamps.createdat)
-    .replace("#UPDATEDAT#", value.timestamps.updatedat)
+    .replace("#CREATEDAT#", timestamp.createdat)
+    .replace("#UPDATEDAT#", timestamp.updatedat)
     .replace("#UID#", value.user.uid)
 
     addInner("tableTodolistAdmin", data);

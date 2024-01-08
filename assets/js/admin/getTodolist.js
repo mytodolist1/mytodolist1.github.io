@@ -4,12 +4,22 @@ import { getWithToken } from "../temp/component.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodolist";
 
+const getAllUsers = async () => {
+    const response = await fetch("https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist");
+    const users = await response.json();
+    return users;
+};
+
+const findUserByUid = (users, uid) => {
+    return users.find(user => user.uid === uid);
+};
+
 const dataTodolist = async (value) => {
     console.log("value: ", value);
 
     const allUsers = await getAllUsers();
 
-    const foundUser = findUserByUID(allUsers, value.user.uid);
+    const foundUser = findUserByUid(allUsers, value.user.uid);
 
     if (foundUser) {
         const data = formTodolistAdmin
@@ -20,8 +30,8 @@ const dataTodolist = async (value) => {
             .replace("#CATEGORY#", value.tags.category)
             .replace("#CREATEDAT#", value.timestamps.createdat)
             .replace("#UPDATEDAT#", value.timestamps.updatedat)
-            .replace("#UID#", foundUser.uid)
-            .replace("#USERNAME#", foundUser.username);
+            .replace("#UID#", value.user.uid)
+            .replace("#USERNAME#", foundUser.username); // Menggunakan informasi username dari informasi pengguna yang ditemukan
 
         addInner("tableTodolistAdmin", data);
     } else {
@@ -36,14 +46,3 @@ const responseData = (result) => {
 };
 
 getWithToken(target_url, responseData);
-
-// Fungsi untuk mendapatkan data pengguna
-const getAllUsers = async () => {
-    const response = await fetch("https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist");
-    const users = await response.json();
-    return users;
-};
-
-const findUserByUID = (users, uid) => {
-    return users.find(user => user.uid === uid);
-};

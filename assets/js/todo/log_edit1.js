@@ -8,6 +8,9 @@ const dataTodoOld  = (value) => {
     console.log("value: ", value);
 
     dataold = value.change[0].dataold;
+
+    console.log("dataold: ", dataold);
+
     const data = formTodolist1
     .replace("#TITLE#", dataold.title)
     .replace("#DESCRIPTION#", dataold.description)

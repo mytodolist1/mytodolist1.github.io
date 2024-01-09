@@ -6,6 +6,7 @@ const Register = () => {
     
     const data = {
         email : getValue("email"),
+        phonemumber : getValue("phonemumber"),
         username : getValue("username"),
         password : getValue("password"),
         confirmpassword : getValue("confirmpassword"),
@@ -16,15 +17,16 @@ const Register = () => {
 
 const responseData = (result) => {
 
-    const pesan = "Saya sudah register dengan username " + getValue("username") + " di MyTodoList";
-
     if (result.status === true) {
+
+
+
         Swal.fire({
             icon: "success",
             title: "Register Successful",
             text: result.message,
         }).then(() => {
-            window.location.href = "https://wa.me/6282317150681?text= " + pesan;
+            window.location.href = "login.html";
         });
     } else {
         Swal.fire({

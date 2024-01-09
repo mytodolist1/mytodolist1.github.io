@@ -6,7 +6,7 @@ const Register = () => {
     
     const data = {
         email : getValue("email"),
-        phonemumber : getValue("phonemumber"),
+        phonenumber : getValue("phonenumber"),
         username : getValue("username"),
         password : getValue("password"),
         confirmpassword : getValue("confirmpassword"),

@@ -25,7 +25,7 @@ const responseData = (result) => {
             title: "Register Successful",
             text: result.message,
         }).then(() => {
-            window.SendWa = SendWa;
+            window.location.href = "login.html";
         });
     } else {
         Swal.fire({

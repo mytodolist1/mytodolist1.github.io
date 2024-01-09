@@ -1,11 +1,11 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { postWithToken } from "../temp/component.js";
 
-const SendWa = () => {
+export const SendWa = () => {
     const url = "https://us-central1-mytodolist-402507.cloudfunctions.net/webhook";
 
     const data = {
-        phonenumber: getValue("phonenumber"),
+        username : getValue("username"),
     };
 
     postWithToken(url, data, responseData);
@@ -26,5 +26,3 @@ const responseData = (result) => {
         });
     }
 }
-
-window.SendWa = SendWa;

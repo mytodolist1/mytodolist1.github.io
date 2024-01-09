@@ -1,6 +1,5 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { postRegister } from "../temp/component.js";
-import { SendWa } from "./webhook.js";
 
 const Register = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-register";

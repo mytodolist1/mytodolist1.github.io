@@ -9,10 +9,13 @@ const SendWa = () => {
         phonenumber : getValue("phonenumber"),
     };
 
+    console.log(data);
+
     postWithToken(url, data, responseData);
 }
 
 const responseData = (result) => {
+    console.log(result);
     Swal.fire({
         icon: "warning",
         title: "Sedang Mengirimkan Pesan",

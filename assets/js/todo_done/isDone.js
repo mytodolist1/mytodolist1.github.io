@@ -20,7 +20,7 @@ const doneTodo = async (IDHAPUS) => {
     myHeaders.append("Authorization", token);
 
     const target_url =
-      "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-isDone?_id=" + _id;
+      "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-tododone?_id=" + _id;
 
     try {
       const response = await fetch(target_url, {

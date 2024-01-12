@@ -8,10 +8,10 @@ const category = urlParams.get("category");
 
 sessionStorage.setItem("selectedCategory", category);
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodoByCategory?category=" + category;
+const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-category?category=" + category;
 
 const dataTodo = (value) => {
-    console.log(value);
+    // console.log(value);
     const data = formTodoCategory
         .replace("#TITLE#", value.title)
         .replace("#DESCRIPTION#", value.description)
@@ -28,7 +28,7 @@ const dataTodo = (value) => {
 }
 
 const Category = (value) => {
-    console.log(value);
+    // console.log(value);
     const data = titleCategory
         .replace("#CATEGORY#", value.tags.category);
 
@@ -36,8 +36,8 @@ const Category = (value) => {
 }
 
 const responseData = (result) => {
-    console.log(result);
-    console.log(result.data);
+    // console.log(result);
+    // console.log(result.data);
     if (result.status === true) {
         result.data.forEach((value, index) => {
             if (index === 0) {

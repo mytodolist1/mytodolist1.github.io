@@ -1,6 +1,6 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
-import { postWithToken } from "../temp/component.js";
+import { postLogin } from "../temp/component.js";
 
 const Login = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-login";
@@ -11,11 +11,11 @@ const Login = () => {
         // "role": getValue("role"),
     };
 
-    postWithToken(target_url, data, responseData);
+    postLogin(target_url, data, responseData);
 }
 
 const responseData = (result) => {
-    console.log(result);
+    // console.log(result);
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);
 
@@ -25,15 +25,15 @@ const responseData = (result) => {
           text: result.message,
         }).then(() => {
 
-            console.log(result.data);
+            // console.log(result.data);
             const role = result.data[0].role;
             switch (role) {
                 case "admin":
                     window.location.href = "pages_admin/todolist_user.html";
                     break;
-                case "user admin":
-                    window.location.href = "pages_user_admin/admin_user.html";
-                    break;
+                // case "user admin":
+                //     window.location.href = "pages_user_admin/admin_user.html";
+                //     break;
                 case "user":
                     window.location.href = "pages_user/list_kegiatan.html";
                     break;

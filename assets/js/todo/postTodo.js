@@ -1,12 +1,9 @@
-import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { format12Hours, formatDate } from "../temp/timestamp.js";
+import { postWithToken } from "../temp/component.js";
 
 const insertTodo = () => {
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-insertTodo";
-    const tokenkey = "Authorization";
-    const tokenvalue = getCookie("Authorization");
+    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
 
     const data = {
         title : getValue("title"),
@@ -18,13 +15,13 @@ const insertTodo = () => {
         } 
     };
 
-    console.log("Data:", data);
+    // console.log("Data:", data);
 
-    postWithToken(target_url, tokenkey, tokenvalue, data, responseData);
+    postWithToken(target_url, data, responseData);
 };
 
 const responseData = (result) => {
-    console.log("Server Response:", result, result.data);
+    // console.log("Server Response:", result, result.data);
 
     if (result.status === true) {
         sessionStorage.removeItem("selectedCategory");

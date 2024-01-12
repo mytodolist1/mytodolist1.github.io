@@ -3,7 +3,7 @@ import { formTodolistDone } from "../temp/table.js";
 import { convertToLocal } from "../temp/timestamp.js";
 import { getWithToken } from "../temp/component.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getIsDone";
+const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-tododone";
 
 const dataTodoDone  = (value) => {
     const timestamp = value.timeclear;

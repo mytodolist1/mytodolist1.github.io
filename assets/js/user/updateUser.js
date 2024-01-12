@@ -1,18 +1,18 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { putData } from "../temp/component.js";
+import { putWithToken } from "../temp/component.js";
 
 const updateUser = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const _id = urlParams.get("_id");
 
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateUser?_id=" + _id;
+    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?_id=" + _id;
 
     const data = {
         username : getValue("username"),
         password : getValue("password"),
     };
     
-    putData(target_url, data, responseData);
+    putWithToken(target_url, data, responseData);
 };
 
 const responseData = (result) => {

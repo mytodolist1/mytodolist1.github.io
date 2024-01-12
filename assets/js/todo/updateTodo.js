@@ -1,14 +1,14 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { putData } from "../temp/component.js";
+import { putWithToken } from "../temp/component.js";
 import { format12Hours, formatDate } from "../temp/timestamp.js";
 
 const updateTodo = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const _id = urlParams.get("_id");
 
-    console.log("todoID:", _id);
+    // console.log("todoID:", _id);
 
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-updateTodo?_id=" + _id;
+    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
 
     const data = {
         title : getValue("title"),
@@ -20,13 +20,13 @@ const updateTodo = () => {
         }
     };
     
-    putData(target_url, data, responseData);
+    putWithToken(target_url, data, responseData);
 
-    console.log("Data:", data);
+    // console.log("Data:", data);
 };
 
 const responseData = (result) => {
-    console.log("Server Response:", result, result.status);
+    // console.log("Server Response:", result, result.status);
     if (result.status === true) {
         Swal.fire({
             icon: "success",

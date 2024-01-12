@@ -3,10 +3,10 @@ import { formTodolist } from "../temp/table.js";
 import { setReminder } from "../temp/reminder.js";
 import { getWithToken } from "../temp/component.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodo";
+const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
 
 const dataTodo  = (value) => {
-    console.log("value: ", value);
+    // console.log("value: ", value);
     const data = formTodolist
     .replace("#TITLE#", value.title)
     .replace("#DESCRIPTION#", value.description)
@@ -24,7 +24,7 @@ const dataTodo  = (value) => {
 }
 
 const responseData = (result) => {
-    console.log("result: ", result);
+    // console.log("result: ", result);
     if (result.status === true) {
         result.data.forEach(dataTodo);
     }

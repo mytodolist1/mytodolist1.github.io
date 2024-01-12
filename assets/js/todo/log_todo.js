@@ -5,11 +5,11 @@ import { getWithToken } from "../temp/component.js";
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-logTodo";
 
 const dataTodoOld  = (value) => {
-    console.log("value: ", value);
+    // console.log("value: ", value);
 
     const dataold = value.change[0].dataold;
 
-    console.log("dataold: ", dataold);
+    // console.log("dataold: ", dataold);
 
     const data = formTodolist1
     .replace("#TITLE#", dataold.title)
@@ -22,7 +22,7 @@ const dataTodoOld  = (value) => {
 }
 
 const responseDataOld = (result) => {
-    console.log("result: ", result);
+    // console.log("result: ", result);
     if (result.status === true) {
         result.data.forEach(dataTodoOld);
     }
@@ -31,7 +31,7 @@ const responseDataOld = (result) => {
 getWithToken(target_url, responseDataOld);
 
 const dataTodoNew  = (value) => {
-    console.log("value: ", value);
+    // console.log("value: ", value);
 
     const latest = value.change[value.change.length - 1];
     const datanew = latest.datanew;
@@ -47,7 +47,7 @@ const dataTodoNew  = (value) => {
 }
 
 const responseDataNew = (result) => {
-    console.log("result: ", result);
+    // console.log("result: ", result);
     if (result.status === true) {
         result.data.forEach(dataTodoNew);
     }

@@ -1,7 +1,7 @@
 import { convertFormatDateToStrip, convertToFormat24Hours } from '../temp/timestamp.js';
 
 export const isiData = (results) => {
-  console.log("isiData:", results);
+  // console.log("isiData:", results);
   const dataTodo = [
     {id: "title", path: "data.0.title"},
     {id: "description", path: "data.0.description"},

@@ -2,22 +2,25 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { putWithToken } from "../temp/component.js";
 
 const updateUser = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const username = urlParams.get("username");
+    const username = getValue("username1");
 
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
 
     const data = {
-        password : getValue("newPassword"),
-        confirmpassword : getValue("confirmPassword"),
+        password : getValue("newpass"),
+        confirmpassword : getValue("confirmpass"),
     };
 
-    console.log(data);
+    const change = document.getElementById('change');
+    change.classList.add('is-loading');
     
     putWithToken(target_url, data, responseData);
 };
 
 const responseData = (result) => {
+    const change = document.getElementById('change');
+    change.classList.remove('is-loading');
+
     if (result.status === true) {
         Swal.fire({
             icon: "success",
@@ -35,11 +38,11 @@ const responseData = (result) => {
     }
 }
 
-const btnUpdates = document.getElementById("btnUpdate");
+const change = document.getElementById("change");
 
-// btnUpdates.addEventListener("click", updateUser);
+// change.addEventListener("click", updateUser);
 
-btnUpdates.addEventListener("click", () => {
+change.addEventListener("click", () => {
     console.log("button aktif");
     updateUser();
   });

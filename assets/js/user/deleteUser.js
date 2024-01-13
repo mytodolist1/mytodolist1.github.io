@@ -1,8 +1,8 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { getValue } from "https://jscroot.github.io/element/croot.js";
+import { deleteCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const deleteUser = async () => {
-  const username = getValue("username");
+const deleteUser = async (USERHAPUS) => {
+  const username = USERHAPUS;
   const token = getCookie("Authorization");
 
   const isConfirmed = await Swal.fire({
@@ -34,9 +34,12 @@ const deleteUser = async () => {
         await Swal.fire({
           icon: "success",
           title: "Akun berhasil dihapus",
-          showConfirmButton: false,
+          text: result.message,
+        }).then(() => {
+            deleteCookie("Authorization");
+            window.location.href = "../login.html";
         });
-        location.reload();
+
       } else {
         throw new Error("Request failed with status: " + response.status);
       }

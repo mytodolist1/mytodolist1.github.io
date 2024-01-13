@@ -12,12 +12,16 @@ const updateUser = () => {
         email : getValue("email"),
     };
 
-    console.log(data);
+    const btnUpdate = document.getElementById('btnUpdate');
+    btnUpdate.classList.add('is-loading');
     
     putWithToken(target_url, data, responseData);
 };
 
 const responseData = (result) => {
+    const btnUpdate = document.getElementById('btnUpdate');
+    btnUpdate.classList.remove('is-loading');
+
     if (result.status === true) {
         Swal.fire({
             icon: "success",

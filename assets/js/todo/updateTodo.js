@@ -19,6 +19,9 @@ const updateTodo = () => {
             category : getValue("category"),
         }
     };
+
+    const btnUpdate = document.getElementById('btnUpdate');
+    btnUpdate.classList.add('is-loading');
     
     putWithToken(target_url, data, responseData);
 
@@ -26,7 +29,9 @@ const updateTodo = () => {
 };
 
 const responseData = (result) => {
-    // console.log("Server Response:", result, result.status);
+    const btnUpdate = document.getElementById('btnUpdate');
+    btnUpdate.classList.remove('is-loading');
+
     if (result.status === true) {
         Swal.fire({
             icon: "success",

@@ -101,12 +101,10 @@ export const formProfile = `
   <div class="control is-clearfix">
     <input type="text" value="#EMAIL#" class="input" readonly />
   </div>
-  <br>
-  <div class="button-icon">
-    <a href="changepass.html?username=#USER#" type="button" class="button is-dark">
-      <span>Change Password</span>
-    </a>
-  </div>
+`;
+
+export const modalHapus = `
+<button class="button is-black jb-modal-close" onclick="deleteUser('#HAPUS#')">Delete</button>
 `;
 
 export const navbarUser = `
@@ -114,7 +112,6 @@ export const navbarUser = `
     <span class="menu-item-label" id="username">#USERNAME#</span>
   </div>
 `;
-
 
 //admin
 export const formTodolistAdmin = `

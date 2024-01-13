@@ -21,9 +21,13 @@
   <!-- js -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
-  <script src="../assets/js/complement/loading.js"></script>
-  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script> -->
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.9/auth/redirect.js"></script> -->
+  <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.9/complement/loading.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.9/complement/categoryBar.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.9/complement/UsernameNav.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.0/user/getUsr.js"></script> -->
 
+  <!-- <script src="../assets/js/complement/loading.js"></script> -->
   <!-- <script type="module" src="../assets/js/auth/redirect.js"></script> -->
   <script type="module" src="../assets/js/complement/categoryBar.js"></script>
   <script type="module" src="../assets/js/user/getUser.js"></script>
@@ -173,17 +177,21 @@
                   <div class="control is-clearfix">
                     <input type="text" readonly value="hehe@gmail.com" class="input">
                   </div> -->
-                  <!-- <br>
-                  <div class="button-icon">
-                    <a href="changepass.html" type="button" class="button is-dark">
-                      <span>Change Password</span>
-                    </a>
-                  </div> -->
                 </div>
-                <div class="button-icon">
-                  <button class="button is-dark jb-modal" data-target="sample-modal">
-                    <span>Delete Account</span>
-                  </button>
+                <div style="text-align: right;">
+                  <div class="button-icon" style="display: inline-block;">
+                      <!-- <a href="changepass.html" type="button" class="button is-dark">
+                          <span>Change Password</span>
+                      </a> -->
+                    <button class="button is-dark jb-modal" data-target="edit-modal">
+                      <span>Change Password</span>
+                    </button>
+                  </div>
+                  <div class="button-icon" style="display: inline-block;">
+                    <button class="button is-dark is-outlined jb-modal" data-target="hapus-modal">
+                      <span>Delete Account</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -193,11 +201,12 @@
     </div>
   </section>
 
-  <div id="sample-modal" class="modal">
+  <!-- modal delete account -->
+  <div id="hapus-modal" class="modal">
     <div class="modal-background jb-modal-close"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Confirm action</p>
+        <p class="modal-card-title"><b>Delete Account</b></p>
         <button class="delete jb-modal-close" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
@@ -206,19 +215,55 @@
           <input type="text" class="input" id="username">
         </div>
       </section>
-      <footer class="modal-card-foot">
-        <button class="button is-danger jb-modal-close" onclick="deleteUser()">Delete</button>
+      <footer class="modal-card-foot" id="hapus">
+        <!-- <button class="button is-danger jb-modal-close" onclick="deleteUser()">Delete</button> -->
       </footer>
     </div>
     <button class="modal-close is-large jb-modal-close" aria-label="close"></button>
   </div>
+
+  <!-- modal change password -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-background jb-modal-close"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title"><b>Change Password</b></p>
+        <button class="delete jb-modal-close" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p><i>*) Inputkan Username Anda</i></p>
+        <label class="label">Username</label>
+        <div class="control is-clearfix">
+          <input type="text" class="input" id="username1">
+        </div>
+        <br>
+        <p><i>*) Inputkan Password Baru Anda</i></p>
+        <label class="label">New Password</label>
+        <div class="control is-clearfix">
+          <input type="password" class="input" id="newpass">
+        </div>
+        <label class="label">Confirm Password</label>
+        <div class="control is-clearfix">
+          <input type="password" class="input" id="confirmpass">
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-black" id="change">Change</button>
+        <button class="button is-black is-outlined jb-modal-close">Cancel</button>
+      </footer>
+    </div>
+    <button class="modal-close is-large jb-modal-close" aria-label="close"></button>
+  </div>
+
 </div>
 
 <!-- Scripts below are for demo only -->
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/comp/main.js"></script>
-<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/logout.js"></script> -->
+<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.9/main/main.js"></script>
+<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.9/auth/logout.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.9/user/changepass.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.0/user/deleteUsr.js"></script> -->
 
-<!-- <script type="module" src="../assets/js/complement/hidden.js"></script> -->
+<script type="module" src="../assets/js/user/changepass.js"></script>
 <script type="module" src="../assets/js/user/deleteUser.js"></script>
 <script type="module" src="../assets/js/auth/logout.js"></script>
 

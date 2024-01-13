@@ -1,13 +1,16 @@
 export const isiData = (results) => {
     const dataUser = [
-      {id: "username", path: "data.0.username"},
+      {id: "username1", path: "data.0.username"},
       {id: "email", path: "data.0.email"},
     ];
+
+    console.log(results);
   
     dataUser.forEach(({ id, path, index, property }) => {
       console.log(`Updating element with ID ${id} with data from path ${path}`);
       const value = getNestedValue(results, path, index, property);
-      inputElement.value = value;
+      const element = document.getElementById(id);
+      element.value = value;
     });
   }
   
@@ -26,5 +29,3 @@ export const isiData = (results) => {
   
     return value;
   };
-  
-    

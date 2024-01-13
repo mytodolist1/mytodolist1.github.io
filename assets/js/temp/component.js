@@ -31,7 +31,7 @@ export function postRegister(target_url, data, responseFunction) {
         .catch(error => console.log('error', error));
 }
 
-export function postWithToken(target_url, FormData, responseFunction) {
+export function postWithToken(target_url, data, responseFunction) {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
 
@@ -63,19 +63,6 @@ export function getWithToken(target_url, responseFunction) {
         .then(result => responseFunction(result))
         .catch(error => console.log('error', error));
 }
-
-export function get(target_url, responseFunction) {
-
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-  
-    fetch(target_url, requestOptions)
-      .then((response) => response.text())
-      .then((result) => responseFunction(JSON.parse(result)))
-      .catch((error) => console.log("error", error));
-  }
 
 export function putWithToken(target_url, data, responseFunction) {
     const myHeaders = new Headers();

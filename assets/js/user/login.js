@@ -11,10 +11,17 @@ const Login = () => {
         // "role": getValue("role"),
     };
 
+    const btnLogin = document.getElementById('btnLogin');
+    btnLogin.classList.add('is-loading');
+
     postLogin(target_url, data, responseData);
 }
 
 const responseData = (result) => {
+
+    const btnLogin = document.getElementById('btnLogin');
+    btnLogin.classList.remove('is-loading');
+
     // console.log(result);
     if (result.status === true) {
         setCookieWithExpireHour("Authorization", result.token, 2);

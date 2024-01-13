@@ -11,11 +11,17 @@ const Register = () => {
         password : getValue("password"),
         confirmpassword : getValue("confirmpassword"),
     };
+
+    const btnRegister = document.getElementById('btnRegister');
+    btnRegister.classList.add('is-loading');
     
     postRegister(target_url, data, responseData);
 }
 
 const responseData = (result) => {
+
+    const btnRegister = document.getElementById('btnRegister');
+    btnRegister.classList.remove('is-loading');
 
     if (result.status === true) {
 

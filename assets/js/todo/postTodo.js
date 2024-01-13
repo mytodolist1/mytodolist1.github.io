@@ -15,13 +15,15 @@ const insertTodo = () => {
         } 
     };
 
-    // console.log("Data:", data);
+    const btnInsert = document.getElementById('btnInsert');
+    btnInsert.classList.add('is-loading');
 
     postWithToken(target_url, data, responseData);
 };
 
 const responseData = (result) => {
-    // console.log("Server Response:", result, result.data);
+    const btnInsert = document.getElementById('btnInsert');
+    btnInsert.classList.remove('is-loading');
 
     if (result.status === true) {
         sessionStorage.removeItem("selectedCategory");

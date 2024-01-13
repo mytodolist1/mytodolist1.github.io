@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="has-aside-left has-aside-mobile-transition has-aside-expanded">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo List - MYTODOLIST</title>
+  <link rel="shortcut icon" href="../assets/img/todolist.ico" type="image/x-icon">
+
+  <!-- Bulma is included -->
+  <link rel="stylesheet" href="../assets/css/comp/main.css">
+  <link rel="stylesheet" href="../assets/css/comp/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/loading.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+  <script src="../assets/js/complement/loading.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/redirect.js"></script> -->
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/getTodo.js"></script> -->
+
+  <!-- <script type="module" src="../assets/js/auth/redirect.js"></script> -->
+  <script type="module" src="../assets/js/admin/getTodolist.js"></script>
+
+  <script type="module" src="../assets/js/complement/UsernameNav.js"></script>
+</head>
+
+<body>
+
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div id="loader"></div>
+    <div id="loader"></div>
+    <div id="loader"></div>
+    <div id="loader"></div>
+  </div>
+
+<div id="app">
+  <aside class="aside is-placed-left is-expanded">
+    <div class="menu is-menu-main">
+      <p class="menu-label"></p>
+      <div class="menu-list">
+        <a href="profile.html" class="has-icon">
+          <div class="menu-item">
+            <div class="menu-content">
+              <div class="is-user-avatar">
+                <img src="../assets/img/todolist.ico">
+              </div>
+              <div class="is-user-info" id="usernameNav">
+                <!-- <div class="is-user-name">
+                  <span class="menu-item-label" id="username">#USERNAME#</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </a>
+        <hr class="custom-hr">
+      </div>
+
+    <div class="menu is-menu-main">
+      <p class="menu-label">General</p>
+      <ul class="menu-list">
+        <li>
+          <a href="todolist_user.html" class="has-icon">
+            <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+            <span class="menu-item-label">Dashboard</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="menu-label">Todolist</p>
+      <ul class="menu-list">
+        <!-- <li>
+          <a href="#" class="has-icon">
+            <span class="icon"><i class="mdi mdi-table"></i></span>
+            <span class="menu-item-label">Todo List User</span>
+          </a>
+        </li> -->
+        <li>
+          <a href="users.html" class="has-icon is-active">
+            <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
+            <span class="menu-item-label">Users</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="menu-label">Personal</p>
+      <ul class="menu-list">
+        <li>
+          <a href="profile.html" class="has-icon">
+            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+            <span class="menu-item-label">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="has-icon" id="btnLogout" type="button">
+            <span class="icon"><i class="mdi mdi-logout"></i></span>
+            <span class="menu-item-label">Logout</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="menu-label">Contact</p>
+      <ul class="menu-list">
+        <li>
+          <a href="https://wa.me/6282317150681?text=HAI KAK" class="has-icon">
+            <span class="icon"><i class="mdi mdi-whatsapp"></i></span>
+            <span class="menu-item-label">WhatsApp</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="hero is-info is-fullheight">
+    <div class="hero-head">
+      <div class="container">
+        <a class="is-hidden-desktop jb-aside-mobile-toggle">
+          <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+        </a>
+
+        <br>
+        <div class="card-header-title">
+          <h1 class="title">
+            <a href="todolist_user.html" class="button is-white">
+              <span>All</span>
+            </a>
+            <a href="log_todo.html" class="button is-white">
+              <span>Log Edit</span>
+            </a>
+          </h1>
+        </div>
+
+        <div class="card has-table">
+          <header class="card-header">
+            <div class="card-header-title">
+              <!-- <a href="tambah_kegiatan.html" type="button" class="button is-black is-outlined"
+              style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
+                <span class="icon"><i class="mdi mdi-plus-thick"></i></span>
+              </a> -->
+              <p>
+                <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+                User Old
+              </p>
+            </div>
+          </header>
+          
+          <div class="card-content">
+            <div class="b-table has-pagination">
+              <div class="table-wrapper has-mobile-cards">
+                <table class="table is-fullwidth is-striped is-hoverable is-fullwidth" id="tableTodolistOld">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th><b>Email</b></th>
+                      <th><b>Username</b></th>
+                      <th><b>Role</b></th>
+                    </tr>
+                  </thead>
+                  <!-- <tbody>
+                  <tr>
+                    <td class="is-checkbox-cell">
+                      <label class="b-checkbox checkbox">
+                        <input type="checkbox" value="false">
+                        <span class="check"></span>
+                      </label>
+                    </td>
+                    <td class="is-image-cell">
+                      <div class="image">
+                        <img src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg" class="is-rounded">
+                      </div>
+                    </td>
+                    <td data-label="Name">Rebecca Bauch</td>
+                    <td data-label="Company">Daugherty-Daniel</td>
+                    <td data-label="City">South Cory</td>
+                    <td data-label="Progress" class="is-progress-cell">
+                      <progress max="100" class="progress is-small is-primary" value="79">79</progress>
+                    </td>
+                    <td data-label="Created">
+                      <small class="has-text-grey is-abbr-like" title="Oct 25, 2020">Oct 25, 2020</small>
+                    </td>
+                    <td class="is-actions-cell">
+                      <div class="buttons is-right">
+                        <button class="button is-small is-primary jb-modal" data-target="edit-modal" type="button">
+                          <span class="icon"><i class="mdi mdi-eye"></i></span>
+                        </button>
+                        <button class="button is-dark is-outlined" style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;" type="button">
+                          <span class="icon"><i class="mdi mdi-clock-check"></i></span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody> -->
+                </table>
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+
+        <div class="card has-table">
+            <header class="card-header">
+              <div class="card-header-title">
+                <!-- <a href="tambah_kegiatan.html" type="button" class="button is-black is-outlined"
+                style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
+                  <span class="icon"><i class="mdi mdi-plus-thick"></i></span>
+                </a> -->
+                <p>
+                  <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+                  User New
+                </p>
+              </div>
+            </header>
+            
+            <div class="card-content">
+              <div class="b-table has-pagination">
+                <div class="table-wrapper has-mobile-cards">
+                  <table class="table is-fullwidth is-striped is-hoverable is-fullwidth" id="tableTodolistNew">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th><b>Email</b></th>
+                        <th><b>Username</b></th>
+                        <th><b>Role</b></th>
+                      </tr>
+                    </thead>
+                    <!-- <tbody>
+                    <tr>
+                      <td class="is-checkbox-cell">
+                        <label class="b-checkbox checkbox">
+                          <input type="checkbox" value="false">
+                          <span class="check"></span>
+                        </label>
+                      </td>
+                      <td class="is-image-cell">
+                        <div class="image">
+                          <img src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg" class="is-rounded">
+                        </div>
+                      </td>
+                      <td data-label="Name">Rebecca Bauch</td>
+                      <td data-label="Company">Daugherty-Daniel</td>
+                      <td data-label="City">South Cory</td>
+                      <td data-label="Progress" class="is-progress-cell">
+                        <progress max="100" class="progress is-small is-primary" value="79">79</progress>
+                      </td>
+                      <td data-label="Created">
+                        <small class="has-text-grey is-abbr-like" title="Oct 25, 2020">Oct 25, 2020</small>
+                      </td>
+                      <td class="is-actions-cell">
+                        <div class="buttons is-right">
+                          <button class="button is-small is-primary jb-modal" data-target="edit-modal" type="button">
+                            <span class="icon"><i class="mdi mdi-eye"></i></span>
+                          </button>
+                          <button class="button is-dark is-outlined" style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;" type="button">
+                            <span class="icon"><i class="mdi mdi-clock-check"></i></span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    </tbody> -->
+                  </table>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="edit-modal" class="modal">
+    <div class="modal-background jb-modal-close"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Edit Data</p>
+        <button class="delete jb-modal-close" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <!-- Form for editing data -->
+        <form id="edit-form">
+          <div class="field">
+            <label class="label">Title</label>
+            <div class="control">
+              <input class="input" type="text" id="titles" value="">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+              <textarea class="textarea" id="descriptions"></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Deadline</label>
+            <div class="control">
+              <input class="input" type="date" id="deadlines" value="">
+            </div>
+          </div>
+        </form>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button jb-modal-close">Cancel</button>
+        <!-- Button to save changes -->
+        <button id="btnUpdate" class="button is-success">Update</button>
+      </footer>
+    </div>
+    <button class="modal-close is-large jb-modal-close" aria-label="close"></button>
+  </div>
+</div>
+
+<!-- Scripts below are for demo only -->
+<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/comp/main.js"></script>
+<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/deleteTodo.js"></script> -->
+<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.0.8/js/logout.js"></script> -->
+
+<!-- <script type="text/javascript" src="./assets/js/comp/main.js"></script> -->
+<!-- <script type="module" src="../assets/js/deleteTodo.js"></script> -->
+<script type="module" src="../assets/js/auth/logout.js"></script>
+
+<!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+</body>
+</html>

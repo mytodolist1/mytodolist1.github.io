@@ -3,13 +3,13 @@ import { putWithToken } from "../temp/component.js";
 
 const updateUser = () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const _id = urlParams.get("_id");
+    const username = urlParams.get("username");
 
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?_id=" + _id;
+    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
 
     const data = {
-        username : getValue("username1"),
-        email : getValue("email"),
+        password : getValue("newPassword"),
+        confirmpassword : getValue("confirmPassword"),
     };
 
     console.log(data);

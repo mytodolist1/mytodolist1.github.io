@@ -1,4 +1,4 @@
-//user
+//todo user
 export const formTodolist = `
   <td></td>
   <td data-label="Status" class="buttons is-left">
@@ -85,6 +85,7 @@ export const formTodolistDone = `
   <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
 `;
 
+// profile user
 export const formProfile = `
   <a href="edit_user.html?_id=#IDEDIT#" class="control-icon" type="button" id="editIcon">
     <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
@@ -92,13 +93,19 @@ export const formProfile = `
   <br>
   <label class="label">Username</label>
   <div class="control is-clearfix">
-    <input type="text" value="#USERNAME#" class="input" id="username" readonly>
+    <input type="text" value="#USERNAME#" class="input" readonly />
   </div>
   <br>
   <br>
   <label class="label">E-mail</label>
   <div class="control is-clearfix">
-    <input type="text" value="#EMAIL#" class="input" id="email" readonly>
+    <input type="text" value="#EMAIL#" class="input" readonly />
+  </div>
+  <br>
+  <div class="button-icon">
+    <a href="changepass.html?username=#USER#" type="button" class="button is-dark">
+      <span>Change Password</span>
+    </a>
   </div>
 `;
 

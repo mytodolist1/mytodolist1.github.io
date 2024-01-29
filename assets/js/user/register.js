@@ -27,7 +27,7 @@ const responseData = (result) => {
 
         Swal.fire({
             icon: "success",
-            title: "Register Successful",
+            title: "Send to Whatsapp",
             text: result.message,
         }).then(() => {
             window.location.href = "login.html";

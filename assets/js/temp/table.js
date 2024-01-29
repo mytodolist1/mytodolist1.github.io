@@ -87,7 +87,7 @@ export const formTodolistDone = `
 
 // profile user
 export const formProfile = `
-  <a href="edit_user.html?_id=#IDEDIT#" class="control-icon" type="button" id="editIcon">
+  <a href="edit_user.html?_id=#IDEDIT#" class="control-icon" type="button">
     <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
   </a>
   <br>
@@ -99,7 +99,7 @@ export const formProfile = `
   <br>
   <label class="label">E-mail</label>
   <div class="control is-clearfix">
-    <input type="text" value="#EMAIL#" class="input" readonly />
+    <input type="email" value="#EMAIL#" class="input" readonly />
   </div>
 `;
 
@@ -126,12 +126,13 @@ export const formTodolistAdmin = `
       <p class="mb-1"><b>Updated At:</b> #UPDATEDAT#</p>
     </div>
   </td>
-  <td data-label="UID">#UID#</td>
+  <td data-label="Username">#USER#</td>
 `;
 
 export const formUserAll = `
   <td></td>
   <td data-label="Email">#EMAIL#</td>
+  <td data-label="Phone Number">#PHONE#</td>
   <td data-label="Username">#USERNAME#</td>
   <td data-label="Role">#ROLE#</td>
 `;

@@ -34,7 +34,7 @@ const deleteUser = async (USERHAPUS) => {
         await Swal.fire({
           icon: "success",
           title: "Akun berhasil dihapus",
-          text: result.message,
+          // text: result.message,
         }).then(() => {
             deleteCookie("Authorization");
             window.location.href = "../login.html";

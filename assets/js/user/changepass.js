@@ -2,7 +2,7 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { putWithToken } from "../temp/component.js";
 
 const updateUser = () => {
-    const username = getValue("username1");
+    const username = getValue("username");
 
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
 

@@ -9,9 +9,6 @@ const dataUser  = (value) => {
     .replace("#USERNAME#", value.username)
     .replace("#EMAIL#", value.email)
     .replace("#IDEDIT#", value._id)
-    .replace("#USER#", value.username)
-    .replace("#USERHAPUS#", value.username)
-    .replace("#HAPUS#", value.username);
 
     addInner("profileUser", data);
 

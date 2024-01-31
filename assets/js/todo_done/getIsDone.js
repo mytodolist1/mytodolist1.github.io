@@ -19,9 +19,14 @@ const dataTodoDone  = (value) => {
     .replace("#CATEGORY#", value.todo.tags.category);
 
     addInner("tableTodolistDone", data);
+
+    console.log(value);
+
+
 }
 
 const responseData = (result) => {
+    console.log("result: ", result);
     if (result.status === true) {
         result.data.forEach(dataTodoDone);
     }

@@ -20,7 +20,9 @@ const dataTodo  = (value) => {
 
     addInner("tableTodolist", data);
 
-    setReminder(value.deadline, value.time);
+    console.log(value);
+
+    setReminder(value.deadline, value.time, value.title, value.user.phonenumber);
 }
 
 const responseData = (result) => {

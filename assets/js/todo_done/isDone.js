@@ -1,7 +1,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const doneTodo = async (IDHAPUS) => {
-  const _id = IDHAPUS;
+const doneTodo = async (DONE) => {
+  const _id = DONE;
   const token = getCookie("Authorization");
 
   const isConfirmed = await Swal.fire({
@@ -15,7 +15,7 @@ const doneTodo = async (IDHAPUS) => {
   });
 
   if (isConfirmed.isConfirmed) {
-    // console.log("Confirmed:", isConfirmed.isConfirmed);
+    console.log("Confirmed:", isConfirmed.isConfirmed);
     const myHeaders = new Headers();
     myHeaders.append("Authorization", token);
 
@@ -30,9 +30,11 @@ const doneTodo = async (IDHAPUS) => {
       });
 
       if (response.ok) {
+        console.log("response:", response);
         await Swal.fire({
           icon: "success",
           title: "Task berhasil diseelsaikan",
+          text: response.message,
           showConfirmButton: false,
         });
         location.reload();

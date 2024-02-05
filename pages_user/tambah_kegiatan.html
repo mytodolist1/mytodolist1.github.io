@@ -145,7 +145,7 @@
             </p>
           </header>
           <div class="card-content">
-            <form method="post">
+            <form method="post" action="javascript:void(0)">
               <div class="field is-horizontal">
                 <div class="field-label is-normal">
                   <label class="label">Title</label>
@@ -194,6 +194,19 @@
                     <input id="time" type="time" class="input">
                   </p>
                 </div>
+              </div>
+
+              <hr>
+              <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                  <label class="label">File</label>
+                </div>
+                <div class="field-body">
+                  <p class="control">
+                    <input id="fileInput" type="file" class="input">
+                  </p>
+                </div>
+                <div id="filePreview"></div>
               </div>
 
               <hr>
@@ -262,10 +275,11 @@
 <!-- Scripts below are for demo only -->
 <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/main/main.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/auth/logout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/todo/postTodo.js"></script>
+<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/todo/postTodo.js"></script> -->
 
-<!-- <script type="module" src="../assets/js/todo/postTodo.js"></script>
-<script type="module" src="../assets/js/auth/logout.js"></script> -->
+<script type="module" src="../assets/js/todo/postTodo.js"></script>
+<script type="module" src="../assets/js/todo/previewFile.js"></script>
+<!-- <script type="module" src="../assets/js/auth/logout.js"></script> -->
 
 <!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">

@@ -5,22 +5,21 @@ import { postWithToken } from "../temp/component.js";
 const insertTodo = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
 
-    const data = {
-        title : getValue("title"),
-        description : getValue("description"),
-        deadline : formatDate(getValue("deadline")),
-        time : format12Hours(getValue("time")),
-        tags : {
-            category : getValue("category"),
-        }
-    };
-
-    console.log("Data:", data);
+    const fileInput = document.getElementById("fileInput");
+    const file = fileInput.files[0];
+    
+    const formData = new FormData();
+    formData.append("title", getValue("title"));
+    formData.append("description", getValue("description"));
+    formData.append("deadline", formatDate(getValue("deadline")));
+    formData.append("time", format12Hours(getValue("time")));
+    formData.append("category", getValue("category"));
+    formData.append("file", file);
 
     const btnInsert = document.getElementById('btnInsert');
     btnInsert.classList.add('is-loading');
 
-    postWithToken(target_url, data, responseData);
+    postWithToken(target_url, formData, responseData);
 };
 
 const getCurrentDate = () => {
@@ -44,7 +43,7 @@ const responseData = (result) => {
     btnInsert.classList.remove('is-loading');
     console.log("Result:", result);
     if (result.status === true) {
-        sessionStorage.removeItem("selectedCategory");
+        localStorage.removeItem("selectedCategory");
 
         Swal.fire({
             icon: "success",

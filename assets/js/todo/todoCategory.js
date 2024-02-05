@@ -6,7 +6,7 @@ import { setReminder } from "../temp/reminder.js";
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
-sessionStorage.setItem("selectedCategory", category);
+localStorage.setItem("selectedCategory", category);
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-category?category=" + category;
 
@@ -24,7 +24,7 @@ const dataTodo = (value) => {
 
     addInner("tableTodoCategory", data);
 
-    setReminder(value.deadline, value.time);
+    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.Username);
 }
 
 const Category = (value) => {

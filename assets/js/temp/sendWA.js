@@ -10,22 +10,22 @@ export function sendWhatsAppMessage(phonenumber, message) {
     };
 
     // Membuat objek XMLHttpRequest
-    const xhr = new XMLHttpRequest();
+    const req = new XMLHttpRequest();
 
     // Menetapkan metode dan URL permintaan
-    xhr.open('POST', url, true);
+    req.open('POST', url, true);
 
     // Menetapkan tipe konten permintaan
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('Token', token);
+    req.setRequestHeader('Content-Type', 'application/json');
+    req.setRequestHeader('Token',  token);
 
     // Menangani perubahan status permintaan
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                console.log(JSON.parse(xhr.responseText));
+    req.onreadystatechange = function () {
+        if (req.readyState === 4) {
+            if (req.status === 200) {
+                console.log(JSON.parse(req.responseText));
             } else {
-                console.error('Gagal mengirim pesan:', xhr.status, xhr.statusText);
+                console.error('Gagal mengirim pesan:', req.status, req.statusText);
             }
         }
     };
@@ -34,5 +34,5 @@ export function sendWhatsAppMessage(phonenumber, message) {
     const jsonData = JSON.stringify(data);
 
     // Mengirim permintaan dengan data JSON
-    xhr.send(jsonData);
+    req.send(jsonData);
 }

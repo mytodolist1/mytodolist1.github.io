@@ -1,31 +1,28 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { putWithToken } from "../temp/component.js";
+import { updateWithToken } from "../temp/component.js";
 import { format12Hours, formatDate } from "../temp/timestamp.js";
 
 const updateTodo = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const _id = urlParams.get("_id");
 
-    // console.log("todoID:", _id);
-
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
 
-    const data = {
-        title : getValue("title"),
-        description : getValue("description"),
-        deadline : formatDate(getValue("deadline")),
-        time : format12Hours(getValue("time")),
-        tags : {
-            category : getValue("category"),
-        }
-    };
+    const fileInput = document.getElementById("fileInput");
+    const file = fileInput.files[0];
+
+    const formData = new FormData();
+    formData.append("title", getValue("title"));
+    formData.append("description", getValue("description"));
+    formData.append("deadline", formatDate(getValue("deadline")));
+    formData.append("time", format12Hours(getValue("time")));
+    formData.append("category", getValue("category"));
+    formData.append("file", file);
 
     const btnUpdate = document.getElementById('btnUpdate');
     btnUpdate.classList.add('is-loading');
     
-    putWithToken(target_url, data, responseData);
-
-    // console.log("Data:", data);
+    updateWithToken(target_url, formData, responseData);
 };
 
 const responseData = (result) => {

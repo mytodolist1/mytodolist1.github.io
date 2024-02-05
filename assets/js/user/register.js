@@ -3,7 +3,7 @@ import { postRegister } from "../temp/component.js";
 
 const Register = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-register";
-    
+
     const data = {
         email : getValue("email"),
         phonenumber : getValue("phonenumber"),

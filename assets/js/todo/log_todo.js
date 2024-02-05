@@ -4,12 +4,11 @@ import { getWithToken } from "../temp/component.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-logTodo";
 
+const btnInsert = document.getElementById('logEditButton');
+btnInsert.classList.remove('is-outlined');
+
 const dataTodoOld  = (value) => {
-    // console.log("value: ", value);
-
     const dataold = value.change[0].dataold;
-
-    // console.log("dataold: ", dataold);
 
     const data = formTodolist1
     .replace("#TITLE#", dataold.title)
@@ -21,18 +20,7 @@ const dataTodoOld  = (value) => {
     addInner("tableTodolistOld", data);
 }
 
-const responseDataOld = (result) => {
-    // console.log("result: ", result);
-    if (result.status === true) {
-        result.data.forEach(dataTodoOld);
-    }
-}
-
-getWithToken(target_url, responseDataOld);
-
 const dataTodoNew  = (value) => {
-    // console.log("value: ", value);
-
     const latest = value.change[value.change.length - 1];
     const datanew = latest.datanew;
 
@@ -46,11 +34,11 @@ const dataTodoNew  = (value) => {
     addInner("tableTodolistNew", data);
 }
 
-const responseDataNew = (result) => {
-    // console.log("result: ", result);
+const responseData = (result) => {
     if (result.status === true) {
+        result.data.forEach(dataTodoOld);
         result.data.forEach(dataTodoNew);
     }
 }
 
-getWithToken(target_url, responseDataNew);
+getWithToken(target_url, responseData);

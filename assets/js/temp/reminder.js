@@ -1,6 +1,6 @@
 import { sendWhatsAppMessage } from "./sendWA.js";
 
-export function setReminder(date, time, title, phonenumber) {
+export function setReminder(date, time, title, phonenumber, username) {
   const currentDate = new Date().getTime();
   const deadline = new Date(date + " " + time).getTime();
 
@@ -9,7 +9,6 @@ export function setReminder(date, time, title, phonenumber) {
 
   const alertDifferences = deadline - currentDate;
 
-  // Fungsi untuk menampilkan pesan pada deadline reminder
   const showReminderMessage = () => {
       Swal.fire({
           icon: "info",
@@ -25,14 +24,12 @@ export function setReminder(date, time, title, phonenumber) {
                   showConfirmButton: false,
               });
 
-              // Kirim pesan WhatsApp di sini
-              const message = "Tugas kamu: " + title + " \nAkan masuk deadline dalam 10 menit lagi! Jangan lupa selesaikan!";
+              const message = `Halo User *${username}* \nTugas kamu: *${title}* \n\nAkan masuk deadline dalam 10 menit lagi! Jangan lupa selesaikan!`;
               sendWhatsAppMessage(phonenumber, message);
           }
       });
   };
 
-  // Fungsi untuk menampilkan pesan setelah melewati deadline
   const showDeadlinePassedMessage = () => {
       Swal.fire({
           icon: "warning",
@@ -41,14 +38,10 @@ export function setReminder(date, time, title, phonenumber) {
           showConfirmButton: false,
       });
 
-      // Kirim pesan WhatsApp di sini
-      const message = "Tugas kamu: " + title + " \nSudah melewati deadline! Jangan lupa selesaikan!";
+      const message = `Halo User *${username}* \nTugas kamu: *${title}* \n\nSudah melewati deadline! Jangan lupa selesaikan!`;
       sendWhatsAppMessage(phonenumber, message);
   };
 
-  // Set timeout untuk reminder 10 menit sebelum deadline
   setTimeout(showReminderMessage, alertDifference);
-
-  // Set timeout untuk pesan setelah melewati deadline
   setTimeout(showDeadlinePassedMessage, alertDifferences);
 }

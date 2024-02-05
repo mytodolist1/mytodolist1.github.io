@@ -3,7 +3,7 @@ export const formTodolist = `
   <td></td>
   <td data-label="Status" class="buttons is-left">
     <button class="button is-link is-outlined" type="button" onclick="doneTodo('#DONE#')"
-    style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
+    style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-left: 5px;">
       <span class="icon"><i class="mdi mdi-check-bold"></i></span>
     </button>
   </td>
@@ -11,10 +11,18 @@ export const formTodolist = `
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# #TIME#</td>
   <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
+  <td data-label="Document" style="color: red; font-weight: bold;">
+    <a href="#FILE#" target="_blank" type="button" title="#FILE1#" id="files"
+    style="margin-left: 15px; margin-top: -15px; display: flex;">
+      <span class="icon" style="font-size: 50px; display: inline-block;">
+        <i class="mdi mdi-file-pdf-box"></i>
+      </span>
+    </a>
+  </td>
   <td data-label="Action" class="buttons is-left">
       <a href="edit.html?_id=#IDEDIT#" class="button is-dark" data-todo-id="#IDHAPUS#" type="button"
       style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">
-        <span class="icon"><i class="mdi mdi-eye"></i></span>
+        <span class="icon"><i class="mdi mdi-pencil"></i></span>
       </a>
       <button class="button is-dark is-outlined" type="button" onclick="deleteTodo('#DELETE#')"
       style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">

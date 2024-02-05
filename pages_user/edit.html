@@ -19,7 +19,6 @@
 
   <!-- js -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/auth/redirect.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/complement/loading.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/complement/categoryBar.js"></script>
@@ -128,109 +127,152 @@
   </aside>
   
   <section class="hero is-info is-fullheight">
-    <div class="hero-head">
+    <div class="hero-body">
       <div class="container">
-        <a class="is-hidden-desktop jb-aside-mobile-toggle">
-          <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
-        </a>
-        <br>
-        <br>
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title">
-              <span class="icon"><i class="mdi mdi-ballot"></i></span>
-              Update Task
-            </p>
-          </header>
-          <div class="card-content">
-            <form method="put">
-              <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                  <label class="label">Title</label>
-                </div>
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control is-expanded">
-                      <input id="title" class="input" type="text" placeholder="Masukkan judul kegiatan">
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <hr>
-              <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                  <label class="label">Description</label>
-                </div>
-                <div class="field-body">
-                  <div class="field">
-                    <div class="control">
-                      <textarea id="description" class="textarea" placeholder="Masukkan deskripsi kegiatan"></textarea>
+        <div class="columns is-vcentered">
+          <a class="is-hidden-desktop jb-aside-mobile-toggle">
+            <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+          </a>
+          <br>
+          <br>
+          <div class="column is-half">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="icon"><i class="mdi mdi-ballot"></i></span>
+                  Update Task
+                </p>
+              </header>
+              <div class="card-content">
+                <form method="put">
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Title</label>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <hr>
-              <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                  <label class="label">Deadline</label>
-                </div>
-                <div class="field-body">
-                  <p class="control">
-                    <input id="deadline" type="date" class="input">
-                  </p>
-                </div>
-              </div>
-
-              <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                  <label class="label"></label>
-                </div>
-                <div class="field-body">
-                  <p class="control">
-                    <input id="time" type="time" class="input">
-                  </p>
-                </div>
-              </div>
-
-              <hr>
-              <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                  <label class="label">Category</label>
-                </div>
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control is-expanded">
-                      <input id="category" type="text" class="input" placeholder="Masukkan kategori kegiatan">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            
-              <hr>
-              <div class="field is-horizontal">
-                <div class="field-label">
-                  <!-- Left empty for spacing -->
-                </div>
-                <div class="field-body">
-                  <div class="field">
-                    <div class="field is-grouped">
-                      <div class="control">
-                        <button type="button" class="button is-dark" id="btnUpdate">
-                          <span>Update</span>
-                        </button>
-                      </div>
-                      <div class="control">
-                        <a href="list_kegiatan.html" type="button" class="button is-dark is-outlined">
-                          <span>Kembali</span>
-                        </a>
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control is-expanded">
+                          <input id="title" class="input" type="text" placeholder="Masukkan judul kegiatan">
+                        </p>
                       </div>
                     </div>
                   </div>
-                </div>
+
+                  <hr>
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Description</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="control">
+                          <textarea id="description" class="textarea" placeholder="Masukkan deskripsi kegiatan"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Deadline</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field is-narrow">
+                        <div class="field">
+                          <p class="control">
+                            <input id="deadline" type="date" class="input">
+                          </p>
+                        </div>
+                      </div>
+                      <div class="field is-narrow">
+                        <div class="field">
+                          <p class="control">
+                            <input id="time" type="time" class="input">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">File</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control">
+                          <input id="fileInput" type="file" class="input">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal">
+                      <label class="label">Category</label>
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control">
+                          <input id="category" type="text" class="input" placeholder="Masukkan kategori kegiatan">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <hr>
+                  <div class="field is-horizontal">
+                    <div class="field-label">
+                      <!-- Left empty for spacing -->
+                    </div>
+                    <div class="field-body">
+                      <div class="field">
+                        <div class="field is-grouped">
+                          <div class="control">
+                            <button type="button" class="button is-dark" id="btnUpdate">
+                              <span>Update</span>
+                            </button>
+                          </div>
+                          <div class="control">
+                            <a href="list_kegiatan.html" type="button" class="button is-dark is-outlined">
+                              <span>Kembali</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
-            </form>
+            </div>
+          </div>
+
+          <div class="column is-half">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="icon"><i class="mdi mdi-ballot"></i></span>
+                  Preview File
+                </p>
+              </header>
+              <div class="card-content">
+                <form method="put">
+                  <div class="field is-horizontal">
+                    <div class="field-label is-normal"></div>
+                    <div class="field-body">
+                      <div class="field">
+                        <p class="control is-expanded">
+                          <div id="filePreview"></div>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -260,13 +302,13 @@
 <!-- Scripts below are for demo only -->
 <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/main/main.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/auth/logout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/todo/fetchEditTodo.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/todo/updateTodo.js"></script>
+<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/todo/fetchEditTodo.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/todo/updateTodo.js"></script> -->
 
 <!-- <script type="text/javascript" src="./assets/js/comp/main.min.js"></script> -->
-<!-- <script type="module" src="../assets/js/todo/fetchEditTodo.js"></script>
+<script type="module" src="../assets/js/todo/fetchEditTodo.js"></script>
 <script type="module" src="../assets/js/todo/updateTodo.js"></script>
-<script type="module" src="../assets/js/auth/logout.js"></script> -->
+<!-- <script type="module" src="../assets/js/auth/logout.js"></script> -->
 
 <!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">

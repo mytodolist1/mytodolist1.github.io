@@ -31,14 +31,14 @@ export function postRegister(target_url, data, responseFunction) {
         .catch(error => console.log('error', error));
 }
 
-export function postWithToken(target_url, data, responseFunction) {
+export function postWithToken(target_url, FormData, responseFunction) {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", getCookie("Authorization"));
 
     const requestOptions = {
         method: 'POST',
         headers: myHeaders,
-        body: JSON.stringify(data),
+        body: FormData,
         redirect: 'follow'
     };
 
@@ -61,6 +61,23 @@ export function getWithToken(target_url, responseFunction) {
     fetch(target_url, requestOptions)
         .then(response => response.json())
         .then(result => responseFunction(result))
+        .catch(error => console.log('error', error));
+}
+
+export function updateWithToken(target_url, FormData, responseFunction) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", getCookie("Authorization"));
+
+    const requestOptions = {
+        method: 'PUT',
+        headers: myHeaders,
+        body: FormData,
+        redirect: 'follow'
+    };
+
+    fetch(target_url, requestOptions)
+        .then(response => response.text())
+        .then(result => responseFunction(JSON.parse(result)))
         .catch(error => console.log('error', error));
 }
 

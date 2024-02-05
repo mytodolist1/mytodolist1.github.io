@@ -28,7 +28,7 @@ const dataTodoNow  = (value) => {
 
     console.log(value);
 
-    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.Username);
+    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.username);
 }
 
 const responseData = (result) => {

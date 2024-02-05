@@ -50,6 +50,14 @@ export const formTodoCategory = `
   <td data-label="Title">#TITLE#</td>
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# #TIME#</td>
+  <td data-label="Document" style="color: red; font-weight: bold;">
+    <a href="#FILE#" target="_blank" type="button" title="#FILE1#" id="files"
+    style="margin-left: 15px; margin-top: -15px; display: flex;">
+      <span class="icon" style="font-size: 50px; display: inline-block;">
+        <i class="mdi mdi-file-pdf-box"></i>
+      </span>
+    </a>
+  </td>
   <td data-label="Action" class="buttons is-left">
     <a href="edit.html?_id=#IDEDIT#" class="button is-dark" type="button"
     style="border-radius: 50%; width: 30px; height: 30px; padding: 3px; margin-right: 10px;">

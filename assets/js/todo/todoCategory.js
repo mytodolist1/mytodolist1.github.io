@@ -17,6 +17,8 @@ const dataTodo = (value) => {
         .replace("#DESCRIPTION#", value.description)
         .replace("#DEADLINE#", value.deadline)
         .replace("#TIME#", value.time)
+        .replace("#FILE#", value.file)
+        .replace("#FILE1#", value.file)
         .replace("#DONE#", value._id)
         .replace("#IDEDIT#", value._id)
         .replace("#DELETE#", value._id)
@@ -24,7 +26,7 @@ const dataTodo = (value) => {
 
     addInner("tableTodoCategory", data);
 
-    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.Username);
+    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.username);
 }
 
 const Category = (value) => {

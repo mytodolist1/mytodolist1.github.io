@@ -2,6 +2,7 @@ import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodolistAdmin } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 import { convertToLocal } from "../temp/timestamp.js";
+import { hideLoading } from "../complement/loading.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodolist";
 
@@ -31,6 +32,7 @@ const responseData = (result) => {
     if (result.status === true) {
         result.data.forEach(dataTodolist);
     }
+    hideLoading();
 }
 
 getWithToken(target_url, responseData);

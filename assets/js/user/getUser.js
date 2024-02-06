@@ -1,6 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formProfile, modalHapus } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
+import { hideLoading } from "../complement/loading.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user";
 
@@ -29,9 +30,8 @@ const responseData = (result) => {
     if (result.status === true) {
         result.data.forEach(dataUser);
         result.data.forEach(modalDel);
-
-        // console.log(result);
     }
+    hideLoading();
 }
 
 getWithToken(target_url, responseData);

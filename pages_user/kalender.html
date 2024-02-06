@@ -4,34 +4,43 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edit Profile - MYTODOLIST</title>
-    <link rel="shortcut icon" href="../assets/img/todolist.ico" type="image/x-icon">
+  <title>Calendar - MYTODOLIST</title>
+  <link rel="shortcut icon" href="../assets/img/todolist.ico" type="image/x-icon">
 
   <!-- Bulma is included -->
   <link rel="stylesheet" href="../assets/css/comp/main.css">
   <link rel="stylesheet" href="../assets/css/comp/dashboard.css">
   <link rel="stylesheet" href="../assets/css/loading.css">
-  <link rel="stylesheet" href="../assets/css/profile.css">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/search.css">
+  <link rel="stylesheet" href="../assets/css/calendar.css">
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/evo-calendar@1.1.3/evo-calendar/css/evo-calendar.min.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/evo-calendar@1.1.3/evo-calendar/css/evo-calendar.midnight-blue.min.css'>
+
   <!-- js -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/evo-calendar@1.1.3/evo-calendar/js/evo-calendar.min.js'></script>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
-  <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/auth/redirect.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/auth/redirect.js"></script> -->
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/complement/loading.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/complement/categoryBar.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/complement/UsernameNav.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/todo/getTodo.js"></script> -->
 
   <!-- <script src="../assets/js/complement/loading.js"></script> -->
   <!-- <script type="module" src="../assets/js/auth/redirect.js"></script> -->
-  <!-- <script type="module" src="../assets/js/complement/categoryBar.js"></script>
-  <script type="module" src="../assets/js/complement/UsernameNav.js"></script> -->
-
+  <!-- <script type="module" src="../assets/js/complement/categoryBar.js"></script> -->
+  <!-- <script type="module" src="../assets/js/todo/getTodo.js"></script> -->
+  <!-- <script type="module" src="../assets/js/complement/UsernameNav.js"></script> -->
 </head>
+
 <body>
 
   <div id="loader-wrapper">
@@ -51,7 +60,7 @@
           <div class="menu-item">
             <div class="menu-content">
               <div class="is-user-avatar">
-                <img src="../assets/img/todolist.ico">
+                <img src="../assets/img/todolist.ico" alt="hehe">
               </div>
               <div class="is-user-info" id="usernameNav">
 
@@ -71,10 +80,10 @@
           </a>
         </li>
         <li>
-          <a href="kalender.html" class="has-icon">
-            <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
-            <span class="menu-item-label">Calendar</span>
-          </a>
+            <a href="kalender.html" class="has-icon is-active">
+              <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+              <span class="menu-item-label">Calendar</span>
+            </a>
         </li>
       </ul>
 
@@ -96,7 +105,7 @@
           </a>
           <ul id="categoryBar">
 
-          </ul>
+           </ul>
         </li>
         <li>
           <a href="done.html" class="has-icon">
@@ -109,7 +118,7 @@
       <p class="menu-label">Personal</p>
       <ul class="menu-list">
         <li>
-          <a href="profile.html" class="is-active has-icon">
+          <a href="profile.html" class="has-icon">
             <span class="icon"><i class="mdi mdi-account-circle"></i></span>
             <span class="menu-item-label">Profile</span>
           </a>
@@ -135,100 +144,21 @@
   </aside>
 
   <section class="hero is-info is-fullheight">
-    <div class="hero-head">
-      <div class="container">
-        <a class="is-hidden-desktop jb-aside-mobile-toggle">
-          <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
-        </a>
-        <br>
-        <br>
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="card tile is-child">
-              <header class="card-header">
-                <p class="card-header-title">
-                  <span class="icon"><i class="mdi mdi-account default"></i></span>
-                  Edit Profile User
-                </p>
-              </header>
-              <div class="card-content">
-                <form method="put">
-                  <div class="is-user-avatar image has-max-width is-aligned-center">
-                    <img src="../assets/img/todolist.png" alt="hehe">
-                  </div>
-                  <hr>
-
-                  <div id="profileUser" class="field">
-                    <a href="#" class="control-icon is-hidden">
-                      <span class="icon"><i class="mdi mdi-pencil-box-multiple-outline"></i></span>
-                    </a>
-                    <br>
-                    <label class="label">Username</label>
-                    <div class="control is-clearfix">
-                      <input type="text" class="input" id="username1">
-                    </div>
-                    <br>
-                    <br>
-                    <label class="label">E-mail</label>
-                    <div class="control is-clearfix">
-                      <input type="text" class="input" id="email">
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="field-body">
-                    <div class="field">
-                      <div class="field is-grouped">
-                        <div class="control">
-                          <button type="button" class="button is-dark" id="btnUpdate">
-                            <span>Simpan</span>
-                          </button>
-                        </div>
-                        <div class="control">
-                          <a href="profile.html" type="button" class="button is-dark is-outlined">
-                            <span>Cancel</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="heros">
+        <div id="calendar"></div>
     </div>
   </section>
 
-  <div id="sample-modal" class="modal">
-    <div class="modal-background jb-modal-close"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Confirm action</p>
-        <button class="delete jb-modal-close" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <p>This will permanently delete <b>Some Object</b></p>
-        <p>This is sample modal</p>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button jb-modal-close">Cancel</button>
-        <button class="button is-danger jb-modal-close">Delete</button>
-      </footer>
-    </div>
-    <button class="modal-close is-large jb-modal-close" aria-label="close"></button>
-  </div>
 </div>
 
 <!-- Scripts below are for demo only -->
 <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/main/main.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/auth/logout.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/user/fetchEditUsr.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/mytodolist1/js_todo@0.1.1/user/updateUsr.js"></script>
 
-<!-- <script type="module" src="../assets/js/user/fetchEditUser.js"></script>
-<script type="module" src="../assets/js/user/updateUser.js"></script>
-<script type="module" src="../assets/js/auth/logout.js"></script> -->
+
+<!-- <script type="text/javascript" src="./assets/js/comp/main.js"></script> -->
+<!-- <script type="module" src="../assets/js/auth/logout.js"></script> -->
+<script type="module" src="../assets/js/complement/calendar.js"></script>
 
 <!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">

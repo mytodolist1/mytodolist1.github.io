@@ -2,6 +2,7 @@ import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodoCategory, titleCategory } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 import { setReminder } from "../temp/reminder.js";
+import { hideLoading } from "../complement/loading.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
@@ -38,8 +39,6 @@ const Category = (value) => {
 }
 
 const responseData = (result) => {
-    // console.log(result);
-    // console.log(result.data);
     if (result.status === true) {
         result.data.forEach((value, index) => {
             if (index === 0) {
@@ -49,6 +48,7 @@ const responseData = (result) => {
             dataTodo(value);
         });
     }
+    hideLoading();
 }
 
 getWithToken(target_url, responseData);

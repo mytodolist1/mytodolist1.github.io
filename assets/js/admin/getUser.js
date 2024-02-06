@@ -1,6 +1,7 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formUserAll } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
+import { hideLoading } from "../complement/loading.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
 
@@ -18,6 +19,7 @@ const responseData = (result) => {
     if (result.status === true) {
         result.data.forEach(dataUsers);
     }
+    hideLoading();
 }
 
 getWithToken(target_url, responseData);

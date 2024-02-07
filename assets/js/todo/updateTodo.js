@@ -9,7 +9,11 @@ const updateTodo = () => {
     const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
 
     const fileInput = document.getElementById("fileInput");
-    const file = fileInput.files[0];
+    let file = fileInput.files[0];
+
+    if (!file) {
+        file = document.getElementById("fileupdate").src;
+    }
 
     const formData = new FormData();
     formData.append("title", getValue("title"));

@@ -19,7 +19,7 @@ export const isiData = (results) => {
     const value = getNestedValue(results, path, index, property);
     
     if (id === "filePreview") {
-      inputElement.innerHTML = `<embed src="${value}" type="application/pdf" alt="Preview File" style="width: 600px; height: 580px;">`;
+      inputElement.innerHTML = `<embed src="${value}" id="fileupdate" type="application/pdf" alt="Preview File" style="width: 600px; height: 580px;">`;
     } else if (id === "deadline") {
       setupCalendarInput(inputElement, value);
     } else if (id === "time") {

@@ -2,7 +2,7 @@ import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodolist } from "../temp/table.js";
 import { setReminder } from "../temp/reminder.js";
 import { getWithToken } from "../temp/component.js";
-import { searchTodo } from "../complement/search.js";
+import { searchTodo } from "../temp/search.js";
 import { hideLoading } from "../complement/loading.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
@@ -14,7 +14,6 @@ const inputSearch = document.getElementById('searchInput');
 const btnSearch = document.getElementById('searchButton');
 
 const dataTodo  = (value) => {
-    // console.log("value: ", value);
     const data = formTodolist
     .replace("#TITLE#", value.title)
     .replace("#DESCRIPTION#", value.description)
@@ -32,17 +31,18 @@ const dataTodo  = (value) => {
 
     console.log(value);
 
-    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.username);
 }
 
 const responseData = (result) => {
     console.log("result: ", result);
     if (result.status === true) {
-        result.data.forEach(dataTodo);
+        result.data.forEach( dataTodo );
+
+        setReminder(result.data);
 
         btnSearch.addEventListener('click', (event) => {
             event.preventDefault();
-            searchTodo(result.data, inputSearch, dataTodo);
+            searchTodo(result.data, inputSearch, dataTodo, "tableTodolist");
         });
     }
     hideLoading();

@@ -2,7 +2,7 @@ import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodolist } from "../temp/table.js";
 import { setReminder } from "../temp/reminder.js";
 import { getWithToken } from "../temp/component.js";
-import { searchTodo } from "../complement/search.js";
+import { searchTodo } from "../temp/search.js";
 import { hideLoading } from "../complement/loading.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
@@ -14,7 +14,6 @@ const inputSearch = document.getElementById('searchInput');
 const btnSearch = document.getElementById('searchButton');
 
 const dataTodoNow  = (value) => {
-    // console.log("value: ", value);
     const data = formTodolist
     .replace("#TITLE#", value.title)
     .replace("#DESCRIPTION#", value.description)
@@ -31,19 +30,15 @@ const dataTodoNow  = (value) => {
     addInner("tableTodolist", data);
 
     console.log(value);
-
-    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.username);
 }
 
 const responseData = (result) => {
-    // console.log("result: ", result);
     if (result.status === true) {
         const today = new Date();
         const formattedToday = (today.getMonth() + 1).toString().padStart(2, '0') + '/' 
         + today.getDate().toString().padStart(2, '0') + '/' 
         + today.getFullYear();
 
-        // Filter todos with a deadline equal to today
         const todosForToday = result.data.filter(todo => {
             if (todo.deadline) {
                 const deadlineDate = new Date(todo.deadline);
@@ -58,9 +53,11 @@ const responseData = (result) => {
 
         todosForToday.forEach(dataTodoNow);
 
+        setReminder(result.data);
+
         btnSearch.addEventListener('click', (event) => {
             event.preventDefault();
-            searchTodo(result.data, inputSearch, dataTodoNow);
+            searchTodo(result.data, inputSearch, dataTodoNow, "tableTodolist");
         });
     }
     hideLoading();

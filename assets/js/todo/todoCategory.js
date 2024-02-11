@@ -3,7 +3,7 @@ import { formTodoCategory, titleCategory } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 import { setReminder } from "../temp/reminder.js";
 import { hideLoading } from "../complement/loading.js";
-import { searchTodo } from "../complement/search.js";
+import { searchTodo } from "../temp/search.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
@@ -16,7 +16,6 @@ const inputSearch = document.getElementById('searchInput');
 const btnSearch = document.getElementById('searchButton');
 
 const dataTodo = (value) => {
-    // console.log(value);
     const data = formTodoCategory
         .replace("#TITLE#", value.title)
         .replace("#DESCRIPTION#", value.description)
@@ -30,12 +29,9 @@ const dataTodo = (value) => {
         .replace("#IDHAPUS#", value._id);
 
     addInner("tableTodoCategory", data);
-
-    setReminder(value.deadline, value.time, value.title, value.user.phonenumber, value.user.username);
 }
 
 const Category = (value) => {
-    // console.log(value);
     const data = titleCategory
         .replace("#CATEGORY#", value.tags.category);
 
@@ -46,15 +42,16 @@ const responseData = (result) => {
     if (result.status === true) {
         result.data.forEach((value, index) => {
             if (index === 0) {
-                // Hanya panggil Category untuk data pertama
                 Category(value);
             }
             dataTodo(value);
         });
 
+        setReminder(result.data);
+
         btnSearch.addEventListener('click', (event) => {
             event.preventDefault();
-            searchTodo(result.data, inputSearch, dataTodo);
+            searchTodo(result.data, inputSearch, dataTodo, "tableTodoCategory");
         });
     }
     hideLoading();

@@ -3,7 +3,7 @@ import { formTodolistDone } from "../temp/table.js";
 import { convertToLocal } from "../temp/timestamp.js";
 import { getWithToken } from "../temp/component.js";
 import { hideLoading } from "../complement/loading.js";
-import { searchTodo } from "../complement/search.js";
+import { searchTodo } from "../temp/search.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-tododone";
 
@@ -37,7 +37,7 @@ const responseData = (result) => {
 
     btnSearch.addEventListener('click', (event) => {
         event.preventDefault();
-        searchTodo(result.data, inputSearch, dataTodoDone);
+        searchTodo(result.data, inputSearch, dataTodoDone, "tableTodolistDone");
     });
     hideLoading();
 }

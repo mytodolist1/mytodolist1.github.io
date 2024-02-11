@@ -18,15 +18,3 @@ const showDateTimeNow = () => {
 const { timeNow, dateNow } = showDateTimeNow();
 document.getElementById("deadline").value = dateNow;
 document.getElementById("time").value = timeNow;
-
-const valueCategory = () => {
-    const storedCategory = sessionStorage.getItem("selectedCategory");
-    
-    if (storedCategory !== null) {
-        document.getElementById("category").value = storedCategory;
-    }
-
-    return storedCategory;
-}
-
-valueCategory();

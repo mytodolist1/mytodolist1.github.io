@@ -3,6 +3,7 @@ import { formTodoCategory, titleCategory } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 import { setReminder } from "../temp/reminder.js";
 import { hideLoading } from "../complement/loading.js";
+import { searchTodo } from "../complement/search.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
@@ -10,6 +11,9 @@ const category = urlParams.get("category");
 localStorage.setItem("selectedCategory", category);
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-category?category=" + category;
+
+const inputSearch = document.getElementById('searchInput');
+const btnSearch = document.getElementById('searchButton');
 
 const dataTodo = (value) => {
     // console.log(value);
@@ -46,6 +50,11 @@ const responseData = (result) => {
                 Category(value);
             }
             dataTodo(value);
+        });
+
+        btnSearch.addEventListener('click', (event) => {
+            event.preventDefault();
+            searchTodo(result.data, inputSearch, dataTodo);
         });
     }
     hideLoading();

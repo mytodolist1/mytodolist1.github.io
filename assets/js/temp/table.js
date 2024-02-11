@@ -99,6 +99,16 @@ export const formTodolistDone = `
   <td data-label="Description">#DESCRIPTION#</td>
   <td data-label="Deadline">#DEADLINE# #TIME#</td>
   <td data-label="Category" style="color: red; font-weight: bold;">##CATEGORY#</td>
+  <td data-label="Document" style="color: red; font-weight: bold;">
+    <a href="#FILE#" target="_blank" type="button" title="#FILE1#" id="files"
+    style="margin-left: 15px; margin-top: -15px; display: flex;">
+      <span class="icon" style="font-size: 50px; display: inline-block;">
+        <i class="mdi mdi-file-pdf-box"></i>
+      </span>
+    </a>
+  </td>
+  <td></td>
+  <hr>
 `;
 
 // profile user

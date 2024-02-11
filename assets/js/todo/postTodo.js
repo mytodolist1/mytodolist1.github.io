@@ -1,5 +1,5 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
-import { format12Hours, formatDate } from "../temp/timestamp.js";
+import { format12Hours, formatDate, convertFormatDateToStrip } from "../temp/timestamp.js";
 import { postWithToken } from "../temp/component.js";
 
 const insertTodo = () => {
@@ -20,6 +20,18 @@ const insertTodo = () => {
     btnInsert.classList.add('is-loading');
 
     postWithToken(target_url, formData, responseData);
+};
+
+const loadFromLocalStorage = () => {
+    const selectedCategory = localStorage.getItem("selectedCategory");
+    const selectedDate = localStorage.getItem("selectedDate");
+    document.getElementById("category").value = selectedCategory;
+    
+    if (selectedDate) {
+        const date = convertFormatDateToStrip(selectedDate);
+        document.getElementById("deadline").value = date;
+    }
+
 };
 
 const getCurrentDate = () => {
@@ -44,6 +56,7 @@ const responseData = (result) => {
     console.log("Result:", result);
     if (result.status === true) {
         localStorage.removeItem("selectedCategory");
+        localStorage.removeItem("selectedDate");
 
         Swal.fire({
             icon: "success",
@@ -61,6 +74,15 @@ const responseData = (result) => {
     }
 };
 
-const btnInsert = document.getElementById("btnInsert");
+const btnBack = document.getElementById("btnBack");
+btnBack.addEventListener("click", () => {
+    localStorage.removeItem("selectedCategory");
+    localStorage.removeItem("selectedDate");
+    
+    window.location.href = "list_kegiatan.html";
+});
 
+window.onload = loadFromLocalStorage;
+
+const btnInsert = document.getElementById("btnInsert");
 btnInsert.addEventListener("click", insertTodo);

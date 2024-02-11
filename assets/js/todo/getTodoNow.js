@@ -2,7 +2,7 @@ import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { formTodolist } from "../temp/table.js";
 import { setReminder } from "../temp/reminder.js";
 import { getWithToken } from "../temp/component.js";
-import { searchTodo } from "./search.js";
+import { searchTodo } from "../complement/search.js";
 import { hideLoading } from "../complement/loading.js";
 
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
@@ -21,6 +21,8 @@ const dataTodoNow  = (value) => {
     .replace("#DEADLINE#", value.deadline)
     .replace("#TIME#", value.time)
     .replace("#CATEGORY#", value.tags.category)
+    .replace("#FILE#", value.file)
+    .replace("#FILE1#", value.file)
     .replace("#DONE#", value._id)
     .replace("#IDEDIT#", value._id)
     .replace("#DELETE#", value._id)
@@ -58,7 +60,7 @@ const responseData = (result) => {
 
         btnSearch.addEventListener('click', (event) => {
             event.preventDefault();
-            searchTodo(result.data, inputSearch);
+            searchTodo(result.data, inputSearch, dataTodoNow);
         });
     }
     hideLoading();

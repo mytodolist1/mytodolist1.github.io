@@ -28,13 +28,9 @@ const dataTodo  = (value) => {
     .replace("#IDHAPUS#", value._id);
 
     addInner("tableTodolist", data);
-
-    console.log(value);
-
 }
 
 const responseData = (result) => {
-    console.log("result: ", result);
     if (result.status === true) {
         result.data.forEach( dataTodo );
 

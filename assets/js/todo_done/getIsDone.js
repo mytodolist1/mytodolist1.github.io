@@ -25,12 +25,9 @@ const dataTodoDone  = (value) => {
     .replace("#FILE1#", value.todo.file);
 
     addInner("tableTodolistDone", data);
-
-    console.log(value);
 }
 
 const responseData = (result) => {
-    console.log("result: ", result);
     if (result.status === true) {
         result.data.forEach(dataTodoDone);
     }

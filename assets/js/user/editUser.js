@@ -3,8 +3,6 @@ export const isiData = (results) => {
       {id: "username1", path: "data.0.username"},
       {id: "email", path: "data.0.email"},
     ];
-
-    console.log(results);
   
     dataUser.forEach(({ id, path, index, property }) => {
       console.log(`Updating element with ID ${id} with data from path ${path}`);

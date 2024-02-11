@@ -1,7 +1,6 @@
 import { convertFormatDateToStrip, convertToFormat24Hours } from '../temp/timestamp.js';
 
 export const isiData = (results) => {
-  // console.log("isiData:", results);
   const dataTodo = [
     {id: "title", path: "data.0.title"},
     {id: "description", path: "data.0.description"},
@@ -10,9 +9,6 @@ export const isiData = (results) => {
     {id: "category", path: "data.0.tags.category"},
     {id: "filePreview", path: "data.0.file"},
   ];
-
-  console.log("isiData:", results);
-
 
   dataTodo.forEach(({ id, path, index, property }) => {
     const inputElement = document.getElementById(id);
@@ -33,11 +29,9 @@ export const isiData = (results) => {
 const setupCalendarInput = (inputElement, value) => {
   inputElement.value = convertFormatDateToStrip(value);
 
-  // Set the minimum date to the current date
   const currentDate = new Date().toISOString().split("T")[0];
   inputElement.min = currentDate;
 
-  // Set the maximum date to a reasonable future date (adjust as needed)
   const maxDate = new Date();
   maxDate.setFullYear(maxDate.getFullYear() + 1);
   inputElement.max = maxDate.toISOString().split("T")[0];

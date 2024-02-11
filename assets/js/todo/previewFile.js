@@ -6,7 +6,6 @@ document.getElementById("fileInput").addEventListener("change", function() {
         var reader = new FileReader();
 
         reader.onload = function (e) {
-            // Menampilkan gambar di bawahnya
             preview.innerHTML = '<embed src="' + e.target.result + '" id="fileupdate" type="application/pdf" alt="Preview File" style="width: 600px; height: 580px;">';
         };
 

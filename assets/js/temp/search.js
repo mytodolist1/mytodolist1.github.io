@@ -5,6 +5,7 @@ export const searchTodo = (todos, inputSearch, data, id) => {
         return (
             todo.title.toLowerCase().includes(keyword) ||
             todo.deadline.toLowerCase().includes(keyword) ||
+            todo.time.toLowerCase().includes(keyword) ||
             todo.tags.category.toLowerCase().includes(keyword)
         );
     });

@@ -15,7 +15,7 @@ const deleteTodo = async (IDHAPUS) => {
   });
 
   if (isConfirmed.isConfirmed) {
-    // console.log("Confirmed:", isConfirmed.isConfirmed);
+    console.log("Confirmed:", isConfirmed.isConfirmed);
     const myHeaders = new Headers();
     myHeaders.append("Authorization", token);
 

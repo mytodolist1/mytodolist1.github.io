@@ -31,7 +31,6 @@ const loadFromLocalStorage = () => {
         const date = convertFormatDateToStrip(selectedDate);
         document.getElementById("deadline").value = date;
     }
-
 };
 
 const getCurrentDate = () => {
@@ -53,7 +52,7 @@ document.getElementById("deadline").addEventListener("change", () => {
 const responseData = (result) => {
     const btnInsert = document.getElementById('btnInsert');
     btnInsert.classList.remove('is-loading');
-    console.log("Result:", result);
+
     if (result.status === true) {
         localStorage.removeItem("selectedCategory");
         localStorage.removeItem("selectedDate");

@@ -12,8 +12,6 @@ const dataUser  = (value) => {
     .replace("#IDEDIT#", value._id)
 
     addInner("profileUser", data);
-
-    console.log(value);
 }
 
 const modalDel = (value) => {
@@ -21,12 +19,9 @@ const modalDel = (value) => {
     .replace("#HAPUS#", value.username);
 
     addInner("hapus", data);
-
-    console.log(value);
 }
 
 const responseData = (result) => {
-    console.log(result);
     if (result.status === true) {
         result.data.forEach(dataUser);
         result.data.forEach(modalDel);

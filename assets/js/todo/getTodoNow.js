@@ -28,8 +28,6 @@ const dataTodoNow  = (value) => {
     .replace("#IDHAPUS#", value._id);
 
     addInner("tableTodolist", data);
-
-    console.log(value);
 }
 
 const responseData = (result) => {

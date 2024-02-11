@@ -39,9 +39,6 @@ const responseData = (result) => {
 }
 
 const change = document.getElementById("change");
-
-// change.addEventListener("click", updateUser);
-
 change.addEventListener("click", () => {
     console.log("button aktif");
     updateUser();

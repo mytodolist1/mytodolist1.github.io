@@ -42,5 +42,4 @@ const responseData = (result) => {
 }
 
 const btnRegister = document.getElementById("btnRegister");
-
 btnRegister.addEventListener("click", Register);

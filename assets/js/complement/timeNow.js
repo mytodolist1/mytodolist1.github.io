@@ -14,7 +14,7 @@ const showDateTimeNow = () => {
     return { dateNow, timeNow };
 }
 
-// Pemanggilan fungsi dan penyetelan nilai ke elemen HTML
 const { timeNow, dateNow } = showDateTimeNow();
+
 document.getElementById("deadline").value = dateNow;
 document.getElementById("time").value = timeNow;

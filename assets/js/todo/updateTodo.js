@@ -51,9 +51,6 @@ const responseData = (result) => {
 }
 
 const btnUpdates = document.getElementById("btnUpdate");
-
-// btnUpdates.addEventListener("click", updateTodo);
-
 btnUpdates.addEventListener("click", () => {
     console.log("button aktif");
     updateTodo();

@@ -7,8 +7,6 @@ import { hideLoading } from "../complement/loading.js";
 const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-getTodolist";
 
 const dataTodolist  = (value) => {
-    console.log("value: ", value);
-
     const timestamp1 = value.timestamps.createdat;
     const createdAt = convertToLocal(timestamp1);
 

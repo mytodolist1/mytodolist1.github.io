@@ -1,10 +1,13 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const checkTokenAndRedirect = () => {
-    const token = "Authorization";
-    const tokenValue = getCookie(token);
+    const userToken = "Authorization";
+    const adminToken = "Authorizationadmin";
+    
+    const userTokenValue = getCookie(userToken);
+    const adminTokenValue = getCookie(adminToken);
 
-    if (!tokenValue) {
+    if (!adminTokenValue && !userTokenValue) {
         window.location.href = "../login.html";
     }
 }

@@ -5,7 +5,8 @@ import { getWithToken } from "../temp/component.js";
 import { searchTodo } from "../temp/search.js";
 import { hideLoading } from "../complement/loading.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+// const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+const target_url = " http://localhost:8081/todo";
 
 const btnInsert = document.getElementById('allTaskButton');
 btnInsert.classList.remove('is-outlined');

@@ -2,7 +2,8 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { postRegister } from "../temp/component.js";
 
 const Register = () => {
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-register";
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-register";
+    const target_url = " http://localhost:8081/register";
 
     const data = {
         email : getValue("email"),

@@ -22,8 +22,8 @@ const responseData = (result) => {
     const btnLogin = document.getElementById('btnLogin');
     btnLogin.classList.remove('is-loading');
 
-    if (result.status === true) {
-        const role = result.data[0].role;
+    if (result.status === 200) {
+        const role = result.data.role;
 
         Swal.fire({
           icon: "success",

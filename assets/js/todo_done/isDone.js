@@ -19,8 +19,8 @@ const doneTodo = async (DONE) => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", token);
 
-    const target_url =
-      "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-tododone?_id=" + _id;
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-tododone?_id=" + _id;
+    const target_url = "https://vercel-go-sandy.vercel.app/todo/clear?_id=" + _id;
 
     try {
       const response = await fetch(target_url, {

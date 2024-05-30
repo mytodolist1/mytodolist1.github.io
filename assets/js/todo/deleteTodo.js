@@ -19,8 +19,8 @@ const deleteTodo = async (IDHAPUS) => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", token);
 
-    const target_url =
-      "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
+    const target_url = "https://vercel-go-sandy.vercel.app/todo?_id=" + _id;
 
     try {
       const response = await fetch(target_url, {

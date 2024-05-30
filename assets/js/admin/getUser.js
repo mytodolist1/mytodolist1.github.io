@@ -3,7 +3,8 @@ import { formUserAll } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 import { hideLoading } from "../complement/loading.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
+// const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist";
+const target_url = "https://vercel-go-sandy.vercel.app/user";
 
 const dataUsers  = (value) => {
     const data = formUserAll
@@ -16,7 +17,7 @@ const dataUsers  = (value) => {
 }
 
 const responseData = (result) => {
-    if (result.status === true) {
+    if (result.status === 200) {
         result.data.forEach(dataUsers);
     }
     hideLoading();

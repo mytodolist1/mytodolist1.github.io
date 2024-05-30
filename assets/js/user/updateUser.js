@@ -5,7 +5,8 @@ const updateUser = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const _id = urlParams.get("_id");
 
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?_id=" + _id;
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?_id=" + _id;
+    const target_url = "https://vercel-go-sandy.vercel.app/user?_id=" + _id;
 
     const data = {
         username : getValue("username1"),
@@ -22,7 +23,7 @@ const responseData = (result) => {
     const btnUpdate = document.getElementById('btnUpdate');
     btnUpdate.classList.remove('is-loading');
 
-    if (result.status === true) {
+    if (result.status === 200) {
         Swal.fire({
             icon: "success",
             title: "Update Successful",

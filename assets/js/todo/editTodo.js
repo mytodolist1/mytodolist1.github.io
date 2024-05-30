@@ -2,12 +2,12 @@ import { convertFormatDateToStrip, convertToFormat24Hours } from '../temp/timest
 
 export const isiData = (results) => {
   const dataTodo = [
-    {id: "title", path: "data.0.title"},
-    {id: "description", path: "data.0.description"},
-    {id: "deadline", path: "data.0.deadline"},
-    {id: "time", path: "data.0.time"},
-    {id: "category", path: "data.0.tags.category"},
-    {id: "filePreview", path: "data.0.file"},
+    {id: "title", path: "data.title"},
+    {id: "description", path: "data.description"},
+    {id: "deadline", path: "data.deadline"},
+    {id: "time", path: "data.time"},
+    {id: "category", path: "data.tags.category"},
+    {id: "filePreview", path: "data.file"},
   ];
 
   dataTodo.forEach(({ id, path, index, property }) => {

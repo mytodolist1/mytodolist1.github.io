@@ -1,10 +1,11 @@
 import { getWithToken } from "../temp/component.js";
 import { hideLoading } from "../complement/loading.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+// const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+const target_url = "https://vercel-go-sandy.vercel.app/todo";
 
 const responseData = (result) => {
-    if (result.status === true) {
+    if (result.status === 200) {
         const calendarEvents = result.data.map((item) => {
             let color = "#6600CC";
 
@@ -37,7 +38,7 @@ const responseData = (result) => {
                 format: 'mm/dd/yyyy',
                 calendarEvents: calendarEvents,
             });
-            $('#calendar').on('selectDate', function(event, newDate, oldDate) {
+            $('#calendar').on('selectDate', function(_, newDate, oldDate) {
                 console.log('Tanggal baru yang dipilih:', newDate);
                 console.log('Tanggal sebelumnya yang dipilih:', oldDate);
         
@@ -48,7 +49,7 @@ const responseData = (result) => {
                     redirectToTambahData(newDate);
                 });
             });
-            $('#calendar').on('selectEvent', function(event, activeEvent) {
+            $('#calendar').on('selectEvent', function(_, activeEvent) {
                 console.log('Acara yang dipilih:', activeEvent);
                 redirectToEdit(activeEvent.id);
             });

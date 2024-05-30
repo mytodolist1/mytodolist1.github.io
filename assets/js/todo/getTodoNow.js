@@ -5,7 +5,8 @@ import { getWithToken } from "../temp/component.js";
 import { searchTodo } from "../temp/search.js";
 import { hideLoading } from "../complement/loading.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+// const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+const target_url = "https://vercel-go-sandy.vercel.app/todo";
 
 const btnInsert = document.getElementById('todayTaskButton');
 btnInsert.classList.remove('is-outlined');
@@ -31,7 +32,8 @@ const dataTodoNow  = (value) => {
 }
 
 const responseData = (result) => {
-    if (result.status === true) {
+    console.log(result);
+    if (result.status === 200) {
         const today = new Date();
         const formattedToday = (today.getMonth() + 1).toString().padStart(2, '0') + '/' 
         + today.getDate().toString().padStart(2, '0') + '/' 

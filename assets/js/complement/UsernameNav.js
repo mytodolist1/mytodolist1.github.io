@@ -3,7 +3,8 @@ import { navbarUser } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 import { hideLoading } from "../complement/loading.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user";
+// const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user";
+const target_url = "https://vercel-go-sandy.vercel.app/user";
 
 const dataUser  = (value) => {
     const data = navbarUser
@@ -13,8 +14,8 @@ const dataUser  = (value) => {
 }
 
 const responseData = (result) => {
-    if (result.status === true) {
-        result.data(dataUser);
+    if (result.status === 200) {
+        dataUser(result.data);
     }
     hideLoading();
 }

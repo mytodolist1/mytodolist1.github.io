@@ -4,6 +4,7 @@ import { isiData } from "./editTodo.js";
 const urlParams = new URLSearchParams(window.location.search);
 const _id = urlParams.get("_id");
 
-const urlFetch = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
+// const urlFetch = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
+const urlFetch = "https://vercel-go-sandy.vercel.app/todo?_id=" + _id;
 
 getWithToken(urlFetch, isiData);

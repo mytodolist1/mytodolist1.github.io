@@ -20,8 +20,8 @@ const deleteUser = async (USERHAPUS) => {
     const myHeaders = new Headers();
     myHeaders.append("Authorization", token);
 
-    const target_url =
-      "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
+    const target_url = "https://vercel-go-sandy.vercel.app/user?username=" + username;
 
     try {
       const response = await fetch(target_url, {

@@ -6,7 +6,7 @@ import { searchTodo } from "../temp/search.js";
 import { hideLoading } from "../complement/loading.js";
 
 // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
-const target_url = " http://localhost:8081/todo";
+const target_url = "https://vercel-go-sandy.vercel.app/todo";
 
 const btnInsert = document.getElementById('allTaskButton');
 btnInsert.classList.remove('is-outlined');
@@ -32,7 +32,7 @@ const dataTodo  = (value) => {
 }
 
 const responseData = (result) => {
-    if (result.status === true) {
+    if (result.status === 200) {
         result.data.forEach( dataTodo );
 
         setReminder(result.data);

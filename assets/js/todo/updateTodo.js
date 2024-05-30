@@ -6,7 +6,8 @@ const updateTodo = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const _id = urlParams.get("_id");
 
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo?_id=" + _id;
+    const target_url = "https://vercel-go-sandy.vercel.app/todo?_id=" + _id;
 
     const fileInput = document.getElementById("fileInput");
     let file = fileInput.files[0];
@@ -33,7 +34,9 @@ const responseData = (result) => {
     const btnUpdate = document.getElementById('btnUpdate');
     btnUpdate.classList.remove('is-loading');
 
-    if (result.status === true) {
+    console.log(result);
+
+    if (result.status === 200) {
         Swal.fire({
             icon: "success",
             title: "Update Successful",

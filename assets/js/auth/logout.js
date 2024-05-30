@@ -10,7 +10,7 @@ const logout = () => {
       cancelButtonText: "Tidak",
     }).then((result) => {
       if (result.isConfirmed) {
-        deleteCookie("Authorization") || deleteCookie("Authorizationadmin");
+        deleteCookie("Authorization") || deleteCookie("AuthorizationA");
         window.location.href = "../login.html";
       }
     });

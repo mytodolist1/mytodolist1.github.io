@@ -10,7 +10,8 @@ const category = urlParams.get("category");
 
 localStorage.setItem("selectedCategory", category);
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-category?category=" + category;
+// const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-category?category=" + category;
+const target_url = "https://vercel-go-sandy.vercel.app/todo?category=" + category;
 
 const inputSearch = document.getElementById('searchInput');
 const btnSearch = document.getElementById('searchButton');
@@ -39,7 +40,7 @@ const Category = (value) => {
 }
 
 const responseData = (result) => {
-    if (result.status === true) {
+    if (result.status === 200) {
         result.data.forEach((value, index) => {
             if (index === 0) {
                 Category(value);

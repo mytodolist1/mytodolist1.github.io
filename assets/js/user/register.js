@@ -3,7 +3,7 @@ import { postRegister } from "../temp/component.js";
 
 const Register = () => {
     // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-register";
-    const target_url = " http://localhost:8081/register";
+    const target_url = "https://vercel-go-sandy.vercel.app/register";
 
     const data = {
         email : getValue("email"),
@@ -24,7 +24,7 @@ const responseData = (result) => {
     const btnRegister = document.getElementById('btnRegister');
     btnRegister.classList.remove('is-loading');
 
-    if (result.status === true) {
+    if (result.status === 201) {
 
         Swal.fire({
             icon: "success",

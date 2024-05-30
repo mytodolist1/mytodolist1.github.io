@@ -4,7 +4,7 @@ import { postLogin } from "../temp/component.js";
 
 const Login = () => {
     // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-login";
-    const target_url = " http://localhost:8081/login";
+    const target_url = "https://vercel-go-sandy.vercel.app/login";
     
     const data = {
         username : getValue("username"),
@@ -15,10 +15,12 @@ const Login = () => {
     btnLogin.classList.add('is-loading');
 
     postLogin(target_url, data, responseData);
+
+    console.log(data);
 }
 
 const responseData = (result) => {
-
+    console.log(result);
     const btnLogin = document.getElementById('btnLogin');
     btnLogin.classList.remove('is-loading');
 
@@ -32,7 +34,7 @@ const responseData = (result) => {
         }).then(() => {
             switch (role) {
                 case "admin":
-                    setCookieWithExpireHour("Authorizationadmin", result.token, 2);
+                    setCookieWithExpireHour("AuthorizationA", result.token, 2);
                     window.location.href = "pages_admin/todolist_user.html";
                     break;
 

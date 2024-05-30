@@ -3,7 +3,8 @@ import { format12Hours, formatDate, convertFormatDateToStrip } from "../temp/tim
 import { postWithToken } from "../temp/component.js";
 
 const insertTodo = () => {
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-todo";
+    const target_url = "https://vercel-go-sandy.vercel.app/todo";
 
     const fileInput = document.getElementById("fileInput");
     const file = fileInput.files[0];
@@ -53,7 +54,7 @@ const responseData = (result) => {
     const btnInsert = document.getElementById('btnInsert');
     btnInsert.classList.remove('is-loading');
 
-    if (result.status === true) {
+    if (result.status === 201) {
         localStorage.removeItem("selectedCategory");
         localStorage.removeItem("selectedDate");
 

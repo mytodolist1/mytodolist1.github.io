@@ -36,7 +36,7 @@ export function setReminder(todos) {
             users.forEach(username => {
                 const userTasks = todayDeadlines.filter(data => data.user.username === username);
                 const message = `Hi *${username}*\n\nAda ${todayDeadlines.length} tugas: *${reminderTitle}* \nyang telah melewati batas waktu. Segera selesaikan tugas kamu! \n\nTugas kamu pada hari ini ada ${todayDate.length}:\n${reminderMessage}`;
-                sendWhatsAppMessage(userTasks[0].user.phonenumber, message);
+                // sendWhatsAppMessage(userTasks[0].user.phonenumber, message);
             });
         };
 

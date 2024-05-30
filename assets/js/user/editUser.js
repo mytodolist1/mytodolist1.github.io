@@ -1,7 +1,7 @@
 export const isiData = (results) => {
     const dataUser = [
-      {id: "username1", path: "data.0.username"},
-      {id: "email", path: "data.0.email"},
+      {id: "username1", path: "data.username"},
+      {id: "email", path: "data.email"},
     ];
   
     dataUser.forEach(({ id, path, index, property }) => {

@@ -4,7 +4,8 @@ import { putWithToken } from "../temp/component.js";
 const updateUser = () => {
     const username = getValue("username");
 
-    const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
+    // const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user?username=" + username;
+    const target_url = "https://vercel-go-sandy.vercel.app/user?username=" + username;
 
     const data = {
         password : getValue("newpass"),
@@ -21,7 +22,7 @@ const responseData = (result) => {
     const change = document.getElementById('change');
     change.classList.remove('is-loading');
 
-    if (result.status === true) {
+    if (result.status === 200) {
         Swal.fire({
             icon: "success",
             title: "Update Successful",

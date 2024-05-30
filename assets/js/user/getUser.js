@@ -3,7 +3,8 @@ import { formProfile, modalHapus } from "../temp/table.js";
 import { getWithToken } from "../temp/component.js";
 import { hideLoading } from "../complement/loading.js";
 
-const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user";
+// const target_url = "https://asia-southeast2-mytodolist-402507.cloudfunctions.net/mytodolist-user";
+const target_url = "https://vercel-go-sandy.vercel.app/user";
 
 const dataUser  = (value) => {
     const data = formProfile
@@ -22,7 +23,7 @@ const modalDel = (value) => {
 }
 
 const responseData = (result) => {
-    if (result.status === true) {
+    if (result.status === 200) {
         result.data.forEach(dataUser);
         result.data.forEach(modalDel);
     }
